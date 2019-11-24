@@ -12,18 +12,15 @@ import Schedule from '../components/Schedule'
 
 
 
-class Home extends React.Component {
-    render() {
-        return (
-            <>
-                <div className="Home">
-                    <Header />
-                    <WhoAreWe />
-                    <WhatWeDo />
-                    <Schedule />
-                </div>
-            </>
-        )
-    }
+export default function Home() {
+    return (
+        <>
+            <div className="Home">
+                <Header />
+                <WhoAreWe />
+                <WhatWeDo />
+                <Schedule />
+            </div>
+        </>
+    )
 }
-export default Home

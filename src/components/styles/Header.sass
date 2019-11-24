@@ -1,14 +1,24 @@
 .header 
-    margin-top: 65px
     display: flex
     justify-content: center
     height: 100vh
     background-image: url('../../images/header-bckground.jpg')
     background-size: cover
 
+
+
 .header-img
-    margin-top: 30px
+    transform: translateY(6rem)
     width: 500px
 
 .stripe
     height: 135px
+
+
+@media (max-width: 957px)
+    .header-img
+        width: 50vw
+
+@media (max-width: 750px)
+    .header-img
+        transform: translateY(6rem)

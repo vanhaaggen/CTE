@@ -1,34 +1,41 @@
 $cte-font: 'Montserrat', sans-serif
 $cte-red: #ff0101
 
+.navbar-wrapper
+    height: 100%
+
 .Navbar 
     display: flex
     position: fixed
     justify-content: space-between
     align-items: center
     flex-direction: row
-    flex-wrap: wrap
-    top: 0
-    left: 0
-    right: 0
+    width: 100%
     padding: 0.5rem 0
     background-color: #f5f5f5
-    z-index: 99
     font-family: $cte-font
     border-bottom: 1px solid #e5e0e0
+    z-index: 99999
+
+
+.navbar-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 90vw    
+       
     &___brand-name
         color: #020202
         display: flex
         align-items: center
         text-decoration: none
-        width: 20vw
-        display: flex
-        flex-direction: row
-    
+        width: 30%
+
     &__list
-        margin-right: 3rem
+        display: flex
+        justify-content: flex-end
+        width: 50%
     
-       
 .menu
     margin: 0 1rem
 
@@ -39,16 +46,67 @@ $cte-red: #ff0101
     margin: 0.4rem 1rem 0.4rem 2rem
     font-weight: 900
 
-
 .brand1
     padding-right: 0.2rem
     font-weight: 800
     
-
 .brand2
     font-weight: 600
 
-
 .Navbar__brand:hover 
     color: #020202
+
+@media (max-width: 957px) 
+    .Navbar
+        font-size: 0.9rem
     
+    .navbar-container
+        &__list
+            width: 60%
+    .menu
+        margin: 0 0.8rem
+
+@media (max-width: 857px)
+    .menu
+        margin: 0 0.7rem
+
+    
+.lang-wrapper
+    height: 40px
+    transform: translateY(4rem)    
+
+.langMenu
+    display: flex
+    justify-content: flex-end
+    padding: 0 1rem
+    font-size: 1.2rem
+    font-family: $cte-font
+    font-weight: 700
+    background-color: #e5e0e0
+
+    &__lang
+        margin: 0
+        padding: 0 0.5rem
+        color: #444040
+
+.button-lang
+    margin-right: 2rem
+    border-radius: 5px 5px 0 0
+    color: #444040
+    font-size: 0.8rem
+    font-weight: 600
+    font-family: $cte-font
+
+.button-lang:hover
+    color: #00ca6a
+
+@media (max-width: 950px)
+    .lang-wrapper
+        transform: translateY(3.9rem)
+  
+
+
+////mobile----------------------------------------
+
+
+
