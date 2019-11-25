@@ -16,12 +16,38 @@ const Header = () => {
     return <>
 
         <header className='header' id="header">
-            <Animated
-                animationIn="bounceInLeft"
-                isVisible={true}
-                className="animation">
-                <img className="header-img" src={cteLogo} alt="cte-logo" />
-            </Animated>
+            <div className="animation-container">
+                <Animated
+                    animationIn="bounceInLeft"
+                    isVisible={true}
+                    className="animation">
+                    <img className="header-img" src={cteLogo} alt="cte-logo" />
+                </Animated>
+                <Animated
+                    animationIn="bounceInLeft"
+                    isVisible={true}
+                    className="animation">
+                    <img className="header-img" src={cteLogo} alt="cte-logo" />
+                </Animated>
+                <Animated
+                    animationIn="bounceInLeft"
+                    isVisible={true}
+                    className="animation">
+                    <img className="header-img" src={cteLogo} alt="cte-logo" />
+                </Animated>
+                <Animated
+                    animationIn="bounceInLeft"
+                    isVisible={true}
+                    className="animation">
+                    <img className="header-img" src={cteLogo} alt="cte-logo" />
+                </Animated>
+                <Animated
+                    animationIn="bounceInLeft"
+                    isVisible={true}
+                    className="animation">
+                    <img className="header-img" src={cteLogo} alt="cte-logo" />
+                </Animated>
+            </div>
         </header>
 
         <BlankStripe />
