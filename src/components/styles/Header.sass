@@ -1,32 +1,46 @@
+$cte-font: 'Montserrat', sans-serif
+
 .header 
     display: flex
     justify-content: center
     height: 100vh
-    width: 100vw
     background-image: url('../../images/header-bckground.jpg')
     background-size: cover
 
-.animation-container
+.header-wrapper
     display: flex
-    justify-content: center
+    flex-wrap: wrap-reverse
     height: 100%
-    width: 100%
+    width: 90vw
+    
+
+.quote-container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    top: 85px
+    width: 30vw
+    padding: 0 1.5rem 0 4rem
+    
+
+
+.quote
+    font-family: $cte-font
+    font-size: 5.5vw
+    font-weight: 900
+    color: #fc4444
+
 
 .animation
     position: absolute
-
+    top: 85px
+    
 .header-img
-    transform: translateY(5rem)
-    width: 500px
+    transform: translateY(1rem)
+    width: 35vw
 
 .stripe
     height: 135px
 
 
-@media (max-width: 957px)
-    .header-img
-        width: 50vw
-
-@media (max-width: 750px)
-    .header-img
-        transform: translateY(6rem)

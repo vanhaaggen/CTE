@@ -16,41 +16,51 @@ const Header = () => {
     return <>
 
         <header className='header' id="header">
-            <div className="animation-container">
-                <Animated
-                    animationIn="bounceIn"
-                    animationInDelay={1200}
-                    isVisible={true}
-                    className="animation">
-                    <img className="header-img" src={back} alt="cte-logo" />
-                </Animated>
-                <Animated
-                    animationIn="bounceInLeft"
-                    animationInDelay={900}
-                    isVisible={true}
-                    className="animation">
-                    <img className="header-img" src={circle} alt="cte-logo" />
-                </Animated>
-                <Animated
-                    animationIn="bounceInRight"
-                    animationInDelay={600}
-                    isVisible={true}
-                    className="animation">
-                    <img className="header-img" src={laurel} alt="cte-logo" />
-                </Animated>
-                <Animated
-                    animationIn="bounceInUp"
-                    animationInDelay={300}
-                    isVisible={true}
-                    className="animation">
-                    <img className="header-img" src={barbell} alt="cte-logo" />
-                </Animated>
-                <Animated
-                    animationIn="bounceInDown"
-                    isVisible={true}
-                    className="animation">
-                    <img className="header-img" src={kettlebell} alt="cte-logo" />
-                </Animated>
+            <div className="header-wrapper">
+                <div className="quote-container">
+                    <Animated
+                        animationIn="bounceInLeft"
+                        animationInDelay={1400}
+                        isVisible={true}>
+                        <p className="quote">SIGUES<br />LA TEVA<br />MILLOR<br />VERSIÓ</p>
+                    </Animated>
+                </div>
+                <div className="animation-container">
+                    <Animated
+                        animationIn="bounceIn"
+                        animationInDelay={1200}
+                        isVisible={true}
+                        className="animation">
+                        <img className="header-img" src={back} alt="cte-logo" />
+                    </Animated>
+                    <Animated
+                        animationIn="bounceInLeft"
+                        animationInDelay={900}
+                        isVisible={true}
+                        className="animation">
+                        <img className="header-img" src={circle} alt="cte-logo" />
+                    </Animated>
+                    <Animated
+                        animationIn="bounceInRight"
+                        animationInDelay={600}
+                        isVisible={true}
+                        className="animation">
+                        <img className="header-img" src={laurel} alt="cte-logo" />
+                    </Animated>
+                    <Animated
+                        animationIn="bounceInUp"
+                        animationInDelay={300}
+                        isVisible={true}
+                        className="animation">
+                        <img className="header-img" src={barbell} alt="cte-logo" />
+                    </Animated>
+                    <Animated
+                        animationIn="bounceInDown"
+                        isVisible={true}
+                        className="animation">
+                        <img className="header-img" src={kettlebell} alt="cte-logo" />
+                    </Animated>
+                </div>
             </div>
         </header>
 
