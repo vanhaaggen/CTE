@@ -78,6 +78,14 @@ export default function Navbar(props) {
                                                     offset={-70}
                                                     duration={500}
                                                 >{text[`${lang}`].navbar.schedule}</Link>
+                                                <Link className="menu"
+                                                    activeClass="active"
+                                                    to="contact"
+                                                    spy={true}
+                                                    smooth={true}
+                                                    offset={-70}
+                                                    duration={500}
+                                                >{text[`${lang}`].navbar.contact}</Link>
                                             </ul>
                                         </div>
                                     </div>
@@ -114,6 +122,12 @@ export default function Navbar(props) {
                                                     delayLangMenu(langMenu)
                                                 }
                                                 }>ES</p>
+                                                <p className='langMenu__lang' onClick={() => {
+                                                    props.handleLang('EN')
+                                                    setAnimation(!animation)
+                                                    delayLangMenu(langMenu)
+                                                }
+                                                }>EN</p>
                                             </div>
 
                                         </Animated>
