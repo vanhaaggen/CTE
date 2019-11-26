@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { I18NContext, I18NConsumer } from './i18ncontext'
 
 import './styles/WhatWeDo.sass'
 
@@ -7,9 +8,13 @@ class WhatWeDo extends Component {
     render() {
         return (
             <>
-                <div className="container-what" id="what">
-                    <h2>Que fem?</h2>
-                </div>
+                <I18NConsumer>
+                    {({ text, lang }) => (
+                        <div className="container-what" id="what">
+                            <h2>{text[`${lang}`].navbar.what}</h2>
+                        </div>
+                    )}
+                </I18NConsumer>
             </>
         )
     }

@@ -1,45 +1,36 @@
 $cte-font: 'Montserrat', sans-serif
 
-.header 
+%flex-center
     display: flex
     justify-content: center
+
+.header 
+    @extend %flex-center
     height: 100vh
     background-image: url('../../images/header-bckground.jpg')
     background-size: cover
 
 .header-wrapper
-    display: flex
-    flex-wrap: wrap-reverse
-    height: 100%
-    width: 90vw
+    transform: translateY(10%)
+    width: 90%
+    @extend %flex-center
+    flex-wrap: wrap
     
-
-.quote-container
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    top: 85px
-    width: 30vw
-    padding: 0 1.5rem 0 4rem
-    
-
-
 .quote
     font-family: $cte-font
     font-size: 5.5vw
     font-weight: 900
     color: #fc4444
 
+.animation-wrapper
+    width: 40%
 
 .animation
-    position: absolute
-    top: 85px
+   position: absolute 
     
 .header-img
-    transform: translateY(1rem)
     width: 35vw
-
+    
 .stripe
     height: 135px
 

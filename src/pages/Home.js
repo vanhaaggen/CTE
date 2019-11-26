@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 
 
 import './styles/Home.sass'
@@ -8,7 +8,7 @@ import Header from '../components/Header'
 import WhoAreWe from '../components/WhoAreWe'
 import WhatWeDo from '../components/WhatWeDo'
 import Schedule from '../components/Schedule'
-
+import Contact from '../components/Contact'
 
 
 
@@ -20,6 +20,8 @@ export default function Home() {
                 <WhoAreWe />
                 <WhatWeDo />
                 <Schedule />
+                <Contact />
+
             </div>
         </>
     )
