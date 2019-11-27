@@ -5,7 +5,7 @@ import React from 'react'
 import './styles/Home.sass'
 
 import Header from '../components/Header'
-import WhoAreWe from '../components/WhoAreWe'
+import WhoAreWe from '../components/WhoAreWe/index'
 import WhatWeDo from '../components/WhatWeDo'
 import Schedule from '../components/Schedule'
 import Contact from '../components/Contact'
