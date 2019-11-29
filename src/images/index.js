@@ -5,11 +5,11 @@ import circle from './circle.svg'
 import laurel from './laurel.svg'
 import kettlebell from './kettlebell.svg'
 
-const logo = {
+const logo = [
     back,
     barbell,
     circle,
     laurel,
     kettlebell
-}
+]
 export default logo
