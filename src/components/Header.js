@@ -6,7 +6,8 @@ import { I18NConsumer } from './i18ncontext'
 import './styles/Header.sass'
 
 import logo from '../images'
-const { back, barbell, circle, kettlebell, laurel } = logo
+const [back, barbell, circle, laurel, kettlebell] = logo
+
 
 
 const BlankStripe = () => {
@@ -68,6 +69,7 @@ const Header = () => {
                             className="animation">
                             <img className="header-img" src={kettlebell} alt="cte-logo" />
                         </Animated>
+
                     </div>
                 </div>
             </div>

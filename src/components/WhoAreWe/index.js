@@ -9,7 +9,7 @@ import '../styles/WhoAreWe.sass'
 
 
 
-export default function () {
+export default function (props) {
     const [isInView, setIsInView] = useState(false)
 
 
@@ -41,8 +41,7 @@ export default function () {
                                 animationIn="fadeIn"
                                 animationInDelay={300}
                                 isVisible={true}>
-                                <h2>{text[`${lang}`].navbar.who}</h2>
-                                <Content />
+                                <Content text={text} lang={lang} isInView={isInView} />
                             </Animated>
                         </>}
                     </div>
