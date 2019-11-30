@@ -1,14 +1,18 @@
 import React from 'react'
 
+import components from '../components'
 
 
 import './styles/Home.sass'
 
 import Header from '../components/Header'
-import WhoAreWe from '../components/WhoAreWe/index'
-import WhatWeDo from '../components/WhatWeDo'
 import Schedule from '../components/Schedule'
 import Contact from '../components/Contact'
+
+
+
+const { WhoAreWe, WhatWeDo } = components
+
 
 
 

@@ -7,6 +7,7 @@ function isInViewport(param) {
 
     const distanceToTop = (window.pageYOffset + 71).toFixed()
 
+    console.log(`${param}:`, inViewZone)
     if (distanceToTop >= inViewZone) {
         return true
     } else {
