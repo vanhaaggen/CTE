@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { I18NConsumer } from '../i18ncontext'
 import { Animated } from 'react-animated-css'
 import isInViewPort from '../../utils/isInViewport'
-import Content from './Content'
+import Content from './content'
 
 import '../styles/WhoAreWe.sass'
 
@@ -11,6 +11,7 @@ import '../styles/WhoAreWe.sass'
 
 export default function (props) {
     const [isInView, setIsInView] = useState(false)
+
 
 
     useEffect(() => {
@@ -41,7 +42,7 @@ export default function (props) {
                                 animationIn="fadeIn"
                                 animationInDelay={300}
                                 isVisible={true}>
-                                <Content text={text} lang={lang} isInView={isInView} />
+                                <Content text={text} lang={lang} />
                             </Animated>
                         </>}
                     </div>

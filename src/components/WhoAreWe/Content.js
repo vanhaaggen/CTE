@@ -3,9 +3,9 @@ import { Animated } from 'react-animated-css'
 
 import '../styles/WhoAreWe.sass'
 
-export default function Content(props) {
-    const [widthState, setWidthState] = useState({ width: "5%" })
-    const { text, lang, isInView } = props
+export default function (props) {
+    const [widthState, setWidthState] = useState({ width: "10%" })
+    const { text, lang } = props
 
     useEffect(() => {
         const changeWidth = () => {
@@ -15,24 +15,15 @@ export default function Content(props) {
     }, [])
 
     return <>
-        <div className="section-title-wrapper">
-            <Animated
-                animationIn="slideInLeft"
-                animationInDelay={100}
-                animationInDuration={2000}
-                isVisible={true}>
 
-                <h2 style={{
-                    paddingLeft: "1rem",
-                    fontSize: "4vw",
-                    backgroundColor: "#fc4444",
-                    color: "white",
-                    width: widthState.width,
-                    transition: "width 2s"
-
-                }}>{text[`${lang}`].navbar.who}</h2>
-            </Animated>
+        <div style={{
+            backgroundColor: "#fc4444",
+            width: widthState.width,
+            transition: "width 2s"
+        }}>
+            <p className="who-title section-title-wrapper">{text[`${lang}`].navbar.who}</p>
         </div>
+
 
         <div>
             <article>
