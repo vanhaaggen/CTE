@@ -1,11 +1,11 @@
 import React from 'react'
 
 import { Animated } from 'react-animated-css'
-import { I18NConsumer } from './i18ncontext'
+import { I18NConsumer } from '../i18ncontext'
 
-import './styles/Header.sass'
+import './style.sass'
 
-import logo from '../images'
+import logo from '../../images'
 const [back, barbell, circle, laurel, kettlebell] = logo
 
 

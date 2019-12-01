@@ -8,10 +8,10 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
 
-import './styles/Navbar.sass'
-import './styles/NavbarMobile.sass'
+import './style.sass'
+import './styleMobile.sass'
 
-import { I18NConsumer } from './i18ncontext'
+import { I18NConsumer } from '../i18ncontext'
 
 
 

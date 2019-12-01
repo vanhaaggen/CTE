@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Home from '../pages/Home'
-import Navbar from '../components/Navbar'
+import components from './index'
 
 import SectionWipes2 from '../components/SectionWipes2'
 
@@ -10,6 +10,7 @@ import SectionWipes2 from '../components/SectionWipes2'
 import text from '../text'
 import { I18NProvider } from './i18ncontext'
 
+const { Navbar } = components
 
 function App() {
     const [language, setLanguage] = useState(localStorage.getItem('lang') || 'CAT')
