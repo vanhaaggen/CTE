@@ -5,15 +5,7 @@ import components from '../components'
 
 import './styles/Home.sass'
 
-import Header from '../components/Header'
-import Schedule from '../components/Schedule'
-import Contact from '../components/Contact'
-
-
-
-const { WhoAreWe, WhatWeDo } = components
-
-
+const { Header, WhoAreWe, WhatWeDo, Schedule, Contact } = components
 
 
 export default function Home() {

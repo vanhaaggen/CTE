@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Animated } from 'react-animated-css'
 
-import '../styles/WhoAreWe.sass'
+
+import './style.sass'
 
 export default function (props) {
     const [widthState, setWidthState] = useState({ width: "10%" })
@@ -19,7 +19,7 @@ export default function (props) {
         <div style={{
             backgroundColor: "#fc4444",
             width: widthState.width,
-            transition: "width 2s"
+            transition: "width 2s linear"
         }}>
             <p className="who-title section-title-wrapper">{text[`${lang}`].navbar.who}</p>
         </div>

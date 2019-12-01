@@ -5,7 +5,7 @@ import { Animated } from 'react-animated-css'
 import isInViewPort from '../../utils/isInViewport'
 import Content from './content'
 
-import '../styles/WhoAreWe.sass'
+import './style.sass'
 
 
 

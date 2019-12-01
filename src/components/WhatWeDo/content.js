@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import '../styles/WhatWeDo.sass'
+import './style.sass'
 
 export default function (props) {
     const [widthState, setWidthState] = useState({ width: "10%" })
@@ -18,7 +18,7 @@ export default function (props) {
         <div style={{
             backgroundColor: "#4577f7",
             width: widthState.width,
-            transition: "width 2s"
+            transition: "width 1s linear"
         }}>
             <p className="what-title section-title-wrapper">{text[`${lang}`].navbar.what}</p>
         </div>

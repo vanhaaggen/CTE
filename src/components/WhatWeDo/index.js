@@ -4,7 +4,7 @@ import { Animated } from 'react-animated-css'
 import isInViewPort from '../../utils/isInViewport'
 import Content from './content'
 
-import '../styles/WhatWeDo.sass'
+import './style.sass'
 
 
 export default function (props) {
