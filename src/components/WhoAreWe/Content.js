@@ -19,7 +19,7 @@ export default function (props) {
         <div style={{
             backgroundColor: "#fc4444",
             width: widthState.width,
-            transition: "width 2s linear"
+            transition: "width 1s linear"
         }}>
             <p className="who-title section-title-wrapper">{text[`${lang}`].navbar.who}</p>
         </div>
