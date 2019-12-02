@@ -1,56 +1,35 @@
-import React, { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom'
-import { I18NConsumer } from '../i18ncontext'
-import { Animated } from 'react-animated-css'
-import isInViewPort from '../../utils/isInViewport'
-import Content from './content'
+import React, { useState, useEffect } from 'react'
+
 
 import './style.sass'
 
-
-
 export default function (props) {
-    const [isInView, setIsInView] = useState(false)
-
-
+    const [widthState, setWidthState] = useState({ width: "10%" })
+    const { text, lang } = props
 
     useEffect(() => {
-        function watchScroll() {
-            window.addEventListener('scroll', function (event) {
-                if (isInViewPort('#schedule')) setIsInView(true)
-            })
-        }
+        setWidthState({ width: "100%" })
+    }, [])
 
-        watchScroll()
-        //remove listener (like componentWillUnmount)
-        return () => {
-            window.removeEventListener("scroll", function (event) {
-                isInViewPort('#schedule')
-            })
-        }
-    })
+    return <>
+
+        <div style={{
+            backgroundColor: "#fcd251",
+            width: widthState.width,
+            transition: "width 1s linear"
+        }}>
+            <p className="schedule-title section-title-wrapper">{text[`${lang}`].navbar.schedule}</p>
+        </div>
 
 
-    return (
-        <>
+        <div>
+            <article>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit euismod proin, mauris himenaeos praesent posuere vehicula nascetur ante interdum velit pellentesque, neque nam nulla sodales sed felis cum molestie. Metus ullamcorper tortor magna commodo mauris enim suscipit consequat, bibendum nec nascetur lectus praesent facilisi. Montes ornare ad orci lobortis bibendum, neque diam eget scelerisque cursus condimentum, donec semper mauris accumsan.</p>
+            </article>
+        </div>
 
-            <I18NConsumer>
-                {({ text, lang }) => (
-                    <div className="container-schedule" id="schedule">
-                        {isInView && <>
-                            <Animated
-                                animationIn="fadeIn"
-                                animationInDelay={300}
-                                isVisible={true}>
-                                <Content text={text} lang={lang} />
-                            </Animated>
-                        </>}
-                    </div>
 
-                )}
-            </I18NConsumer>
-        </>
-    )
 
+
+    </>
 }
-

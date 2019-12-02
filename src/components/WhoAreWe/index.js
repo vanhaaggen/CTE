@@ -1,56 +1,52 @@
-import React, { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom'
-import { I18NConsumer } from '../i18ncontext'
-import { Animated } from 'react-animated-css'
-import isInViewPort from '../../utils/isInViewport'
-import Content from './content'
+import React, { useState, useEffect } from 'react'
 
 import './style.sass'
-
-
+import coach1 from '../../images/coach1.png'
+import coach2 from '../../images/coach2.png'
 
 export default function (props) {
-    const [isInView, setIsInView] = useState(false)
-
-
+    const [widthState, setWidthState] = useState({ width: "10%" })
+    const { text, lang } = props
 
     useEffect(() => {
-        function watchScroll() {
-            window.addEventListener('scroll', function (event) {
-                if (isInViewPort('#who')) setIsInView(true)
-            })
-        }
-
-        watchScroll()
-        //remove listener (like componentWillUnmount)
-        return () => {
-            window.removeEventListener("scroll", function (event) {
-                isInViewPort('#who')
-            })
-        }
-    })
-
+        setWidthState({ width: "100%" })
+    }, [])
 
     return (
+
         <>
+            <div style={{
+                backgroundColor: "#fc4444",
+                width: widthState.width,
+                transition: "width 1s linear"
+            }}>
+                <p className="who-title section-title-wrapper">{text[`${lang}`].navbar.who}</p>
+            </div>
 
-            <I18NConsumer>
-                {({ text, lang }) => (
-                    <div className="container-who" id="who">
-                        {isInView && <>
-                            <Animated
-                                animationIn="fadeIn"
-                                animationInDelay={300}
-                                isVisible={true}>
-                                <Content text={text} lang={lang} />
-                            </Animated>
-                        </>}
+
+            <div className="who-container">
+                <article className="who-container__article-intro">
+                    <p className='section-intro'>{text[`${lang}`].sectionWho.intro}</p>
+                </article>
+                <article className="pictures-container">
+                    <div className="pic-wrapper">
+                        <div className="who-pictures">
+                            <img className="coach1-pic" src={coach1} alt="coach picture" />
+                        </div>
                     </div>
+                    <div className="pic-wrapper">
+                        <div className="who-pictures">
+                            <img className="coach2-pic" src={coach2} alt="coach picture" />
+                        </div>
+                    </div>
+                </article>
+            </div>
 
-                )}
-            </I18NConsumer>
         </>
+
+
+
+
+
     )
-
 }
-
