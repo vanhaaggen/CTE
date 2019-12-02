@@ -31,12 +31,12 @@ export default function (props) {
                 <article className="pictures-container">
                     <div className="pic-wrapper">
                         <div className="who-pictures">
-                            <img className="coach1-pic" src={coach1} alt="coach picture" />
+                            <img className="coach1-pic" src={coach1} alt="coach" />
                         </div>
                     </div>
                     <div className="pic-wrapper">
                         <div className="who-pictures">
-                            <img className="coach2-pic" src={coach2} alt="coach picture" />
+                            <img className="coach2-pic" src={coach2} alt="coach" />
                         </div>
                     </div>
                 </article>
