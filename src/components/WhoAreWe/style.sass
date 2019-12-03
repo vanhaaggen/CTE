@@ -1,3 +1,10 @@
+%coach
+     width: 45%
+     transition: .5s ease
+     background-color: rgba(255, 255, 255, 0.6)
+     border-radius: 50%
+     
+     
 .who-title
      font-size: 2rem
      font-weight: 700
@@ -6,11 +13,14 @@
 .who-container
      margin: 1rem 2rem
 
-     &__article-intro
-          margin: 0 3rem
-          padding: 0.3rem 1rem
-          background-color: #f5f5f5
-          border-radius: 10px
+     &___article-intro
+          margin: 0 3rem 1rem
+          padding: 0.3rem 2rem
+          border-radius: 5px
+          font-size: 1.2rem
+          text-align: justify
+
+                     
 
 .pictures-container
      display: flex
@@ -21,16 +31,33 @@
      width: 100%
 
 .who-pictures
+     position: relative
      display: flex
      justify-content: center
 
 
-.coach1-pic
-     width: 45%
-     transition: width .5s ease
+.overlay 
+     display: flex
+     align-items: flex-end
+     position: absolute
+     height: 100%
+     border-radius: 50%
+     opacity: 0
+     transition: 0.5s ease
+     
+.text-pic
+     font-size: 1.5rem
+     font-weight: 700
+     color: #f5f5f5
 
-.coach1-pic:hover
+.coach1-pic
+     @extend %coach
+
+.who-pictures:hover .coach1-pic 
      width: 50%
+
+.who-pictures:hover .overlay
+     opacity: 1
 
 .coach2-pic
      width: 45%
@@ -39,9 +66,10 @@
      border-radius: 50%
 
 
-.coach2-pic:hover
+.who-pictures:hover .coach2-pic 
      width: 50%
-    
+     
+
 
 
 

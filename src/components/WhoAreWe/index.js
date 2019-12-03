@@ -25,19 +25,33 @@ export default function (props) {
 
 
             <div className="who-container">
-                <article className="who-container__article-intro">
-                    <p className='section-intro'>{text[`${lang}`].sectionWho.intro}</p>
+                <article className="who-container___article-intro">
+                    <p className='who-container___article-intro_par1'>{text[`${lang}`].sectionWho.par1}</p>
+                    <p className='who-container___article-intro_par2'>{text[`${lang}`].sectionWho.par2}</p>
                 </article>
+
                 <article className="pictures-container">
+
                     <div className="pic-wrapper">
+
                         <div className="who-pictures">
                             <img className="coach1-pic" src={coach1} alt="coach" />
+                            <div className="overlay">
+                                <p className="text-pic">Cristhian</p>
+                            </div>
                         </div>
+
                     </div>
+
                     <div className="pic-wrapper">
+
                         <div className="who-pictures">
                             <img className="coach2-pic" src={coach2} alt="coach" />
+                            <div className="overlay">
+                                <p className="text-pic">Gerard</p>
+                            </div>
                         </div>
+
                     </div>
                 </article>
             </div>

@@ -5,16 +5,10 @@ import { I18NConsumer } from '../i18ncontext'
 
 import './style.sass'
 
+import stripe from '../../images/stripe-white.png'
 import logo from '../../images'
 const [back, barbell, circle, laurel, kettlebell] = logo
 
-
-
-const BlankStripe = () => {
-    return <>
-        <div className="stripe"></div>
-    </>
-}
 
 const Header = () => {
     return <>
@@ -73,9 +67,14 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+
         </header>
 
-        <BlankStripe />
+        <div className="stripe">
+            <img className='image-stripe' src={stripe} alt="decoration" />
+            <p className="text-stripe">~ VINCIT QUI SE VINCIT ~</p>
+        </div>
+
 
     </>
 }
