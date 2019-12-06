@@ -1,5 +1,5 @@
 %coach
-     width: 45%
+     width: 12rem
      transition: .5s ease
      background-color: rgba(255, 255, 255, 0.6)
      border-radius: 50%
@@ -8,9 +8,10 @@
 .who-title
      font-size: 2rem
      font-weight: 700
-     color: white
+     color: black
 
 .who-container
+     display: flex
      margin: 1rem 2rem
 
      &___article-intro
@@ -24,6 +25,7 @@
 
 .pictures-container
      display: flex
+     flex-direction: column
      width: 100%
 
 .pic-wrapper
@@ -34,6 +36,7 @@
      position: relative
      display: flex
      justify-content: center
+     margin:  .5rem 0
 
 
 .overlay 
@@ -41,7 +44,6 @@
      align-items: flex-end
      position: absolute
      height: 100%
-     border-radius: 50%
      opacity: 0
      transition: 0.5s ease
      
@@ -54,20 +56,17 @@
      @extend %coach
 
 .who-pictures:hover .coach1-pic 
-     width: 50%
+     width: 80%
 
 .who-pictures:hover .overlay
      opacity: 1
 
 .coach2-pic
-     width: 45%
-     transition: .5s ease
-     background-color: rgba(255, 255, 255, 0.6)
-     border-radius: 50%
+    @extend %coach
 
 
 .who-pictures:hover .coach2-pic 
-     width: 50%
+     width: 80%
      
 
 

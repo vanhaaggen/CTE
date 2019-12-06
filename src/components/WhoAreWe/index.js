@@ -16,9 +16,9 @@ export default function (props) {
 
         <>
             <div style={{
-                backgroundColor: "#fc4444",
+                borderBottom: "10px solid #fc4444",
                 width: widthState.width,
-                transition: "width 1s linear"
+                transition: "width 2s linear"
             }}>
                 <p className="who-title section-title-wrapper">{text[`${lang}`].navbar.who}</p>
             </div>
@@ -31,27 +31,17 @@ export default function (props) {
                 </article>
 
                 <article className="pictures-container">
-
-                    <div className="pic-wrapper">
-
-                        <div className="who-pictures">
-                            <img className="coach1-pic" src={coach1} alt="coach" />
-                            <div className="overlay">
-                                <p className="text-pic">Cristhian</p>
-                            </div>
+                    <div className="who-pictures">
+                        <img className="coach1-pic" src={coach1} alt="coach" />
+                        <div className="overlay">
+                            <p className="text-pic">Cristhian</p>
                         </div>
-
                     </div>
-
-                    <div className="pic-wrapper">
-
-                        <div className="who-pictures">
-                            <img className="coach2-pic" src={coach2} alt="coach" />
-                            <div className="overlay">
-                                <p className="text-pic">Gerard</p>
-                            </div>
+                    <div className="who-pictures">
+                        <img className="coach2-pic" src={coach2} alt="coach" />
+                        <div className="overlay">
+                            <p className="text-pic">Gerard</p>
                         </div>
-
                     </div>
                 </article>
             </div>
