@@ -2,10 +2,11 @@ import React from 'react'
 
 import { Animated } from 'react-animated-css'
 import { I18NConsumer } from '../i18ncontext'
+import Stripe from './Stripe'
 
 import './style.sass'
 
-import stripe from '../../images/stripe-white.png'
+
 import logo from '../../images'
 const [back, barbell, circle, laurel, kettlebell] = logo
 
@@ -70,11 +71,7 @@ const Header = () => {
 
         </header>
 
-        <div className="stripe">
-            <img className='image-stripe' src={stripe} alt="decoration" />
-            <p className="text-stripe">~ VINCIT QUI SE VINCIT ~</p>
-        </div>
-
+        <Stripe />
 
     </>
 }

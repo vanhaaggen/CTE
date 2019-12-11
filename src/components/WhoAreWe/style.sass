@@ -1,76 +1,31 @@
-%coach
-     width: 12rem
-     transition: .5s ease
-     background-color: rgba(255, 255, 255, 0.6)
-     border-radius: 50%
-     
-     
-.who-title
-     font-size: 2rem
-     font-weight: 700
-     color: black
-
-.who-container
+.who-wrapper
      display: flex
-     margin: 1rem 2rem
+     justify-content: flex-start
+     padding: 1rem 0 0 4rem
+     width: 100%
+        
 
-     &___article-intro
-          margin: 0 3rem 1rem
-          padding: 0.3rem 2rem
-          border-radius: 5px
-          font-size: 1.2rem
-          text-align: justify
-
-                     
-
-.pictures-container
+.who-description-wrapper
      display: flex
      flex-direction: column
-     width: 100%
+     width: 60%
 
-.pic-wrapper
-     margin-top: 1rem
-     width: 100%
-
-.who-pictures
-     position: relative
-     display: flex
-     justify-content: center
-     margin:  .5rem 0
-
-
-.overlay 
-     display: flex
-     align-items: flex-end
-     position: absolute
+.who-description
+     width: 80%
      height: 100%
-     opacity: 0
-     transition: 0.5s ease
+     text-align: justify
+     font-size: 1.3rem
+     background-color: rgba(255, 255, 255, 0.5)
      
-.text-pic
-     font-size: 1.5rem
-     font-weight: 700
-     color: #f5f5f5
-
-.coach1-pic
-     @extend %coach
-
-.who-pictures:hover .coach1-pic 
-     width: 80%
-
-.who-pictures:hover .overlay
-     opacity: 1
-
-.coach2-pic
-    @extend %coach
-
-
-.who-pictures:hover .coach2-pic 
-     width: 80%
-     
+.right
+    width: 40%
+    height: 40ex
+    float: right
+    shape-outside: polygon(100% 0, 0 100%, 100% 100%)
 
 
 
 
-     
+
+    
 

@@ -1,17 +1,23 @@
 %container-light
-    width: 100vw
+    width: 100%    
     min-height: 100vh
-    
     
 %container-dark
     width: 100vw
-    min-height: 100vh
+    height: 100vh
     background-color: #444040
     
+.who-background
+    background: linear-gradient(135deg, #ffffff 50%,#4577f6 50%)
+
     
 .container-who 
     @extend %container-light
-    background-color: white
+    background-image: url('../images/coaches.png')
+    background-size: 100%
+    background-position: 0 100%
+    background-repeat: no-repeat
+
 
 .container-what
     @extend %container-dark
@@ -25,3 +31,5 @@
 
 .animated
     height: 100%
+    
+
