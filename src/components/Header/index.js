@@ -2,19 +2,14 @@ import React from 'react'
 
 import { Animated } from 'react-animated-css'
 import { I18NConsumer } from '../i18ncontext'
+import Stripe from './Stripe'
 
 import './style.sass'
+
 
 import logo from '../../images'
 const [back, barbell, circle, laurel, kettlebell] = logo
 
-
-
-const BlankStripe = () => {
-    return <>
-        <div className="stripe"></div>
-    </>
-}
 
 const Header = () => {
     return <>
@@ -73,9 +68,10 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+
         </header>
 
-        <BlankStripe />
+        <Stripe />
 
     </>
 }

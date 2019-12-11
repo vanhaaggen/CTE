@@ -1,46 +1,43 @@
 import React, { useState, useEffect } from 'react'
 
 import './style.sass'
-import coach1 from '../../images/coach1.png'
-import coach2 from '../../images/coach2.png'
+import coach1 from '../../images/larrosa3.png'
+import coach2 from '../../images/devesa3.png'
 
 export default function (props) {
-    const [widthState, setWidthState] = useState({ width: "10%" })
+    const [widthState, setWidthState] = useState({ fontSize: "2rem" })
     const { text, lang } = props
 
     useEffect(() => {
-        setWidthState({ width: "100%" })
+        setWidthState({ fontSize: "6rem" })
     }, [])
 
     return (
 
         <>
+
             <div style={{
-                backgroundColor: "#fc4444",
-                width: widthState.width,
-                transition: "width 1s linear"
+                fontSize: widthState.fontSize,
+                color: "#f5f5f5",
+                fontWeight: "800",
+                transition: "1s linear",
+                paddingLeft: "4rem"
             }}>
-                <p className="who-title section-title-wrapper">{text[`${lang}`].navbar.who}</p>
+                <p className="who-title section-title-wrapper">{text[`${lang}`].navbar.who.toUpperCase()}</p>
             </div>
 
+            <div className="who-wrapper">
 
-            <div className="who-container">
-                <article className="who-container__article-intro">
-                    <p className='section-intro'>{text[`${lang}`].sectionWho.intro}</p>
-                </article>
-                <article className="pictures-container">
-                    <div className="pic-wrapper">
-                        <div className="who-pictures">
-                            <img className="coach1-pic" src={coach1} alt="coach" />
-                        </div>
-                    </div>
-                    <div className="pic-wrapper">
-                        <div className="who-pictures">
-                            <img className="coach2-pic" src={coach2} alt="coach" />
-                        </div>
+                <article className="who-description-wrapper">
+                    <div className="who-description">
+                        <div className="right"></div>
+                        <p className='para1'>{text[`${lang}`].sectionWho.par1}</p>
+                        <p className='para2'>{text[`${lang}`].sectionWho.par2}</p>
                     </div>
                 </article>
             </div>
+
+
 
         </>
 

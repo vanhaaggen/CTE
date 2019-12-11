@@ -31,15 +31,17 @@ export default function SectionLayout(props) {
 
     return (
         <>
-            <div className={`container-${section}`} id={section}>
-                {isInView && <>
-                    <Animated
-                        animationIn="fadeIn"
-                        animationInDelay={300}
-                        isVisible={true}>
-                        {content}
-                    </Animated>
-                </>}
+            <div className={`${section}-background`}>
+                <div className={`container-${section}`} id={section}>
+                    {isInView && <>
+                        <Animated
+                            animationIn="fadeIn"
+                            animationInDelay={300}
+                            isVisible={true}>
+                            {content}
+                        </Animated>
+                    </>}
+                </div>
             </div>
         </>
     )
