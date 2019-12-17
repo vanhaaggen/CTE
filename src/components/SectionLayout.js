@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Animated } from 'react-animated-css'
 import isInViewPort from '../utils/isInViewport'
-
-
 import './SectionStyle.sass'
-
 
 
 export default function SectionLayout(props) {

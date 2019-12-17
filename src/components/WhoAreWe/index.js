@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
 import './style.sass'
-import coach1 from '../../images/larrosa3.png'
-import coach2 from '../../images/devesa3.png'
+
 
 export default function (props) {
     const [widthState, setWidthState] = useState({ fontSize: "2rem" })
@@ -18,7 +16,7 @@ export default function (props) {
 
             <div style={{
                 fontSize: widthState.fontSize,
-                color: "#f5f5f5",
+                color: "#fc4545",
                 fontWeight: "800",
                 transition: "1s linear",
                 paddingLeft: "4rem"

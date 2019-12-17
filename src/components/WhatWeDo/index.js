@@ -1,34 +1,71 @@
 import React, { useState, useEffect } from 'react'
-
+import logic from '../../logic'
 import './style.sass'
 
 export default function (props) {
-    const [widthState, setWidthState] = useState({ width: "10%" })
+    const [widthState, setWidthState] = useState({ fontSize: "2rem" })
     const { text, lang } = props
+    // const [nasaPic, setNasaPic] = useState(undefined)
 
     useEffect(() => {
-        setWidthState({ width: "100%" })
+        setWidthState({ fontSize: "6rem" })
     }, [])
 
-    return <>
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const nasaData = await logic.nasaApi()
+
+    //             setNasaPic(nasaData)
+
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //     })()
+    // }, [])
+
+
+    return (<>
         <div>
             <div style={{
-                backgroundColor: "#4577f7",
-                width: widthState.width,
-                transition: "width 1s linear"
+                fontSize: widthState.fontSize,
+                color: "#4577f6",
+                fontWeight: "800",
+                transition: "1s linear",
+                paddingRight: "4rem"
             }}>
-                <p className="what-title section-title-wrapper">{text[`${lang}`].navbar.what}</p>
+                <p className=" what-title section-title-wrapper">{text[`${lang}`].navbar.what.toUpperCase()}</p>
             </div>
 
-            <div>
-                <article>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit euismod proin, mauris himenaeos praesent posuere vehicula nascetur ante interdum velit pellentesque, neque nam nulla sodales sed felis cum molestie. Metus ullamcorper tortor magna commodo mauris enim suscipit consequat, bibendum nec nascetur lectus praesent facilisi. Montes ornare ad orci lobortis bibendum, neque diam eget scelerisque cursus condimentum, donec semper mauris accumsan.</p>
+
+            <section className="what-content">
+                <article className="what-description-wrapper">
+
+                    <div className="what-first-para-wrap whatContent">
+                        <p className='what-para'>{text[`${lang}`].sectionWhat.par1}</p>
+                    </div>
+
+                    <div className="what-second-para-wrap whatContent">
+                        <p className='what-para'>{text[`${lang}`].sectionWhat.par2}</p>
+                    </div>
+
+                    <div className="what-third-para-wrap whatContent">
+                        <p className='what-para'>{text[`${lang}`].sectionWhat.par3}</p>
+                    </div>
+
                 </article>
-            </div>
+            </section>
+
         </div>
 
-
-
-
-    </>
+    </>)
 }
+{/* <div className="nasa-container">
+                {nasaPic && nasaPic.photos.map((pic, i) => {
+                    return <>
+                        <div className="div" key={`nasa-${i}`}>
+                            <img className="nasa-img" src={pic.img_src} alt="mars rove" />
+                        </div>
+                    </>
+                })}
+            </div> */}
