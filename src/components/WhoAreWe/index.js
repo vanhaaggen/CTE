@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './style.sass'
 
+import coach1 from '../../images/coach1.png'
+import coach2 from '../../images/coach2.png'
+
 
 export default function (props) {
     const [widthState, setWidthState] = useState({ fontSize: "2rem" })
@@ -28,9 +31,17 @@ export default function (props) {
 
                 <article className="who-description-wrapper">
                     <div className="who-description">
-                        <div className="right"></div>
                         <p className='para1'>{text[`${lang}`].sectionWho.par1}</p>
                         <p className='para2'>{text[`${lang}`].sectionWho.par2}</p>
+                    </div>
+                    <p className="coach-title">{text[`${lang}`].sectionWho.coachTitle}</p>
+                    <div className="who-coach-wrapper">
+                        <div className="coach-wrapper">
+                            <img className="coach-wrapper--style" src={coach1} alt="coach" />
+                        </div>
+                        <div className="coach-wrapper">
+                            <img className="coach-wrapper--style" src={coach2} alt="coach" />
+                        </div>
                     </div>
                 </article>
             </div>

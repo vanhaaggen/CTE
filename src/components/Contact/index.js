@@ -4,11 +4,11 @@ import React, { useState, useEffect } from 'react'
 import './style.sass'
 
 export default function (props) {
-    const [widthState, setWidthState] = useState({ width: "10%" })
+    const [widthState, setWidthState] = useState({ fontSize: "2rem" })
     const { text, lang } = props
 
     useEffect(() => {
-        setWidthState({ width: "100%" })
+        setWidthState({ fontSize: "6rem" })
     }, [])
 
 
@@ -16,19 +16,23 @@ export default function (props) {
 
         <>
 
-            <div style={{
-                backgroundColor: "#6bdd52",
-                width: widthState.width,
-                transition: "width 1s linear"
-            }}>
-                <p className="contact-title section-title-wrapper">{text[`${lang}`].navbar.contact}</p>
-            </div>
+            <div className="contact-container">
+                <div style={{
+                    fontSize: widthState.fontSize,
+                    color: "#4577f6",
+                    fontWeight: "800",
+                    transition: "1s linear",
+                    paddingRight: "4rem"
+                }}>
+                    <p className=" contact-title section-title-wrapper">{text[`${lang}`].navbar.contact.toUpperCase()}</p>
+                </div>
+                <section className="contact-content">
+                    <article className="contact-description-wrapper">
 
-
-            <div>
-                <article>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit euismod proin, mauris himenaeos praesent posuere vehicula nascetur ante interdum velit pellentesque, neque nam nulla sodales sed felis cum molestie. Metus ullamcorper tortor magna commodo mauris enim suscipit consequat, bibendum nec nascetur lectus praesent facilisi. Montes ornare ad orci lobortis bibendum, neque diam eget scelerisque cursus condimentum, donec semper mauris accumsan.</p>
+                        Hello
                 </article>
+                </section>
+
             </div>
         </>
     )

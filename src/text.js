@@ -6,6 +6,11 @@ const text = {
         brand1: 'Crosstraining',
         brand2: 'Empordà'
     },
+    footer: {
+        brand1: 'crosstraining',
+        brand2: 'empordà'
+    },
+
     EN: {
         navbar: {
             who: "Who we are",
@@ -24,7 +29,9 @@ const text = {
         sectionWho: {
             par1: "We are a Crosstraining gym located on Calle dels Arboços 4 in Vulpellac. We will help you with our classes to unlock your full potential through high intensity interval (HIIT) and functional training adapted to your sports level. Always paying close attention to the correct implementation of the movements",
 
-            par2: "Whether you're just starting or been around for a while, with us you will always have a great time reaching your limit."
+            par2: "Whether you're just starting or been around for a while, with us you will always have a great time reaching your limit.",
+
+            coachTitle: "The Coaches"
         }
 
     },
@@ -46,14 +53,16 @@ const text = {
 
         ],
         sectionWho: {
-            par1: "Somos un gimnasio de Crosstraining situado en la calle dels Arboços 4 de Vulpellac. Te ayudaremos con nuestras clases dirigidas a liberar tu máximo potencial mediante entrenos intervalicos de alta intensida (HIIT) y funcionales adaptados a tu nivel deportivo. Siempre prestando mucha atención a la correcta implementación de los movimientos ",
+            par1: "Somos un gimnasio de Crosstraining situado en la calle dels Arboços 4 de Vulpellac. Te ayudaremos con nuestras clases dirigidas a liberar tu máximo potencial mediante entrenos intervalicos de alta intensidad (HIIT) y funcionales adaptados a tu nivel deportivo. Siempre prestando mucha atención a la correcta implementación de los movimientos ",
 
-            par2: "Sea acabando de empezar o llevando ya un tiempo, con nosotros siempre te lo pasaras a lo grande llegando a tu limite."
+            par2: "Sea acabando de empezar o llevando ya un tiempo, con nosotros siempre te lo pasaras a lo grande llegando a tu limite.",
+
+            coachTitle: "Los Coaches"
         },
         sectionWhat: {
-            par1: <p>En <b>Crosstraining Empordà</b> te ofrecemos entrenos funcionales o HIITs para  grandes y pequeños, como también clases de Jiu Jitsu.</p>,
-            par2: <p>Los <b>HIIT</b> son entrenamientos intervalicos de alta intensidad. Es una técnica de entreno rápida, intensa y que et permite quemar calorías como ninguna otra.</p>,
-            par3: <p>Si tienes curiosidad, ven a probar una clase.</p>
+            par1: <p className="what-para">En <b>Crosstraining Empordà</b> te ofrecemos entrenos funcionales o HIITs para  grandes y pequeños, como también clases de Jiu Jitsu.</p>,
+            par2: <p className="what-para">Los <b>HIIT</b> son entrenamientos intervalicos de alta intensidad. Es una técnica de entreno rápida, intensa y que et permite quemar calorías como ninguna otra.</p>,
+            par3: <p className="what-para">Si tienes curiosidad, ven a probar una clase.</p>
         }
 
     },
@@ -76,12 +85,14 @@ const text = {
         sectionWho: {
             par1: "Som un gimnàs de Crosstraining situat al carrer dels Arboços 4 a Vulpellac. T'ajudarem en les nostres classes dirigides a alliberar el teu màxim potencial mitjançant entrenaments intervàlics d'alta intensitat (HIIT) i funcionals adaptats al teu nivell esportiu. Sempre prestant molta atenció al correcte desenvolupament del moviment.",
 
-            par2: "Sia acabant de començar o portant temps, amb nosaltres sempre t'ho passaràs en gran arribant al teu límit."
+            par2: "Sia acabant de començar o portant temps, amb nosaltres sempre t'ho passaràs en gran arribant al teu límit.",
+
+            coachTitle: "Els Coaches"
         },
         sectionWhat: {
-            par1: <p>A <b>Crosstraining Empordà</b> t'oferim entrenaments funcionals o HIITS, per a grans i petits, com tambe classes de Jiu Jitsu.</p>,
-            par2: <p>Els <b>HIIT</b> son entrenaments intervalics d'alta intensitat. És una tecnica d'entrenament ràpida, intensa i que et permet cremar calories com ninguna altre.</p>,
-            par3: <p>Si tens curiositat, vine a provar una classe.</p>
+            par1: <p className="what-para">A <b>Crosstraining Empordà</b> t'oferim entrenaments funcionals o HIITS, per a grans i petits, com tambe classes de Jiu Jitsu.</p>,
+            par2: <p className="what-para">Els <b>HIIT</b> son entrenaments intervalics d'alta intensitat. És una tecnica d'entrenament ràpida, intensa i que et permet cremar calories com ninguna altre.</p>,
+            par3: <p className="what-para">Si tens curiositat, vine a provar una classe.</p>
         }
     }
 }

@@ -4,21 +4,23 @@ import React, { useState, useEffect } from 'react'
 import './style.sass'
 
 export default function (props) {
-    const [widthState, setWidthState] = useState({ width: "10%" })
+    const [widthState, setWidthState] = useState({ fontSize: "2rem" })
     const { text, lang } = props
 
     useEffect(() => {
-        setWidthState({ width: "100%" })
+        setWidthState({ fontSize: "6rem" })
     }, [])
 
     return <>
 
         <div style={{
-            backgroundColor: "#fcd251",
-            width: widthState.width,
-            transition: "width 1s linear"
+            fontSize: widthState.fontSize,
+            color: "#52f9b1",
+            fontWeight: "800",
+            transition: "1s linear",
+            paddingLeft: "4rem"
         }}>
-            <p className="schedule-title section-title-wrapper">{text[`${lang}`].navbar.schedule}</p>
+            <p className="schedule-title section-title-wrapper">{text[`${lang}`].navbar.schedule.toUpperCase()}</p>
         </div>
 
 

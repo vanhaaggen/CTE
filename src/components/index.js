@@ -5,6 +5,7 @@ import WhoAreWe from './WhoAreWe/index.js'
 import WhatWeDo from './WhatWeDo/index.js'
 import Schedule from './Schedule/index.js'
 import Contact from './Contact/index.js'
+import Footer from './Footer/index.js'
 
 const components = {
     Navbar,
@@ -13,6 +14,7 @@ const components = {
     WhatWeDo,
     Schedule,
     Contact,
+    Footer
 }
 
 export default components

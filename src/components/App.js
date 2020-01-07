@@ -10,7 +10,7 @@ import SectionWipes2 from '../components/SectionWipes2'
 import text from '../text'
 import { I18NProvider } from './i18ncontext'
 
-const { Navbar } = components
+const { Navbar, Footer } = components
 
 function App() {
     const [language, setLanguage] = useState(localStorage.getItem('lang') || 'CAT')
@@ -28,6 +28,7 @@ function App() {
                 <Switch>
                     <Route exact path='/' component={Home} />
                 </Switch>
+                <Footer />
 
                 {/* <SectionWipes2 /> */}
 
