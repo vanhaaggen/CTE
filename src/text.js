@@ -32,6 +32,17 @@ const text = {
             par2: "Whether you're just starting or been around for a while, with us you will always have a great time reaching your limit.",
 
             coachTitle: "The Coaches"
+        },
+        sectionContact: {
+            title1: "Can we help?",
+            title2: "Leave us a message",
+            name: "Name",
+            email: "E-mail",
+            message: "Your message here...",
+            send: "Send",
+            sending: "We are sending your message",
+            sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Thanks for contacting us ❤</p>
+                <p className="contact-p contact-sent-wrap--second">We will contact you shortly.</p></div>
         }
 
     },
@@ -63,6 +74,17 @@ const text = {
             par1: <p className="what-para">En <b>Crosstraining Empordà</b> te ofrecemos entrenos funcionales o HIITs para  grandes y pequeños, como también clases de Jiu Jitsu.</p>,
             par2: <p className="what-para">Los <b>HIIT</b> son entrenamientos intervalicos de alta intensidad. Es una técnica de entreno rápida, intensa y que et permite quemar calorías como ninguna otra.</p>,
             par3: <p className="what-para">Si tienes curiosidad, ven a probar una clase.</p>
+        },
+        sectionContact: {
+            title1: "Te podemos ayudar ?",
+            title2: "Dejanos un mensaje",
+            name: "Nombre",
+            email: "E-mail",
+            message: "Tu mensaje aqui...",
+            send: "Enviar",
+            sending: "Estamos enviando tu mensaje",
+            sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Gracies por contactar con nosotros ❤</p>
+                <p className="contact-p contact-sent-wrap--second">En breve nos pondremos en contacto contigo.</p></div>
         }
 
     },
@@ -93,6 +115,17 @@ const text = {
             par1: <p className="what-para">A <b>Crosstraining Empordà</b> t'oferim entrenaments funcionals o HIITS, per a grans i petits, com tambe classes de Jiu Jitsu.</p>,
             par2: <p className="what-para">Els <b>HIIT</b> son entrenaments intervalics d'alta intensitat. És una tecnica d'entrenament ràpida, intensa i que et permet cremar calories com ninguna altre.</p>,
             par3: <p className="what-para">Si tens curiositat, vine a provar una classe.</p>
+        },
+        sectionContact: {
+            title1: "Et podem ajudar?",
+            title2: "deixa'ns un missatge",
+            name: "Nom",
+            email: "E-mail",
+            message: "El teu missatge aqui...",
+            send: "Enviar",
+            sending: "Estem enviant el teu missatge",
+            sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Gràcies per contactar amb nosaltres ❤</p>
+                <p className="contact-p contact-sent-wrap--second">En breu ens posarem en contacte amb tu.</p></div>
         }
     }
 }
