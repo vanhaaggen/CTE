@@ -6,10 +6,6 @@ const text = {
         brand1: 'Crosstraining',
         brand2: 'Empordà'
     },
-    footer: {
-        brand1: 'crosstraining',
-        brand2: 'empordà'
-    },
 
     EN: {
         navbar: {
@@ -43,7 +39,10 @@ const text = {
             sending: "We are sending your message",
             sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Thanks for contacting us ❤</p>
                 <p className="contact-p contact-sent-wrap--second">We will contact you shortly.</p></div>
-        }
+        },
+        footer: {
+            follow: "follow us:"
+        },
 
     },
 
@@ -85,7 +84,10 @@ const text = {
             sending: "Estamos enviando tu mensaje",
             sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Gracies por contactar con nosotros ❤</p>
                 <p className="contact-p contact-sent-wrap--second">En breve nos pondremos en contacto contigo.</p></div>
-        }
+        },
+        footer: {
+            follow: "Siguenos:"
+        },
 
     },
 
@@ -126,7 +128,10 @@ const text = {
             sending: "Estem enviant el teu missatge",
             sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Gràcies per contactar amb nosaltres ❤</p>
                 <p className="contact-p contact-sent-wrap--second">En breu ens posarem en contacte amb tu.</p></div>
-        }
+        },
+        footer: {
+            follow: "Segueix-nos:"
+        },
     }
 }
 

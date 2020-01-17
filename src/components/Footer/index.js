@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
-
 import './style.sass'
 
+import whiteLogo from '../../images/logo-white.png'
 import { I18NConsumer } from '../i18ncontext'
+
+
 
 export default function Footer() {
 
@@ -13,8 +15,7 @@ export default function Footer() {
         const date = new Date()
         const year = date.getFullYear()
         return <>
-            <p className="footer-legal--text">Crosstraining Empordà, {year}</p>
-            <p>Tots els drets reservats</p>
+            <p className="footer-legal">Crosstraining Empordà - {year}</p>
         </>
     }
 
@@ -23,13 +24,28 @@ export default function Footer() {
         <I18NConsumer>
             {({ text, lang }) => (
                 <>
-                    <div className="footer-container">
-                        <div className="footer-container-upside">
+                    <footer className="footer-container">
 
-                            <p className="footer-name"><span className="footer-name--brand1">{text.footer.brand1.toUpperCase()}</span><span className="footer-name--brand2">{text.footer.brand2.toUpperCase()}</span></p>
+                        <div className="footer-wrapper">
 
-                            <div className="footer-right-wrapper">
-                                <p className="footer-right-text">segueix-nos:</p>
+                            <div>
+                                <div className="footer-name">
+                                    <p className="footer-name--brand1">{text.navBar.brand1.toUpperCase()}</p>
+                                    <p className="footer-name--brand2">{text.navBar.brand2.toUpperCase()}</p>
+                                </div>
+                                <div className="footer-address">
+                                    <p>Carrer dels Arboços, 4</p>
+                                    <p>1711, Vulpellac</p>
+                                    <p>+34 659 53 37 21</p>
+                                </div>
+                            </div>
+
+                            <div className="logo-wrapper">
+                                <img src={whiteLogo} alt="logo" />
+                            </div>
+
+                            <div className="footer-social">
+                                <p className="footer-right-text">{text[`${lang}`].footer.follow}</p>
                                 <div className="media-container">
                                     <a href="https://www.instagram.com/crosstrainingemporda/?hl=es"><FontAwesomeIcon className="footer-insta media" icon={faInstagram} /></a>
                                     <div className="media-separator"></div>
@@ -42,12 +58,11 @@ export default function Footer() {
                             {legal()}
                         </div>
 
-                    </div>
+                    </footer>
 
                 </>
             )}
         </I18NConsumer>
-
 
     </>
 
