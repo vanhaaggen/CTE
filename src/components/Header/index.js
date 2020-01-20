@@ -7,8 +7,8 @@ import Stripe from './Stripe'
 import './style.sass'
 
 
-import logo from '../../images'
-const [back, barbell, circle, laurel, kettlebell] = logo
+import images from '../../images'
+const { logo: [back, barbell, circle, laurel, kettlebell] } = images
 
 
 const Header = () => {

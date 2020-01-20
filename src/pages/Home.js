@@ -23,6 +23,7 @@ export default function Home(props) {
                         <Insta text={text} lang={lang} />
                         <SectionLayout section={'contact'} content={<Contact text={text} lang={lang} />} />
                     </div>
+
                 )}
             </I18NConsumer>
         </>
