@@ -2,19 +2,41 @@
     position: fixed
     top: 0
     left: 0
-    width: 100%
-    height: 100%
+    width: 100vw
+    height: 100vh
     background: rgba(0, 0, 0, 0.8)
     z-index: 100000000
 
     &__main 
+        display: flex
+        flex-direction: column
         position: fixed
-        width: auto
-        height: auto
+        height: 70%
         top: 50%
         left: 50%
         transform: translate(-50%,-50%)
   
+.control-arrow
+    display: flex
+    justify-content: center
+    margin: 1rem 0
+    font-size: 2rem 
+    color: white
+    cursor: pointer
+
+.left, .right
+    padding: 1rem
+
+.left:hover, .right:hover
+    color: #4ae09f
 
 
+.modal-close
+    font-size: 2rem
+    padding: 0 1rem
+    color: white
+    cursor: pointer
+
+.modal-close:hover
+    color: #4ae09f
 

@@ -7,13 +7,24 @@ import './style.sass'
 const { instalation } = images
 
 export default function (props) {
-    const [image, setImage] = useState(instalation[0])
-    const [modal, setModal] = useState(true)
+    const [modal, setModal] = useState(false)
+    const [index, setIndex] = useState()
 
+
+    const handleLeft = () => {
+        return index <= 0 ? setIndex(instalation.length - 1) : setIndex(index - 1)
+    }
+
+    const handleRight = () => {
+        return index >= instalation.length - 1 ? setIndex(0) : setIndex(index + 1)
+    }
 
     return (
         <>
-            <Modal show={modal} image={image} handleClose={() => setModal(false)} />
+            <Modal show={modal}
+                image={instalation[index]} handleClose={() => setModal(false)}
+                handleLeft={() => handleLeft()}
+                handleRight={() => handleRight()} />
 
             <section className="pic-container">
                 <p className="install-title">Les Instal·lacions</p>
@@ -27,9 +38,8 @@ export default function (props) {
                             backgroundImage: `url(${item})`
                         }} key={index}
                             onClick={() => {
-                                setImage(item)
+                                setIndex(index)
                                 setModal(true)
-
                             }}
                         ></div>
                     ))}
