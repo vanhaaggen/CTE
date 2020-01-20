@@ -12,17 +12,19 @@ export default function Modal({ handleClose, handleLeft, handleRight, show, imag
         <div className="modal" style={{
             display: `${show ? "block" : "none"}`
         }}>
-            <div className="modal__main">
-                <div className="modal__image">
-                    <img className="img-big" src={image} alt=" " />
+            <div className="modal-content">
+                <img className="img-big" src={image} alt=" " />
+            </div>
+            <FontAwesomeIcon className="modal-close" onClick={handleClose} icon={faTimes} />
+            <div className="control-box">
+                <div className="control left" onClick={handleLeft}>
+
                 </div>
-                <div className="control-arrow">
-                    <FontAwesomeIcon className="left" onClick={handleLeft} icon={faArrowCircleLeft} />
-                    <FontAwesomeIcon className="right" onClick={handleRight} icon={faArrowCircleRight} />
+                <div className="control right" onClick={handleRight} >
+
                 </div>
             </div>
 
-            <FontAwesomeIcon className="modal-close" onClick={handleClose} icon={faTimes} />
 
         </div>
 
