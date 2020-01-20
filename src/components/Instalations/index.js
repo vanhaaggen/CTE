@@ -7,7 +7,7 @@ import './style.sass'
 const { instalation } = images
 
 export default function (props) {
-    const [modal, setModal] = useState(false)
+    const [isModal, setIsModal] = useState(false)
     const [index, setIndex] = useState()
 
 
@@ -21,8 +21,8 @@ export default function (props) {
 
     return (
         <>
-            <Modal show={modal}
-                image={instalation[index]} handleClose={() => setModal(false)}
+            <Modal show={isModal}
+                image={instalation[index]} handleClose={() => setIsModal(false)}
                 handleLeft={() => handleLeft()}
                 handleRight={() => handleRight()} />
 
@@ -39,7 +39,7 @@ export default function (props) {
                         }} key={index}
                             onClick={() => {
                                 setIndex(index)
-                                setModal(true)
+                                setIsModal(true)
                             }}
                         ></div>
                     ))}
