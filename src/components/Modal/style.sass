@@ -5,30 +5,38 @@
     width: 100vw
     height: 100vh
     background: rgba(0, 0, 0, 0.8)
-    z-index: 100000000
+    z-index: 900000
 
-    &__main 
-        display: flex
-        flex-direction: column
-        position: fixed
-        height: 85%
-        top: 50%
-        left: 50%
-        transform: translate(-50%,-50%)
+   
+.modal-content
+    margin: auto
+    position: fixed
+    height: 85%
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+.modal-image
+    z-index: 1000000
+
+
+.img-big
+    height: 100%
+    -webkit-box-shadow: 6px 7px 13px 0px rgba(0,0,0,0.44)
+    -moz-box-shadow: 6px 7px 13px 0px rgba(0,0,0,0.44)
+    box-shadow: 6px 7px 13px 0px rgba(0,0,0,0.44)
   
-.control-arrow
+.control-box
+    width: 100vw
+    height: 100vh
     display: flex
     justify-content: center
-    margin: 1rem 0
     font-size: 2rem 
     color: white
     cursor: pointer
 
-.left, .right
-    padding: 1rem
-
-.left:hover, .right:hover
-    color: #4ae09f
+.control
+    width: 50vw
 
 
 .modal-close
@@ -36,6 +44,7 @@
     padding: 0 1rem
     color: white
     cursor: pointer
+    z-index: 1100000
 
 .modal-close:hover
     color: #4ae09f
