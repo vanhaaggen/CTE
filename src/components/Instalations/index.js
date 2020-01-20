@@ -7,8 +7,8 @@ import './style.sass'
 const { instalation } = images
 
 export default function (props) {
-    const [image, setImage] = useState()
-    const [modal, setModal] = useState(false)
+    const [image, setImage] = useState(instalation[0])
+    const [modal, setModal] = useState(true)
 
 
     return (
