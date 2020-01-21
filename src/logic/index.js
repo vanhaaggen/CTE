@@ -1,7 +1,7 @@
-import nasaApi from './get-nasa-api'
+import instaFetch from './get-instagram'
 import sendMail from './send-mail'
 
 export default {
-    nasaApi,
+    instaFetch,
     sendMail
 }

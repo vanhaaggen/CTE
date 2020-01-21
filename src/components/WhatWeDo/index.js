@@ -5,24 +5,11 @@ import './style.sass'
 export default function (props) {
     const [widthState, setWidthState] = useState({ fontSize: "2rem" })
     const { text, lang } = props
-    // const [nasaPic, setNasaPic] = useState(undefined)
+
 
     useEffect(() => {
         setWidthState({ fontSize: "6rem" })
     }, [])
-
-    // useEffect(() => {
-    //     (async () => {
-    //         try {
-    //             const nasaData = await logic.nasaApi()
-
-    //             setNasaPic(nasaData)
-
-    //         } catch (error) {
-    //             console.log(error)
-    //         }
-    //     })()
-    // }, [])
 
 
     return (<>
@@ -54,18 +41,10 @@ export default function (props) {
                     </div>
 
                 </article>
+
             </section>
 
         </div>
 
     </>)
 }
-{/* <div className="nasa-container">
-                {nasaPic && nasaPic.photos.map((pic, i) => {
-                    return <>
-                        <div className="div" key={`nasa-${i}`}>
-                            <img className="nasa-img" src={pic.img_src} alt="mars rove" />
-                        </div>
-                    </>
-                })}
-            </div> */}
