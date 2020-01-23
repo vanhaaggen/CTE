@@ -27,7 +27,7 @@ export default function (prop) {
                 <div className="insta-images-container">
                     {images && images.map((item, index) => (
                         <div className="insta-thumb-container" key={`insta-${index}`}>
-                            <img className="insta-thumb" src={item} alt="" />
+                            <img className="insta-thumb-container__image" src={item} alt="" />
                         </div>
                     ))}
                 </div>
