@@ -1,49 +1,145 @@
-.who-wrapper
-     display: flex
-     justify-content: flex-start
-     padding: 1rem 0 0 4rem
-     width: 100%
-        
+%who-shadow-outter
+     -webkit-box-shadow: 7px 7px 7px -5px rgba(0,0,0,0.2)
+     -moz-box-shadow: 7px 7px 7px -5px rgba(0,0,0,0.2)
+     box-shadow: 7px 7px 7px -5px rgba(0,0,0,0.2)
 
-.who-description-wrapper
+.who-container-content
      display: flex
      flex-direction: column
-     width: 60%
+     background-color: #e5e3e3
+     width: 100%
 
-.who-description
-     width: 78%
-     text-align: justify
-     font-size: 1.5rem
-
-.coach-title
-     margin-top: 3rem 
-     font-size: 2rem
-     font-weight: 600
-    
-.who-coach-wrapper
+.who-wrapp
      display: flex
-     justify-content: space-between
-     width: 80%
-     margin: 0 0 2rem 0
+     align-items: center
+     flex-direction: column
+     width: 100%
 
-.coach-wrapper
-     width: 40%
-     -webkit-filter: grayscale(100%)
-     filter: grayscale(100%)
+     &__anim
+          display: flex
+          justify-content: center
+
      
 
-     &--style
+.divisor-background
+     display: flex
+     justify-content: center
+     background-color: #f9f9f9
+     width: 90%
+     margin: 2vw 0
+     border-radius: 5px
+     -webkit-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.1)
+     -moz-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.1)
+     box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.1)
+     
+.border-left
+     border-left: 5px solid #fc4646
+     background-image: url(../../images/pattern2.png)
+     background-size: contain
+     background-position-y: 200px
+
+.border-right
+     border-right: 5px solid #fc4646
+     background-image: url(../../images/pattern2.png)
+     background-size: contain
+     
+
+.divisor-wave1
+     width: 100%
+     background-image: url(../../images/wave.svg)
+     background-size: cover
+     background-repeat: no-repeat
+
+.divisor-wave2
+     width: 100%
+     background-image: url(../../images/wave1.svg)
+     background-size: cover
+     background-repeat: no-repeat
+     background-position-x: -300px
+
+     
+.who-divisor
+     display: flex
+     justify-content: center
+     flex-direction: row
+     flex-wrap: wrap
+     padding: 1.5rem
+     width: 90%
+
+     &__coach-container
+          display: flex
+          justify-content: center
+          width: 50%
+         
+     
+     &__coach
+          @extend %who-shadow-outter
+          display: flex
+          flex-direction: column
+          background-color: white
+          width: 50%
+          padding: .5vw
+          border-radius: 5px
+          min-width: 200px
+
+
+          &--image
+               width: 100%
+               border-radius: 5px
+               object-fit: cover
+                          
+
+     &__coach-description-container
           width: 100%
-          -webkit-box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.50)
-          -moz-box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.50)
-          box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.50)
-          border-radius: 100% 
-             
+          max-height: 500px
+          text-align: center
 
-.coach-wrapper:hover
-     -webkit-filter: grayscale(0)
-     filter: grayscale(0)
+          &--line
+               margin: 2rem 0 1rem 0
+               width: 100%
+               height: 3px
+               border-top: 1.5px solid #dee2e2
 
+          &--textBig
+               padding: 0  0 1vw 0
+               font-size: 1.1rem
+               font-weight: 500
+
+          &--textSmall
+               padding: 0 1vw
+               font-weight: 400
+               
+
+     &__paragraph
+          width: 50%
+
+          &--size
+               font-size: 1.2rem
+               letter-spacing: 1.2px
+               line-height: 1.6
+          
+          &--size-par3
+               font-size: 2rem
+               padding-left: 1rem
+               letter-spacing: 1.2px
+               line-height: 1.2
+               border-left: 7px solid #fc4646
+               
+.par3
+     display: flex
+     align-items: center
+
+   
+@media (min-width: 1540px)
+     .divisor-background
+          width: 70vw
+     
+     .who-divisor__paragraph--size
+          font-size: 1.4rem
+
+@media (max-width: 900px)
+     .divisor-background
+          width: 90vw
 
 
 
