@@ -1,7 +1,18 @@
+=bckImage($property)
+    width: 100%
+    height: 100%
+    background-image: url("../../images/" + $property + ".jpg")
+    background-size: cover
+    border-radius: 5px
+    -webkit-box-shadow: 7px 7px 7px -5px rgba(0,0,0,0.5)
+    -moz-box-shadow: 7px 7px 7px -5px rgba(0,0,0,0.5)
+    box-shadow: 7px 7px 7px -5px rgba(0,0,0,0.6)
+
 $red: #fc4545
 $blue: #4577f6
 $yellow: #fcd252
 $green: #6bdc52
+
 
 .stripe
     display: flex
@@ -17,14 +28,15 @@ $green: #6bdc52
 .stripe-anim
     display: flex
     align-items: center
-    width: 15%
+    width: 20%
+    height: 200px
 
 .stripe-text
     text-align: center
     font-size: 3rem
     font-weight: bold
     font-family: 'IM Fell English', serif;
-    color: #b0b0b0
+    
 
     &_translation
         font-size: 1.5rem
@@ -32,49 +44,57 @@ $green: #6bdc52
 .stripe-badge
     display: flex
     justify-content: space-around
-    flex-wrap: wrap
     margin-top: 3rem
 
 .cont
+    display: flex
+    justify-content: center
+    align-items: center
     width: 100%
     height: 100%
-    background-color: rgba(245, 245, 245, 0.6)
-    -webkit-box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.50)
-    -moz-box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.50)
-    box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.50)
-    border-radius: 0 10px 10px 0
+    
+    
 
 .cont0
-    border-left: 5px solid $red
+    +bckImage("stripeImg1")
+
 .cont1
-    border-left: 5px solid $blue
+    +bckImage("stripeImg4")
+
 .cont2
-    border-left: 5px solid $yellow
+    +bckImage("stripeImg3")
+
 .cont3
-    border-left: 5px solid $green
+    +bckImage("stripeImg2")
 
 
 
 .stripeText
+    color: white
+    margin: 1vw
     padding: 1vw
-    font-size: 1.3rem
+    font-size: 1.5rem
+    border: 3px solid white
 
     &___box1
-        color: $red
         font-weight: 600
 
     &___box2
-        color: $blue
         font-weight: 600
 
     &___box3
-        color: $yellow
         font-weight: 600
 
     &___box4
-        color: $green
         font-weight: 600
     
 
 
 
+@media (max-width: 1540px)
+    .stripeText
+        font-size: 1.3rem
+
+@media (max-width: 900px)
+    .stripeText
+        font-size: 1.1rem

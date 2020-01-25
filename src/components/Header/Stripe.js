@@ -36,13 +36,17 @@ function Stripe() {
                             {text[`${lang}`].stripeText.map((badge, i) => {
                                 let count = i * 100
                                 return <>
+
                                     <Animated className="stripe-anim"
                                         key={`anim${i}`}
                                         animationIn="bounceInUp"
                                         animationInDelay={count}
                                         isVisible={isInView}>
-                                        <div key={`cont${i}`} className={`cont cont${i}`}>{badge}</div>
+                                        <div className="cont">
+                                            <div key={`cont${i}`} className={`cont${i}`}>{badge}</div>
+                                        </div>
                                     </Animated>
+
                                 </>
                             })}
                         </div>
