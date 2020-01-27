@@ -49,7 +49,7 @@ export default function (props) {
                             </ul>
                         </div>
                         <div className="price-table-container__content ">
-                            <h3 className="price-table-container__content title thirdTitle">Quotes Basiques</h3>
+                            <h3 className="price-table-container__content title thirdTitle">Bonos</h3>
                             <ul className="list">
                                 <li>
                                     <p>1 sessio</p>
