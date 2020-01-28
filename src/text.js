@@ -12,6 +12,7 @@ const text = {
             who: "Who we are",
             what: "What we do",
             schedule: "Schedule",
+            price: "Prices",
             contact: "Contact"
         },
         header: <p className="quote">BE YOUR<br />BETTER<br />VERSION</p>,
@@ -30,6 +31,63 @@ const text = {
             par3: "Whether you're just starting or been around for a while, with us you will always have a great time reaching your limit.",
 
             coachTitle: "The Coaches"
+        },
+        sectionPrice: {
+            child: {
+                content1: {
+                    text: "1 sessió al mes ",
+                    price: "20€",
+                },
+                content2: {
+                    text: "2 sessions al mes",
+                    price: "40€"
+                }
+            },
+            basic: {
+                content1: {
+                    text: "9 sessions al mes",
+                    price: "40€",
+                },
+                content2: {
+                    text: "9 sessions al mes (matins)",
+                    price: "30€",
+                },
+                content3: {
+                    text: "13 sessions al mes",
+                    price: "45€",
+                },
+                content4: {
+                    text: "Il·limitat",
+                    price: "58€",
+                },
+                content5: {
+                    text: "Il.limitat (matins)",
+                    price: "40€",
+                },
+            },
+            bond: {
+                content1: {
+                    text: "1 sessió",
+                    price: "8€",
+                },
+                content2: {
+                    text: "5 sessions",
+                    price: "35€",
+                },
+                content3: {
+                    text: "10 sessions",
+                    price: "60€",
+                },
+            },
+            offer: {
+                text: "Estudiants, jubilats, Agents ordre public, familiars de socis",
+                discount: "-10%"
+            },
+            info: {
+                text: "Matricula",
+                price: "40€",
+                vat: "IVA inclós en totes les quotes",
+            }
         },
         sectionContact: {
             title1: "Can we help?",
@@ -53,6 +111,7 @@ const text = {
             who: "Quien somos?",
             what: "Que hacemos?",
             schedule: 'Horario',
+            price: "Quotas",
             contact: 'Contacto'
         },
         header: <p className="quote">SE TU<br />MEJOR<br />VERSIÓN</p>,
@@ -77,6 +136,63 @@ const text = {
             par2: <p className="what-para">Los <b>HIIT</b> son entrenamientos intervalicos de alta intensidad. Es una técnica de entreno rápida, intensa y que et permite quemar calorías como ninguna otra.</p>,
             par3: <p className="what-para">Si tienes curiosidad, ven a probar una clase.</p>
         },
+        sectionPrice: {
+            child: {
+                content1: {
+                    text: "1 sesión al mes ",
+                    price: "20€",
+                },
+                content2: {
+                    text: "2 sesiones al mes ",
+                    price: "40€"
+                }
+            },
+            basic: {
+                content1: {
+                    text: "9 sesiones al mes ",
+                    price: "40€",
+                },
+                content2: {
+                    text: "9 sesiones al mes (mañanas) ",
+                    price: "30€",
+                },
+                content3: {
+                    text: "13 sesiones al mes ",
+                    price: "45€",
+                },
+                content4: {
+                    text: "Ilimitado ",
+                    price: "58€",
+                },
+                content5: {
+                    text: "Ilimitado (mañanas) ",
+                    price: "40€",
+                },
+            },
+            bond: {
+                content1: {
+                    text: "1 sesión ",
+                    price: "8€",
+                },
+                content2: {
+                    text: "5 sesiones ",
+                    price: "35€",
+                },
+                content3: {
+                    text: "10 sesiones ",
+                    price: "60€",
+                },
+            },
+            offer: {
+                text: "Estudiantes, jubilados, Agentes orden publico, familiares de socios ",
+                discount: "-10%"
+            },
+            info: {
+                text: "Matricula ",
+                price: "40€",
+                vat: "IVA incluido en todas las cuotas",
+            }
+        },
         sectionContact: {
             title1: "Te podemos ayudar ?",
             title2: "Dejanos un mensaje",
@@ -99,6 +215,7 @@ const text = {
             who: "Qui som?",
             what: "Que fem?",
             schedule: 'Horari',
+            price: "Quotes",
             contact: "Contacte"
         },
         header: <p className="quote">SIGUES<br />LA TEVA<br />MILLOR<br />VERSIÓ</p>,
@@ -121,6 +238,63 @@ const text = {
             par1: <p className="what-para">A <b>Crosstraining Empordà</b> t'oferim entrenaments funcionals o HIITS, per a grans i petits, com tambe classes de Jiu Jitsu.</p>,
             par2: <p className="what-para">Els <b>HIIT</b> son entrenaments intervalics d'alta intensitat. És una tecnica d'entrenament ràpida, intensa i que et permet cremar calories com ninguna altre.</p>,
             par3: <p className="what-para">Si tens curiositat, vine a provar una classe.</p>
+        },
+        sectionPrice: {
+            child: {
+                content1: {
+                    text: "1 sessió al mes ",
+                    price: "20€",
+                },
+                content2: {
+                    text: "2 sessions al mes ",
+                    price: "40€"
+                }
+            },
+            basic: {
+                content1: {
+                    text: "9 sessions al mes ",
+                    price: "40€",
+                },
+                content2: {
+                    text: "9 sessions al mes (matins) ",
+                    price: "30€",
+                },
+                content3: {
+                    text: "13 sessions al mes ",
+                    price: "45€",
+                },
+                content4: {
+                    text: "Il·limitat ",
+                    price: "58€",
+                },
+                content5: {
+                    text: "Il.limitat (matins) ",
+                    price: "40€",
+                },
+            },
+            bond: {
+                content1: {
+                    text: "1 sessió",
+                    price: "8€",
+                },
+                content2: {
+                    text: "5 sessions",
+                    price: "35€",
+                },
+                content3: {
+                    text: "10 sessions",
+                    price: "60€",
+                },
+            },
+            offer: {
+                text: "Estudiants, jubilats, Agents ordre public, familiars de socis ",
+                discount: "-10%"
+            },
+            info: {
+                text: "Matricula ",
+                price: "40€",
+                vat: "IVA inclós en totes les quotes",
+            }
         },
         sectionContact: {
             title1: "Et podem ajudar?",
