@@ -32,10 +32,10 @@ export default function (props) {
                             <h3 className="price-table-container__content title secondTitle">Quotes Basiques</h3>
                             <ul className="list">
                                 <li>
-                                    <p>{basic.content1.text}<span>{basic.content1.price}</span></p>
+                                    <p>{basic.content1.text} <span>{basic.content1.price}</span></p>
                                 </li>
                                 <li>
-                                    <p>{basic.content2.text}<span>{basic.content2.price}</span></p>
+                                    <p>{basic.content2.text} <span>{basic.content2.price}</span></p>
                                 </li>
                                 <li>
                                     <p>{basic.content3.text}<span>{basic.content3.price}</span></p>
