@@ -80,6 +80,14 @@ export default function Navbar(props) {
                                                 >{text[`${lang}`].navbar.schedule}</Link>
                                                 <Link className="menu"
                                                     activeClass="active"
+                                                    to="price"
+                                                    spy={true}
+                                                    smooth={true}
+                                                    offset={-70}
+                                                    duration={500}
+                                                >{text[`${lang}`].navbar.price}</Link>
+                                                <Link className="menu"
+                                                    activeClass="active"
                                                     to="contact"
                                                     spy={true}
                                                     smooth={true}
@@ -180,6 +188,7 @@ export default function Navbar(props) {
                                                         duration={500}
                                                         onClick={() => setMenuOpen(!menuOpen)}
                                                     >{text[`${lang}`].navbar.what}</Link>
+
                                                     <Link className="menu-mobile"
                                                         activeClass="active"
                                                         to="schedule"
@@ -189,6 +198,26 @@ export default function Navbar(props) {
                                                         duration={500}
                                                         onClick={() => setMenuOpen(!menuOpen)}
                                                     >{text[`${lang}`].navbar.schedule}</Link>
+
+                                                    <Link className="menu-mobile"
+                                                        activeClass="active"
+                                                        to="price"
+                                                        spy={true}
+                                                        smooth={true}
+                                                        offset={-70}
+                                                        duration={500}
+                                                        onClick={() => setMenuOpen(!menuOpen)}
+                                                    >{text[`${lang}`].navbar.price}</Link>
+
+                                                    <Link className="menu-mobile"
+                                                        activeClass="active"
+                                                        to="contact"
+                                                        spy={true}
+                                                        smooth={true}
+                                                        offset={-70}
+                                                        duration={500}
+                                                        onClick={() => setMenuOpen(!menuOpen)}
+                                                    >{text[`${lang}`].navbar.contact}</Link>
                                                     <div className="menu-mobile" onClick={() => {
                                                         setAnimation(!animation)
                                                         delayLangMenu(langMenu)
