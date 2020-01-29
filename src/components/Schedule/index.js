@@ -5,6 +5,7 @@ import './style.sass'
 
 export default function (props) {
     const [widthState, setWidthState] = useState({ fontSize: "2rem" })
+    const [isOn, setIsOn] = useState(false)
     const { text, lang } = props
     const { sectionSchedule } = text[`${lang}`]
 
@@ -12,6 +13,9 @@ export default function (props) {
         setWidthState({ fontSize: "6rem" })
     }, [])
 
+    useEffect(() => {
+        console.log('state: ', isOn)
+    }, [isOn])
     /**
      * Creates Schedule table and load dinamicaly content from the text prop.
      * 
@@ -29,8 +33,13 @@ export default function (props) {
             let children = []
             for (let j = 0; j < cols; j++) {
                 children.push(
-                    <td className="table-data">
-                        <div className={`table-data-child cell${cellId[cellId.length - 1]}`}>
+                    <td style={{
+                        boxShadow: `${isOn ? "0px 2px 5px -2px rgba(0,0,0,0.6)" : "none"}`
+                    }}
+                        className={`table-data cell${cellId[cellId.length - 1]}`}>
+
+                        <div className="table-data-child">
+
                             <p>{sectionSchedule[`row${i + 1}`][`cell${cellId[cellId.length - 1]}`]}</p>
                         </div>
                     </td>)
@@ -41,51 +50,80 @@ export default function (props) {
         return table
     }
 
-    return <>
-
-        <div style={{
-            fontSize: widthState.fontSize,
-            color: "#52f9b1",
-            fontWeight: "800",
-            transition: "1s linear",
-            paddingLeft: "4rem"
-        }}>
-            <p className="schedule-title section-title-wrapper">{text[`${lang}`].navbar.schedule.toUpperCase()}</p>
-        </div>
-
-        <div>
-            <div className="ct-container">
-                <p>Crosstraining</p>
-            </div>
-            <div className="ob-container">
-                <p>Open Box</p>
-            </div>
-            <div className="jj-container">
-                <p>Jiu-Jitsu</p>
-            </div>
-            <div className="jjk-container">
-                <p>Jiu-Jitsu Kids</p>
-            </div>
-            <div className="ctk-container">
-                <p>Crosstraining Kids</p>
-            </div>
-        </div>
 
 
-        <div className="table-container">
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Dilluns</th>
-                    <th>Dimarts</th>
-                    <th>Dimecres</th>
-                    <th>Dijous</th>
-                    <th>Divendres</th>
-                    <th>Dissabte</th>
-                </tr>
-                {createTable(9, 7)}
-            </table>
-        </div>
+    return (
+        <>
 
-    </>
+            <div style={{
+                fontSize: widthState.fontSize,
+                color: "#52f9b1",
+                fontWeight: "800",
+                transition: "1s linear",
+                paddingLeft: "4rem"
+            }}>
+                <p className="schedule-title section-title-wrapper">{text[`${lang}`].navbar.schedule.toUpperCase()}</p>
+            </div>
+
+            <div className="schedule-menu" >
+                <div className="schedule-menu__container ct-container " >
+                    <p>Crosstraining</p>
+
+                    <label className="switch" onClick={() => setIsOn(true)}>
+                        <input type="checkbox" />
+                        <span className="slider round" ></span>
+                    </label>
+
+                </div>
+            </div>
+
+
+
+            <div className="table-container">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Dilluns</th>
+                        <th>Dimarts</th>
+                        <th>Dimecres</th>
+                        <th>Dijous</th>
+                        <th>Divendres</th>
+                        <th>Dissabte</th>
+                    </tr>
+                    {createTable(9, 7)}
+                </table>
+            </div>
+
+        </>
+    )
 }
+
+{/* <div className=" schedule-menu__container ob-container">
+                    <p>Open Box</p>
+                    <label className="switch">
+                        <input type="checkbox" />
+                        <span className="slider round"></span>
+                    </label>
+                </div>
+                <div className="schedule-menu__container jj-container">
+                    <p>Jiu-Jitsu</p>
+                    <label className="switch">
+                        <input type="checkbox" />
+                        <span className="slider round"></span>
+                    </label>
+                </div>
+                <div className="schedule-menu__container jjk-container">
+                    <p>Jiu-Jitsu Kids</p>
+                    <label className="switch">
+                        <input type="checkbox" />
+                        <span className="slider round"></span>
+                    </label>
+                </div>
+                <div className="schedule-menu__container ctk-container">
+                    <p>Crosstraining Kids</p>
+                    <label className="switch">
+                        <input type="checkbox" />
+                        <span className="slider round"></span>
+                    </label>
+                </div>
+            */}
