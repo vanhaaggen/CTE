@@ -31,7 +31,7 @@ export default function (props) {
                 children.push(
                     <td className="table-data">
                         <div className={`table-data-child cell${cellId[cellId.length - 1]}`}>
-                            {sectionSchedule[`row${i + 1}`][`cell${cellId[cellId.length - 1]}`]}
+                            <p>{sectionSchedule[`row${i + 1}`][`cell${cellId[cellId.length - 1]}`]}</p>
                         </div>
                     </td>)
                 cellId.push((cellId.length - 1) + 1)
@@ -52,6 +52,26 @@ export default function (props) {
         }}>
             <p className="schedule-title section-title-wrapper">{text[`${lang}`].navbar.schedule.toUpperCase()}</p>
         </div>
+
+        <div>
+            <div className="ct-container">
+                <p>Crosstraining</p>
+            </div>
+            <div className="ob-container">
+                <p>Open Box</p>
+            </div>
+            <div className="jj-container">
+                <p>Jiu-Jitsu</p>
+            </div>
+            <div className="jjk-container">
+                <p>Jiu-Jitsu Kids</p>
+            </div>
+            <div className="ctk-container">
+                <p>Crosstraining Kids</p>
+            </div>
+        </div>
+
+
         <div className="table-container">
             <table>
                 <tr>

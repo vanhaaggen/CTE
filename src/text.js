@@ -288,10 +288,10 @@ const text = {
             row6: {
                 cell35: "17:30 - 18:30",
                 cell36: "CROSSTRAINING",
-                cell37: "CROSSTRAINING" + " " + "Jiu-Jitsu Kids",
+                cell37: <span>CROSSTRAINING <span className="span jjk">Jiu-Jitsu Kids</span></span>,
                 cell38: "CROSSTRAINING",
-                cell39: "CROSSTRAINING" + " " + "Jiu-Jitsu Kids",
-                cell40: "CROSSTRAINING Crosstraining Kids",
+                cell39: <span>CROSSTRAINING <span className="span jjk">Jiu-Jitsu Kids</span></span>,
+                cell40: <span>CROSSTRAINING <span className="span ctk">Crosstraining Kids</span></span>,
                 cell41: "",
             },
             row7: {
@@ -315,10 +315,10 @@ const text = {
             row9: {
                 cell56: "20:30 - 21:30",
                 cell57: "CROSSTRAINING",
-                cell58: "CROSSTRAINING" + " " + "Jiu-Jitsu",
+                cell58: <span>CROSSTRAINING <span className="span jj">Jiu-Jitsu</span></span>,
                 cell59: "CROSSTRAINING",
                 cell60: "CROSSTRAINING",
-                cell61: "CROSSTRAINING" + " " + "Jiu-Jitsu",
+                cell61: <span>CROSSTRAINING <span className="span jj">Jiu-Jitsu</span></span>,
                 cell62: "",
             },
 
