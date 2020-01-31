@@ -18,9 +18,9 @@ export default function Home(props) {
                         <Header />
                         <SectionLayout section={'who'} content={<WhoAreWe text={text} lang={lang} />} />
                         <SectionLayout section={'what'} content={<WhatWeDo text={text} lang={lang} />} />
-                        <Instalation text={text} lang={lang} />
                         <SectionLayout section={'schedule'} content={<Schedule text={text} lang={lang} />} />
                         <SectionLayout section={'price'} content={<Price text={text} lang={lang} />} />
+                        <Instalation text={text} lang={lang} />
                         <Insta text={text} lang={lang} />
                         <SectionLayout section={'contact'} content={<Contact text={text} lang={lang} />} />
                     </div>
