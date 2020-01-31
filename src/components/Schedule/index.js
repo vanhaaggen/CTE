@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import ReactDOM from 'react-dom'
-
-
+import methods from '../../utils/index.js'
 import './style.sass'
+
+const { highlightCell, createTable } = methods
+
 
 export default function (props) {
     const [widthState, setWidthState] = useState({ fontSize: "2rem" })
@@ -21,84 +22,6 @@ export default function (props) {
     }, [isOn])
 
 
-    /**
-     * Creates Schedule table and load dinamicaly content from the text prop.
-     * 
-     * @param {number} rows
-     * @param {number} cols
-     * 
-     * @returns {Array}
-     */
-
-    const createTable = (rows, cols) => {
-        let table = []
-        let cellId = [0]
-
-        for (let i = 0; i < rows; i++) {
-            let children = []
-            for (let j = 0; j < cols; j++) {
-                children.push(
-                    <td key={j}
-                        className={`table-data-child cell${cellId[cellId.length - 1]}`}>
-
-                        {sectionSchedule[`row${i + 1}`][`cell${cellId[cellId.length - 1]}`]}
-
-                    </td>)
-
-                cellId.push((cellId.length - 1) + 1)
-            }
-
-            table.push(<tr key={i} className={`row${i + 1}`}>{children}</tr>)
-        }
-
-        return table
-    }
-
-    /**
-     * If cells inner text match with cellContent parameter the cell changes its style.
-     * 
-     * @param {string} selector
-     * @param {boolean} boolean 
-     * 
-     * @returns {nodeList}
-     */
-
-    const highlightCell = (selector, boolean) => {
-
-        const cells = document.querySelectorAll(selector)
-
-
-
-        const cssClassName = (string) => {
-            let toArr = Array.from(string)
-            let pushNum = toArr.push("-td")
-            let del = toArr.splice(0, 2)
-            let result = toArr.join('')
-
-            return result
-        }
-
-        for (let i = 0; i < cells.length; i++) {
-
-            let parent = cells[i].parentNode
-            let parentName = parent.nodeName
-
-
-            boolean && (parentName == 'TD' ?
-                parent.classList.add(cssClassName(selector)) :
-                parent.parentNode.classList.add(cssClassName(`${selector}-splt`)))
-
-            !boolean && (parentName == 'TD' ?
-                parent.classList.remove(cssClassName(selector)) :
-                parent.parentNode.classList.remove(cssClassName(`${selector}-splt`)))
-        }
-    }
-
-
-    const handleControlBox = (param) => {
-        setIsOn(!isOn)
-        setSelector(param)
-    }
 
 
     function ScheduleControlBox({ activity, handleControlBox }) {
@@ -113,6 +36,14 @@ export default function (props) {
             </div>
         )
     }
+
+    const handleControlBox = (param) => {
+        setIsOn(!isOn)
+        setSelector(param)
+    }
+
+
+
 
     return (
         <>
@@ -148,7 +79,7 @@ export default function (props) {
                             <th>Divendres</th>
                             <th>Dissabte</th>
                         </tr>
-                        {createTable(9, 7)}
+                        {createTable(sectionSchedule, 9, 7)}
                     </tbody>
                 </table>
             </div>
