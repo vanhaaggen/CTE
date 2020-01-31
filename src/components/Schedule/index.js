@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom'
 
 
 import './style.sass'
@@ -6,7 +7,6 @@ import './style.sass'
 export default function (props) {
     const [widthState, setWidthState] = useState({ fontSize: "2rem" })
     const [isOn, setIsOn] = useState(false)
-    const [cellContent, setCellContent] = useState()
     const [selector, setSelector] = useState()
 
     const { text, lang } = props
@@ -38,7 +38,7 @@ export default function (props) {
             let children = []
             for (let j = 0; j < cols; j++) {
                 children.push(
-                    <td
+                    <td key={j}
                         className={`table-data-child cell${cellId[cellId.length - 1]}`}>
 
                         {sectionSchedule[`row${i + 1}`][`cell${cellId[cellId.length - 1]}`]}
@@ -48,7 +48,7 @@ export default function (props) {
                 cellId.push((cellId.length - 1) + 1)
             }
 
-            table.push(<tr className={`row${i + 1}`}>{children}</tr>)
+            table.push(<tr key={i} className={`row${i + 1}`}>{children}</tr>)
         }
 
         return table
@@ -64,14 +64,33 @@ export default function (props) {
      */
 
     const highlightCell = (selector, boolean) => {
+
         const cells = document.querySelectorAll(selector)
+
+
+
+        const cssClassName = (string) => {
+            let toArr = Array.from(string)
+            let pushNum = toArr.push("-td")
+            let del = toArr.splice(0, 2)
+            let result = toArr.join('')
+
+            return result
+        }
 
         for (let i = 0; i < cells.length; i++) {
 
             let parent = cells[i].parentNode
+            let parentName = parent.nodeName
 
-            boolean && (parent.style.boxShadow = "0px 2px 5px -2px rgba(0,0,0,0.6)")
-            !boolean && (parent.style.boxShadow = "none")
+
+            boolean && (parentName == 'TD' ?
+                parent.classList.add(cssClassName(selector)) :
+                parent.parentNode.classList.add(cssClassName(`${selector}-splt`)))
+
+            !boolean && (parentName == 'TD' ?
+                parent.classList.remove(cssClassName(selector)) :
+                parent.parentNode.classList.remove(cssClassName(`${selector}-splt`)))
         }
     }
 
@@ -110,22 +129,27 @@ export default function (props) {
             <div className="schedule-menu" >
                 <ScheduleControlBox activity={"Crosstraining"} handleControlBox={() => handleControlBox("p.crosstraining")} />
                 <ScheduleControlBox activity={"Open Box"} handleControlBox={() => handleControlBox("p.openbox")} />
+                <ScheduleControlBox activity={"Jiu-Jitsu"} handleControlBox={() => handleControlBox("p.jj")} />
+                <ScheduleControlBox activity={"Jiu-Jitsu Kids"} handleControlBox={() => handleControlBox("p.jjk")} />
+                <ScheduleControlBox activity={"Crosstraining Kids"} handleControlBox={() => handleControlBox("p.ctk")} />
             </div>
 
 
 
             <div className="table-container">
                 <table className="table-layout" id="display-table">
-                    <tr>
-                        <th></th>
-                        <th>Dilluns</th>
-                        <th>Dimarts</th>
-                        <th>Dimecres</th>
-                        <th>Dijous</th>
-                        <th>Divendres</th>
-                        <th>Dissabte</th>
-                    </tr>
-                    {createTable(9, 7)}
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th>Dilluns</th>
+                            <th>Dimarts</th>
+                            <th>Dimecres</th>
+                            <th>Dijous</th>
+                            <th>Divendres</th>
+                            <th>Dissabte</th>
+                        </tr>
+                        {createTable(9, 7)}
+                    </tbody>
                 </table>
             </div>
 

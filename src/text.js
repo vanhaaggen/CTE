@@ -287,11 +287,11 @@ const text = {
             },
             row6: {
                 cell35: "17:30 - 18:30",
-                cell36: "CROSSTRAINING",
-                cell37: <p className="crosstraining">CROSSTRAINING <span className="jjk">Jiu-Jitsu Kids</span></p>,
-                cell38: "CROSSTRAINING",
-                cell39: <p className="crosstraining">CROSSTRAINING <span className="jjk">&nbsp;&nbsp;Jiu-Jitsu Kids</span></p>,
-                cell40: <p className="crosstraining">CROSSTRAINING <span className="ctk">Crosstraining Kids</span></p>,
+                cell36: <p className="crosstraining">CROSSTRAINING</p>,
+                cell37: <div className="cellSplitted"><p className="crosstraining">CROSSTRAINING</p> <p className="jjk">Jiu-Jitsu Kids</p></div>,
+                cell38: <p className="crosstraining">CROSSTRAINING</p>,
+                cell39: <div className="cellSplitted"><p className="crosstraining">CROSSTRAINING</p> <p className="jjk">Jiu-Jitsu Kids</p></div>,
+                cell40: <div className="cellSplitted"><p className="crosstraining">CROSSTRAINING</p> <p className="ctk">Crosstraining Kids</p></div>,
                 cell41: "",
             },
             row7: {
@@ -314,11 +314,11 @@ const text = {
             },
             row9: {
                 cell56: "20:30 - 21:30",
-                cell57: "CROSSTRAINING",
-                cell58: <span>CROSSTRAINING <span className="span jj">Jiu-Jitsu</span></span>,
-                cell59: "CROSSTRAINING",
-                cell60: "CROSSTRAINING",
-                cell61: <span>CROSSTRAINING <span className="span jj">Jiu-Jitsu</span></span>,
+                cell57: <p className="crosstraining">CROSSTRAINING</p>,
+                cell58: <div className="cellSplitted"><p className="crosstraining">CROSSTRAINING</p> <p className="jj">Jiu-Jitsu</p></div>,
+                cell59: <p className="crosstraining">CROSSTRAINING</p>,
+                cell60: <p className="crosstraining">CROSSTRAINING</p>,
+                cell61: <div className="cellSplitted"><p className="crosstraining">CROSSTRAINING</p> <p className="jj">Jiu-Jitsu</p></div>,
                 cell62: "",
             },
 
