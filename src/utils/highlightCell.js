@@ -11,8 +11,6 @@ const highlightCell = (selector, boolean) => {
 
     const cells = document.querySelectorAll(selector)
 
-
-
     const cssClassName = (string) => {
         let toArr = Array.from(string)
         let pushNum = toArr.push("-td")
@@ -26,7 +24,6 @@ const highlightCell = (selector, boolean) => {
 
         let parent = cells[i].parentNode
         let parentName = parent.nodeName
-
 
         boolean && (parentName == 'TD' ?
             parent.classList.add(cssClassName(selector)) :

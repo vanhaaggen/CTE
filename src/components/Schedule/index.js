@@ -25,8 +25,7 @@ export default function (props) {
 
 
     function ScheduleControlBox({ activity, handleControlBox }) {
-        return (
-
+        return (<>
             <div className="schedule-menu__container ct-container" onClick={handleControlBox}>
                 <p>{activity}</p>
                 <label className="switch">
@@ -34,15 +33,13 @@ export default function (props) {
                     <span className="slider round" ></span>
                 </label>
             </div>
-        )
+        </>)
     }
 
     const handleControlBox = (param) => {
         setIsOn(!isOn)
         setSelector(param)
     }
-
-
 
 
     return (
@@ -88,32 +85,3 @@ export default function (props) {
     )
 }
 
-{/* <div className=" schedule-menu__container ob-container">
-                    <p>Open Box</p>
-                    <label className="switch">
-                        <input type="checkbox" />
-                        <span className="slider round"></span>
-                    </label>
-                </div>
-                <div className="schedule-menu__container jj-container">
-                    <p>Jiu-Jitsu</p>
-                    <label className="switch">
-                        <input type="checkbox" />
-                        <span className="slider round"></span>
-                    </label>
-                </div>
-                <div className="schedule-menu__container jjk-container">
-                    <p>Jiu-Jitsu Kids</p>
-                    <label className="switch">
-                        <input type="checkbox" />
-                        <span className="slider round"></span>
-                    </label>
-                </div>
-                <div className="schedule-menu__container ctk-container">
-                    <p>Crosstraining Kids</p>
-                    <label className="switch">
-                        <input type="checkbox" />
-                        <span className="slider round"></span>
-                    </label>
-                </div>
-            */}
