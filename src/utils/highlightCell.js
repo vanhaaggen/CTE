@@ -25,6 +25,7 @@ const highlightCell = (selector, boolean) => {
         let parent = cells[i].parentNode
         let parentName = parent.nodeName
 
+
         boolean && (parentName == 'TD' ?
             parent.classList.add(cssClassName(selector)) :
             parent.parentNode.classList.add(cssClassName(`${selector}-splt`)))
