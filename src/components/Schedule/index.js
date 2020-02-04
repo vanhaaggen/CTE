@@ -15,8 +15,6 @@ export default function (props) {
         setWidthState({ fontSize: "6rem" })
     }, [])
 
-
-
     return (
         <>
             <div style={{
