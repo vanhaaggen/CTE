@@ -14,8 +14,8 @@ const { logo: [back, barbell, circle, laurel, kettlebell] } = images
 const Header = () => {
     return <>
 
-        <header className='header' id="header">
-            <div className="header-wrapper">
+        <section className='hero' id="hero">
+            <div className="hero-wrapper">
                 <I18NConsumer>
                     {({ text, lang }) => (
                         <div className="quote-wrapper">
@@ -35,41 +35,41 @@ const Header = () => {
                             animationInDelay={1200}
                             isVisible={true}
                             className="animation">
-                            <img className="header-img" src={back} alt="cte-logo" />
+                            <img className="hero-img" src={back} alt="cte-logo" />
                         </Animated>
                         <Animated
                             animationIn="bounceInLeft"
                             animationInDelay={900}
                             isVisible={true}
                             className="animation">
-                            <img className="header-img" src={circle} alt="cte-logo" />
+                            <img className="hero-img" src={circle} alt="cte-logo" />
                         </Animated>
                         <Animated
                             animationIn="bounceInRight"
                             animationInDelay={600}
                             isVisible={true}
                             className="animation">
-                            <img className="header-img" src={laurel} alt="cte-logo" />
+                            <img className="hero-img" src={laurel} alt="cte-logo" />
                         </Animated>
                         <Animated
                             animationIn="bounceInUp"
                             animationInDelay={300}
                             isVisible={true}
                             className="animation">
-                            <img className="header-img" src={barbell} alt="cte-logo" />
+                            <img className="hero-img" src={barbell} alt="cte-logo" />
                         </Animated>
                         <Animated
                             animationIn="bounceInDown"
                             isVisible={true}
                             className="animation">
-                            <img className="header-img" src={kettlebell} alt="cte-logo" />
+                            <img className="hero-img" src={kettlebell} alt="cte-logo" />
                         </Animated>
 
                     </div>
                 </div>
             </div>
 
-        </header>
+        </section>
 
         <Stripe />
 

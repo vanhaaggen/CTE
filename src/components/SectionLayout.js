@@ -28,7 +28,7 @@ export default function SectionLayout(props) {
 
     return (
         <>
-            <div className={`${section}-background`}>
+            <section className={`${section}-background`}>
                 <div className={`container-${section}`} id={section}>
                     {isInView && <>
                         <Animated
@@ -39,7 +39,7 @@ export default function SectionLayout(props) {
                         </Animated>
                     </>}
                 </div>
-            </div>
+            </section>
         </>
     )
 

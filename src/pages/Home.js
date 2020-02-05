@@ -6,7 +6,7 @@ import { I18NConsumer } from '../components/i18ncontext'
 
 import './styles/Home.sass'
 
-const { Header, WhoAreWe, Instalation, WhatWeDo, Schedule, Price, Insta, Contact } = components
+const { Hero, WhoAreWe, Instalation, WhatWeDo, Schedule, Price, Insta, Contact } = components
 
 
 export default function Home(props) {
@@ -14,8 +14,8 @@ export default function Home(props) {
         <>
             <I18NConsumer>
                 {({ text, lang }) => (
-                    <div className="Home">
-                        <Header />
+                    <body className="Home">
+                        <Hero />
                         <SectionLayout section={'who'} content={<WhoAreWe text={text} lang={lang} />} />
                         <SectionLayout section={'what'} content={<WhatWeDo text={text} lang={lang} />} />
                         <SectionLayout section={'schedule'} content={<Schedule text={text} lang={lang} />} />
@@ -23,7 +23,7 @@ export default function Home(props) {
                         <Instalation text={text} lang={lang} />
                         <Insta text={text} lang={lang} />
                         <SectionLayout section={'contact'} content={<Contact text={text} lang={lang} />} />
-                    </div>
+                    </body>
 
                 )}
             </I18NConsumer>

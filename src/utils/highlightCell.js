@@ -26,11 +26,11 @@ const highlightCell = (selector, boolean) => {
         let parentName = parent.nodeName
 
 
-        boolean && (parentName == 'TD' ?
+        boolean && (parentName === 'TD' ?
             parent.classList.add(cssClassName(selector)) :
             parent.parentNode.classList.add(cssClassName(`${selector}-splt`)))
 
-        !boolean && (parentName == 'TD' ?
+        !boolean && (parentName === 'TD' ?
             parent.classList.remove(cssClassName(selector)) :
             parent.parentNode.classList.remove(cssClassName(`${selector}-splt`)))
     }

@@ -17,44 +17,47 @@ export default function (props) {
 
     return (
         <>
-            <div style={{
-                fontSize: widthState.fontSize,
-                color: "#52f9b1",
-                fontWeight: "800",
-                transition: "1s linear",
-                paddingLeft: "4rem"
-            }}>
-                <p className="schedule-title section-title-wrapper">{text[`${lang}`].navbar.schedule.toUpperCase()}</p>
-            </div>
+            <section className="schedule-container-content">
+                <div style={{
+                    fontSize: widthState.fontSize,
+                    color: "#fc4545",
+                    fontWeight: "800",
+                    transition: ".7s linear",
+                    padding: "3rem 0"
 
-            <div className="sh-cont-wrapp">
-                <div className="control-table-container">
-                    <div className="schedule-menu" >
-                        <ScheduleControlBox delayTime={200} bttnClass={"ct-bttn"} tdClass={"ct"} activity={"Crosstraining"} />
-                        <ScheduleControlBox delayTime={300} bttnClass={"ob-bttn"} tdClass={"ob"} activity={"Open Box"} />
-                        <ScheduleControlBox delayTime={400} bttnClass={"jj-bttn"} tdClass={"jj"} activity={"Jiu-Jitsu"} />
-                        <ScheduleControlBox delayTime={500} bttnClass={"jjk-bttn"} tdClass={"jjk"} activity={"Jiu-Jitsu Kids"} />
-                        <ScheduleControlBox delayTime={600} bttnClass={"ctk-bttn"} tdClass={"ctk"} activity={"Crosstraining Kids"} />
-                    </div>
+                }}>
+                    <p className="schedule-title section-title-wrapper">{text[`${lang}`].navbar.schedule.toUpperCase()}</p>
+                </div>
 
-                    <div className="table-container">
-                        <table className="table-layout" id="display-table">
-                            <tbody>
-                                <tr>
-                                    <th></th>
-                                    <th>Dilluns</th>
-                                    <th>Dimarts</th>
-                                    <th>Dimecres</th>
-                                    <th>Dijous</th>
-                                    <th>Divendres</th>
-                                    <th>Dissabte</th>
-                                </tr>
-                                {createTable(sectionSchedule, 9, 7)}
-                            </tbody>
-                        </table>
+                <div className="sh-cont-wrapp">
+                    <div className="control-table-container">
+                        <div className="schedule-menu" >
+                            <ScheduleControlBox delayTime={1000} bttnClass={"ct-bttn"} tdClass={"ct"} activity={"Crosstraining"} />
+                            <ScheduleControlBox delayTime={1100} bttnClass={"ob-bttn"} tdClass={"ob"} activity={"Open Box"} />
+                            <ScheduleControlBox delayTime={1200} bttnClass={"jj-bttn"} tdClass={"jj"} activity={"Jiu-Jitsu"} />
+                            <ScheduleControlBox delayTime={1300} bttnClass={"jjk-bttn"} tdClass={"jjk"} activity={"Jiu-Jitsu Kids"} />
+                            <ScheduleControlBox delayTime={1400} bttnClass={"ctk-bttn"} tdClass={"ctk"} activity={"Crosstraining Kids"} />
+                        </div>
+
+                        <div className="table-container">
+                            <table className="table-layout" id="display-table">
+                                <tbody>
+                                    <tr>
+                                        <th></th>
+                                        <th>Dilluns</th>
+                                        <th>Dimarts</th>
+                                        <th>Dimecres</th>
+                                        <th>Dijous</th>
+                                        <th>Divendres</th>
+                                        <th>Dissabte</th>
+                                    </tr>
+                                    {createTable(sectionSchedule, 9, 7)}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }

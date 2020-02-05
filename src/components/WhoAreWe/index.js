@@ -24,7 +24,7 @@ export default function (props) {
                     color: "#fc4545",
                     fontWeight: "800",
                     transition: "1s linear",
-                    margin: "0 auto"
+                    padding: "3rem 0"
 
                 }}>
                     <p className="who-title section-title-wrapper">{text[`${lang}`].navbar.who.toUpperCase()}</p>

@@ -31,7 +31,7 @@ export default function Navbar(props) {
 
         <I18NConsumer>
             {({ text, lang }) => (
-                <div className="navbar-wrapper">
+                <header className="navbar-wrapper">
                     <Media query={{ minWidth: 700 }}>
                         {matches => matches ? (
                             <>
@@ -39,7 +39,7 @@ export default function Navbar(props) {
                                     <div className="navbar-container">
                                         <Link className="menu"
                                             activeClass="active"
-                                            to="header"
+                                            to="hero"
                                             spy={true}
                                             smooth={true}
                                             offset={-70}
@@ -261,7 +261,7 @@ export default function Navbar(props) {
                             )
                         }
                     </Media>
-                </div>
+                </header>
             )}
         </I18NConsumer>
 
