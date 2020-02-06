@@ -4,13 +4,15 @@
      
 
 .what-title
+     width: 100%
      text-align: right
+     background-color: #4577f6
      
 .what-content
      @extend %flexWidth
      flex-direction: column
      width: 100%
-     margin-top: 3rem
+     margin-top: 1.5rem
      align-items: center
 
 .what-description-wrapper
@@ -27,12 +29,49 @@
 .what-second-paragraph
      @extend %flexWidth
 
-.what-third-paragraph
-     @extend %flexWidth
-
 .what-para
      width: 30%
      padding: .4rem 0
+
+
+/*---third paragrap-----*/
+
+.what-third-pgrph-wrapper
+     display: flex
+     align-items: center
+     margin: 3rem 0 8rem 0
+     width: 100%
+     font-size: 1.5rem
+     
+
+.what-third-pgrph-line-Left
+     width: 100%
+     height: 115.56px
+     background-image: linear-gradient(135deg, #fcfbf8 32.26%, #fc4646 32.26%, #fc4646 50%, #fcfbf8 50%, #fcfbf8 82.26%, #fc4646 82.26%, #fc4646 100%);
+     background-size: 43.84px 43.84px;
+     
+
+.what-third-paragraph
+     display: flex
+     flex-direction: column
+     align-items: center
+     padding: 1rem 0
+     width: 70%
+     background-color: #fcfbf8
+     text-align: center
+
+.what-para-third
+     margin: 0
+     padding: .4rem 0
+
+.what-third-pgrph-line-Right
+     width: 100%
+     height: 115.56px
+     background-image: linear-gradient(45deg, #fcfbf8 32.26%, #fc4646 32.26%, #fc4646 50%, #fcfbf8 50%, #fcfbf8 82.26%, #fc4646 82.26%, #fc4646 100%);
+     background-size: 43.84px 43.84px;
+     
+     
+     
      
 /*----stripe styles--*/
 
@@ -41,6 +80,7 @@
      justify-content: center
      width: 100vw
      height: 30rem
+     margin: 4rem
      background-image: url("../../images/whatBckImage.png")
      background-size: cover
 

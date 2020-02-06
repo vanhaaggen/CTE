@@ -20,7 +20,7 @@ export default function (props) {
         <div className="what-container">
             <div style={{
                 fontSize: widthState.fontSize,
-                color: "#4577f6",
+                color: "white",
                 fontWeight: "800",
                 transition: "1s linear",
                 padding: "3rem"
@@ -58,10 +58,12 @@ export default function (props) {
                     </div>
                 </div>
 
-                <article className="what-description-wrapper">
+                <article className="what-third-pgrph-wrapper">
+                    <div className="what-third-pgrph-line-Left"></div>
                     <div className="what-third-paragraph whatContent">
                         {text[`${lang}`].sectionWhat.par3}
                     </div>
+                    <div className="what-third-pgrph-line-Right"></div>
                 </article>
 
             </section>
