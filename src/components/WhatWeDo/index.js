@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import logic from '../../logic'
+import IconBox from './IconBox'
+import images from "../../images"
+
 import './style.sass'
+
+const { icons } = images
 
 export default function (props) {
     const [widthState, setWidthState] = useState({ fontSize: "2rem" })
@@ -19,7 +23,7 @@ export default function (props) {
                 color: "#4577f6",
                 fontWeight: "800",
                 transition: "1s linear",
-                paddingRight: "4rem"
+                padding: "3rem"
             }}>
                 <p className=" what-title section-title-wrapper">{text[`${lang}`].navbar.what.toUpperCase()}</p>
             </div>
@@ -28,18 +32,36 @@ export default function (props) {
             <section className="what-content">
                 <article className="what-description-wrapper">
 
-                    <div className="what-first-para-wrap whatContent">
+                    <div className="what-first-paragraph whatContent">
                         {text[`${lang}`].sectionWhat.par1}
                     </div>
 
-                    <div className="what-second-para-wrap whatContent">
+                    <div className="what-second-paragraph whatContent">
                         {text[`${lang}`].sectionWhat.par2}
                     </div>
 
-                    <div className="what-third-para-wrap whatContent">
+                </article>
+
+                <div className="what-stripe-container">
+                    <div className="what-shape-container">
+
+                        <div className="what-text-wrapper">
+                            <p className="what-text-wrapper--text1">Els beneficis d'entrenar amb nosaltres?</p>
+                            <p className="what-text-wrapper--text2"><i>guanyaras en...</i></p>
+                        </div>
+
+                        <div className="what-blocks">
+                            {icons.map((item, index) => {
+                                return <IconBox text={text[`${lang}`].sectionWhat.icons[index]} image={item} />
+                            })}
+                        </div>
+                    </div>
+                </div>
+
+                <article className="what-description-wrapper">
+                    <div className="what-third-paragraph whatContent">
                         {text[`${lang}`].sectionWhat.par3}
                     </div>
-
                 </article>
 
             </section>

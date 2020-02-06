@@ -132,6 +132,7 @@ const text = {
             coachTitle: "Los Coaches"
         },
         sectionWhat: {
+            icons: ["Fuerza", "Agilidad", "Flexibilidad", "Velocidad", "Equilibrio", "Condición"],
             par1: <p className="what-para">En <b>Crosstraining Empordà</b> te ofrecemos entrenos funcionales o HIITs para  grandes y pequeños, como también clases de Jiu Jitsu.</p>,
             par2: <p className="what-para">Los <b>HIIT</b> son entrenamientos intervalicos de alta intensidad. Es una técnica de entreno rápida, intensa y que et permite quemar calorías como ninguna otra.</p>,
             par3: <p className="what-para">Si tienes curiosidad, ven a probar una clase.</p>
@@ -235,6 +236,7 @@ const text = {
             coachTitle: "Els Coaches"
         },
         sectionWhat: {
+            icons: ["Força", "Agilitat", "Flexibilitat", "Velocitat", "Equilibri", "Condició"],
             par1: <p className="what-para">A <b>Crosstraining Empordà</b> t'oferim entrenaments funcionals o HIITS, per a grans i petits, com tambe classes de Jiu Jitsu.</p>,
             par2: <p className="what-para">Els <b>HIIT</b> son entrenaments intervalics d'alta intensitat. És una tecnica d'entrenament ràpida, intensa i que et permet cremar calories com ninguna altre.</p>,
             par3: <p className="what-para">Si tens curiositat, vine a provar una classe.</p>

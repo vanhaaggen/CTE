@@ -1,15 +1,17 @@
 %flexWidth
      display: flex
-     width: 100%
+     justify-content: center
+     
 
 .what-title
      text-align: right
      
-
 .what-content
      @extend %flexWidth
+     flex-direction: column
+     width: 100%
      margin-top: 3rem
-     justify-content: center
+     align-items: center
 
 .what-description-wrapper
      display: flex
@@ -18,19 +20,91 @@
      font-size: 1.5rem
      margin: 0
 
-.what-first-para-wrap
+.what-first-paragraph
+     @extend %flexWidth
+     
+
+.what-second-paragraph
      @extend %flexWidth
 
-.what-second-para-wrap
-     @extend %flexWidth
-
-.what-third-para-wrap
+.what-third-paragraph
      @extend %flexWidth
 
 .what-para
-     width: 40%
+     width: 30%
      padding: .4rem 0
      
+/*----stripe styles--*/
+
+.what-stripe-container
+     display: flex
+     justify-content: center
+     width: 100vw
+     height: 30rem
+     background-image: url("../../images/whatBckImage.png")
+     background-size: cover
+
+.what-text-wrapper
+     display: flex
+     flex-direction: column
+     align-items: center
+     padding-top: 2rem
+     height: 50%
+  
+     &--text1
+          text-align: center
+          padding: 0 1rem
+          font-size: 2.5rem
+          font-weight: 600
+          color: white
+          border-left: 4px solid #fc4646
+          border-right: 4px solid #fc4646
+
+          
+     &--text2
+          margin: 0
+          font-size: 2rem
+          color: white
+          
+/*--shape-style--*/
+     
+.what-shape-container
+     width: 100%
+     background-size: cover
+     background-position-x: -15rem
+    
+/*--IconBOx style--*/
+
+.what-blocks
+     display: flex
+     justify-content: center
+     padding-top: 1rem
+     width: 100%
+     
+
+.icon-block-container
+     display: flex
+     flex-direction: column
+     align-items: center
+     width: 14%
+    
+.ib-img-container
+     width: 30%
+     padding: .5vw
+     background-color: #f5f5f5
+     border: 2px solid #fc4646
+     border-radius: 10px
+     cursor: pointer
+     -webkit-box-shadow: 7px 7px 7px -5px rgba(0,0,0,0.2)
+     -moz-box-shadow: 7px 7px 7px -5px rgba(0,0,0,0.2)
+     box-shadow: 7px 7px 7px -5px rgba(26,26,26, 0.9)
+
+
+     &--image
+          width: 100%
+          filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%)
+          
+              
 
 
 
