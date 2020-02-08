@@ -15,58 +15,65 @@ export default function (props) {
 
 
                     <div className="price-table-container">
-                        <div className="price-table-container__content ">
-                            <h3 className="price-table-container__content title firstTitle">Quota Mensual Infantil</h3>
-                            <ul className="list">
-                                <li>
-                                    <p>{child.content1.text}</p>
-                                    <p>{child.content1.price}</p>
-                                </li>
-                                <li>
-                                    <p>{child.content2.text}</p>
-                                    <p>{child.content2.price}</p>
-                                </li>
-                            </ul>
+                        <div className="price-table-container__content left-table">
+                            <p className="title firstTitle">Quota Infantil</p>
+                            <div className="list-background">
+                                <ul className="list">
+                                    <li>
+                                        <p>{child.content1.text}</p>
+                                        <p>{child.content1.price}</p>
+                                    </li>
+                                    <li>
+                                        <p>{child.content2.text}</p>
+                                        <p>{child.content2.price}</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div className="price-table-container__content center-table">
-                            <h3 className="price-table-container__content title secondTitle">Quotes Basiques</h3>
-                            <ul className="list">
-                                <li>
-                                    <p>{basic.content1.text} <span>{basic.content1.price}</span></p>
-                                </li>
-                                <li>
-                                    <p>{basic.content2.text} <span>{basic.content2.price}</span></p>
-                                </li>
-                                <li>
-                                    <p>{basic.content3.text}<span>{basic.content3.price}</span></p>
-                                </li>
-                                <li>
-                                    <p>{basic.content4.text}</p>
-                                    <p>{basic.content4.price}</p>
-                                </li>
-                                <li>
-                                    <p>{basic.content5.text}</p>
-                                    <p>{basic.content5.price}</p>
-                                </li>
-
-                            </ul>
+                            <p className="title secondTitle">Quotes Basiques</p>
+                            <div className="list-background">
+                                <ul className="list">
+                                    <li>
+                                        <p>{basic.content1.text} <span>{basic.content1.price}</span></p>
+                                    </li>
+                                    <li>
+                                        <p>{basic.content2.text} <span>{basic.content2.price}</span></p>
+                                    </li>
+                                    <li>
+                                        <p>{basic.content3.text}<span>{basic.content3.price}</span></p>
+                                    </li>
+                                </ul>
+                                <ul className="list list-secondTitle-offer">
+                                    <li>
+                                        <p className="list-secondTitle-offer-text">{basic.content4.text}</p>
+                                        <p className="list-secondTitle-offer-price">{basic.content4.price}</p>
+                                    </li>
+                                    <li>
+                                        <p>{basic.content5.text}</p>
+                                        <p>{basic.content5.price}</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div className="price-table-container__content ">
-                            <h3 className="price-table-container__content title thirdTitle">Bonos</h3>
-                            <ul className="list">
-                                <li>
-                                    <p>{bond.content1.text}</p>
-                                    <p>{bond.content1.price}</p>
-                                </li>
-                                <li>
-                                    <p>{bond.content2.text}</p>
-                                    <p>{bond.content2.price}</p>
-                                </li>
-                                <li>
-                                    <p>{bond.content3.text}</p>
-                                    <p>{bond.content3.price}</p>
-                                </li>
-                            </ul>
+                        <div className="price-table-container__content right-table">
+                            <p className="title thirdTitle">Bonos</p>
+                            <div className="list-background">
+                                <ul className="list">
+                                    <li>
+                                        <p>{bond.content1.text}</p>
+                                        <p>{bond.content1.price}</p>
+                                    </li>
+                                    <li>
+                                        <p>{bond.content2.text}</p>
+                                        <p>{bond.content2.price}</p>
+                                    </li>
+                                    <li>
+                                        <p>{bond.content3.text}</p>
+                                        <p>{bond.content3.price}</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -77,7 +84,7 @@ export default function (props) {
 
 
                     <div className="price-info-container">
-                        <h3 className="price-info-container__matricula">{info.text} <span>{info.price}</span></h3>
+                        <p className="price-info-container__matricula">{info.text} <span>{info.price}</span></p>
                         <p className="price-info-container__iva">{info.vat}</p>
                     </div>
 
