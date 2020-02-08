@@ -23,7 +23,7 @@ export default function (props) {
                 color: "white",
                 fontWeight: "800",
                 transition: "1s linear",
-                padding: "3rem"
+                padding: "3rem 0"
             }}>
                 <p className=" what-title section-title-wrapper">{text[`${lang}`].navbar.what.toUpperCase()}</p>
             </div>
