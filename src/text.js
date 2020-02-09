@@ -12,7 +12,7 @@ const text = {
             who: "Who we are",
             what: "What we do",
             schedule: "Schedule",
-            price: "Prices",
+            price: "Rates",
             contact: "Contact"
         },
         header: <p className="quote">BE YOUR<br />BETTER<br />VERSION</p>,

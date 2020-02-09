@@ -1,33 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import SectionTitle from '../SectionTitle'
 import methods from '../../utils/index.js'
 import ScheduleControlBox from '../ScheduleControlBox'
 import './style.sass'
 
-const { highlightCell, createTable } = methods
+const { createTable } = methods
 
 
 export default function (props) {
-    const [widthState, setWidthState] = useState({ fontSize: "2rem" })
     const { text, lang } = props
     const { sectionSchedule } = text[`${lang}`]
-
-    useEffect(() => {
-        setWidthState({ fontSize: "6rem" })
-    }, [])
 
     return (
         <>
             <section className="schedule-container-content">
-                <div style={{
-                    fontSize: widthState.fontSize,
-                    color: "#fc4545",
-                    fontWeight: "800",
-                    transition: ".7s linear",
-                    padding: "3rem 0"
 
-                }}>
-                    <p className="schedule-title section-title-wrapper">{text[`${lang}`].navbar.schedule.toUpperCase()}</p>
-                </div>
+                <SectionTitle props={props} section={"schedule"} padding={"0 0 4rem 0"} />
 
                 <div className="sh-cont-wrapp">
                     <div className="control-table-container">

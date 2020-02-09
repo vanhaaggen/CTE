@@ -1,4 +1,5 @@
 import React from 'react'
+import SectionTitle from '../SectionTitle'
 
 import './style.sass'
 
@@ -7,13 +8,14 @@ export default function (props) {
 
     const { sectionPrice: { child, basic, bond, offer, info } } = text[`${lang}`]
 
+
     return (
         <>
-            <div className="price-container">
-                <h1>Price</h1>
+            <section className="price-container">
+
+                <SectionTitle props={props} section={"price"} padding={"0 0 4rem 0"} />
+
                 <div className="price-content-container">
-
-
                     <div className="price-table-container">
                         <div className="price-table-container__content left-table">
                             <p className="title firstTitle">Quota Infantil</p>
@@ -90,7 +92,7 @@ export default function (props) {
 
 
                 </div>
-            </div>
+            </section>
         </>
     )
 }

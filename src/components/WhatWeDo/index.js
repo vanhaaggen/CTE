@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import SectionTitle from '../SectionTitle'
 import IconBox from './IconBox'
 import images from "../../images"
 
@@ -7,29 +8,16 @@ import './style.sass'
 const { icons } = images
 
 export default function (props) {
-    const [widthState, setWidthState] = useState({ fontSize: "2rem" })
     const { text, lang } = props
 
 
-    useEffect(() => {
-        setWidthState({ fontSize: "6rem" })
-    }, [])
-
-
     return (<>
-        <div className="what-container">
-            <div style={{
-                fontSize: widthState.fontSize,
-                color: "white",
-                fontWeight: "800",
-                transition: "1s linear",
-                padding: "3rem 0"
-            }}>
-                <p className=" what-title section-title-wrapper">{text[`${lang}`].navbar.what.toUpperCase()}</p>
-            </div>
+        <section className="what-container">
 
+            <SectionTitle props={props} section={"what"} padding={"0 0 4rem 0"} />
 
-            <section className="what-content">
+            <div className="what-content">
+
                 <article className="what-description-wrapper">
 
                     <div className="what-first-paragraph whatContent">
@@ -66,10 +54,10 @@ export default function (props) {
                     <div className="what-third-pgrph-line-Right"></div>
                 </article>
 
-            </section>
+            </div>
 
 
-        </div>
+        </section>
 
     </>)
 }

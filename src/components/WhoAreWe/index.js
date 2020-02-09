@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import SectionTitle from '../SectionTitle'
 import { Animated } from 'react-animated-css'
 import './style.sass'
 
@@ -7,28 +8,15 @@ import coach2 from '../../images/coach2.png'
 
 
 export default function (props) {
-    const [widthState, setWidthState] = useState({ fontSize: "2rem" })
     const { text, lang } = props
 
-    useEffect(() => {
-        setWidthState({ fontSize: "6rem" })
-    }, [])
 
     return (
 
         <>
             <section className="who-container-content">
 
-                <div style={{
-                    fontSize: widthState.fontSize,
-                    color: "#fc4545",
-                    fontWeight: "800",
-                    transition: "1s linear",
-                    padding: "3rem 0"
-
-                }}>
-                    <p className="who-title section-title-wrapper">{text[`${lang}`].navbar.who.toUpperCase()}</p>
-                </div>
+                <SectionTitle props={props} section={"who"} padding={"0 0 4rem 0"} />
 
                 <div className="who-wrapp">
                     <Animated className="who-wrapp__anim"
