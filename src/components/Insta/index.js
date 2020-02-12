@@ -39,7 +39,7 @@ export default function (prop) {
                         {firstImage ? <div className="insta-first-wrap">
                             <img src={firstImage.image} alt=" " />
                             <div>
-                                <p>{addClassToText(firstImage.caption)}</p>
+                                {addClassToText(firstImage.caption)}
                             </div>
                         </div>
                             : <div>
