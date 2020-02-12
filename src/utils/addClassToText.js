@@ -11,20 +11,24 @@ import React from 'react'
 export default function (string) {
     let strg = string.split(' ')
 
-
+    console.log('function runs')
     for (let i = 0; i < strg.length; i++) {
         if (strg[i][0] === "#") {
             strg[i] = React.createElement('span', {
+                key: [i],
                 className: 'hashtag',
                 style: { color: 'blue' }
             }, ` ${strg[i]}`)
         } else if (strg[i][0] === "@") {
             strg[i] = React.createElement('span', {
+                key: [i],
                 className: 'atTag',
                 style: { color: 'purple' }
             }, ` ${strg[i]} `)
         } else {
-            strg[i] = ` ${strg[i]}`
+            strg[i] = React.createElement('span', {
+                key: [i]
+            }, ` ${strg[i]}`)
         }
     }
 
