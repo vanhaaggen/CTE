@@ -14,7 +14,7 @@ export default function Home(props) {
         <>
             <I18NConsumer>
                 {({ text, lang }) => (
-                    <body className="Home">
+                    <main className="Home">
                         <Hero />
                         <SectionLayout section={'who'} content={<WhoAreWe text={text} lang={lang} />} />
                         <SectionLayout section={'what'} content={<WhatWeDo text={text} lang={lang} />} />
@@ -23,7 +23,7 @@ export default function Home(props) {
                         <Instalation text={text} lang={lang} />
                         <Insta text={text} lang={lang} />
                         <SectionLayout section={'contact'} content={<Contact text={text} lang={lang} />} />
-                    </body>
+                    </main>
 
                 )}
             </I18NConsumer>

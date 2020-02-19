@@ -4,7 +4,7 @@ const INSTA_HASHTAG_URL = "https://www.instagram.com/explore/tags/"
 const INSTA_ATTAG_URL = "https://www.instagram.com/"
 
 /**
- * Iterates over a String to search for "#" and "@" and adds  a classname
+ * Iterates over a String to search for "#" and "@" and adds a classname
  * 
  * @param {string} string
  * 

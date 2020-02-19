@@ -42,8 +42,8 @@ function Stripe() {
                                         animationIn="bounceInUp"
                                         animationInDelay={count}
                                         isVisible={isInView}>
-                                        <div className="cont">
-                                            <div key={`cont${i}`} className={`cont${i}`}>{badge}</div>
+                                        <div className="cont" key={`cont${i}`}>
+                                            <div className={`cont${i}`}>{badge}</div>
                                         </div>
                                     </Animated>
 
