@@ -1,6 +1,6 @@
 ## SPA Landing page for Crosstraining Empordà.
 
-<article style="background-color: #f5f5f5; border-radius: 10px">
+<article style="padding: 1rem; background-color: #e5f1fc; border-radius: 10px">
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Available Scripts
 
