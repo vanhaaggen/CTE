@@ -29,8 +29,8 @@ export default function (props) {
                             <div className="who-divisor">
 
                                 <article className="who-divisor__paragraph">
-                                    <p className='who-divisor__paragraph--size'>{text[`${lang}`].sectionWho.par1}</p>
-                                    <p className='who-divisor__paragraph--size'>{text[`${lang}`].sectionWho.par2}</p>
+                                    {text[`${lang}`].sectionWho.par1}
+                                    {text[`${lang}`].sectionWho.par2}
                                 </article>
 
                                 <Card image={coach1} text1={text[`${lang}`].sectionWho.coach1.name} text2={text[`${lang}`].sectionWho.coach1.text} />
