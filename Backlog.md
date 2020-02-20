@@ -6,8 +6,8 @@
 - [ ] add hoover style to Navbar menu
 
 ### WhoAreWe
-- [ ] center main text
-- [ ] style text on card
+- [x] center main text
+- [x] style text on card
 
 ## WhatWeDo
 - [ ] add better description
