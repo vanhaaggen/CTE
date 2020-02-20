@@ -24,13 +24,21 @@ const text = {
             <p className="stripeText">We call the suffering a <span className="stripeText___box4">Joyful</span> experience</p>,
         ],
         sectionWho: {
-            par1: "We are a Crosstraining gym located on Calle dels Arboços 4 in Vulpellac.",
+            par1: <p className='who-divisor__paragraph--size'>We are a Crosstraining gym located on <b>Calle dels Arboços 4 in Vulpellac.</b></p>,
 
-            par2: "We will help you with our classes to unlock your full potential through high intensity interval (HIIT) and functional training adapted to your sports level. Always paying close attention to the correct implementation of the movements",
+            par2: <p className='who-divisor__paragraph--size'>We will help you with our classes to <b>unlock</b> your full potential through <b>high intensity interval</b> (HIIT) and functional training adapted to your sports level. Always paying close attention to the correct implementation of the movements.</p>,
 
             par3: "Whether you're just starting or been around for a while, with us you will always have a great time reaching your limit.",
 
-            coachTitle: "The Coaches"
+            coach1: {
+                name: "- Coach Cristhian -",
+                text: "I will teach you how to move big loads with little risk."
+            },
+
+            coach2: {
+                name: "- Coach Gerard -",
+                text: "I will teach you to overcome your weaknesess"
+            }
         },
         sectionPrice: {
             child: {
@@ -124,12 +132,20 @@ const text = {
 
         ],
         sectionWho: {
-            par1: "Somos un gimnasio de Crosstraining situado en la calle dels Arboços 4 de Vulpellac.",
-            par2: "Te ayudaremos con nuestras clases dirigidas a liberar tu máximo potencial mediante entrenos intervalicos de alta intensidad (HIIT) y funcionales adaptados a tu nivel deportivo. Siempre prestando mucha atención a la correcta implementación de los movimientos ",
+            par1: <p className='who-divisor__paragraph--size'>Somos un gimnasio de Crosstraining situado en la <b>calle dels Arboços 4 de Vulpellac.</b></p>,
+            par2: <p className='who-divisor__paragraph--size'>Te ayudaremos con nuestras <b>clases dirigidas</b> a liberar tu máximo potencial mediante <b>entrenos intervalicos de alta intensidad</b> (HIIT) y funcionales adaptados a tu nivel deportivo. Siempre prestando mucha atención a la correcta implementación de los movimientos.</p>,
 
             par3: "Sea acabando de empezar o llevando ya un tiempo, con nosotros siempre te lo pasaras a lo grande llegando a tu limite.",
 
-            coachTitle: "Los Coaches"
+            coach1: {
+                name: "- Coach Cristhian - ",
+                text: "Yo te enseñaré a mover pesos altos sin riesgo."
+            },
+
+            coach2: {
+                name: "- Coach Gerard -",
+                text: "Yo te enseñaré a superar tus debilidades."
+            }
         },
         sectionWhat: {
             icons: ["Fuerza", "Agilidad", "Flexibilidad", "Velocidad", "Equilibrio", "Condición"],
@@ -228,12 +244,20 @@ const text = {
             <p className="stripeText">Als entrenadors els anomenem <span className="stripeText___box4">Coaches</span></p>,
         ],
         sectionWho: {
-            par1: "Som un gimnàs de Crosstraining situat al carrer dels Arboços 4 a Vulpellac.",
-            par2: "T'ajudarem en les nostres classes dirigides a alliberar el teu màxim potencial mitjançant entrenaments intervàlics d'alta intensitat (HIIT) i funcionals adaptats al teu nivell esportiu. Sempre prestant molta atenció al correcte desenvolupament del moviment.",
+            par1: <p className='who-divisor__paragraph--size'>Som un gimnàs de Crosstraining situat al <b>carrer dels Arboços 4 a Vulpellac.</b></p>,
+            par2: <p className='who-divisor__paragraph--size'>T'ajudarem en les nostres <b>classes dirigides</b> a alliberar el teu màxim potencial mitjançant <b>entrenaments intervàlics d'alta intensitat</b> (HIIT) i funcionals adaptats al teu nivell esportiu. Sempre prestant molta atenció al correcte desenvolupament del moviment.</p>,
 
             par3: "Sia acabant de començar o portant temps, amb nosaltres sempre t'ho passaràs en gran arribant al teu límit.",
 
-            coachTitle: "Els Coaches"
+            coach1: {
+                name: "- Coach Cristhian -",
+                text: "Jo t'ensenyare a moure pesos alts sense risc"
+            },
+
+            coach2: {
+                name: "- Coach Gerard -",
+                text: "Jo t'ensenyare a superar les teves debilitats."
+            }
         },
         sectionWhat: {
             icons: ["Força", "Agilitat", "Flexibilitat", "Velocitat", "Equilibri", "Condició"],

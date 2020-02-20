@@ -35,20 +35,18 @@
      -moz-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.1)
      box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.1)
      
-.border-left
+.back-border-img-left
      border-left: 5px solid #fc4646
      background-image: url('../../images/bckImageLarrosa1.png')
      background-size: cover
      background-position-y: -500px
    
-.border-right
+.back-border-img-right
      border-right: 5px solid #fc4646
      background-image: url('../../images/bckImageDevesa1.png')
      background-size: cover
      background-position-y: -300px
     
-     
-
 .divisor-wave1
      width: 100%
      background-image: url(../../images/wave1.svg)
@@ -87,12 +85,14 @@
           width: 50%
           padding: .5vw
           border-radius: 5px
+          border-bottom: 1rem solid #0049ff
           min-width: 200px
 
 
           &--image
                width: 100%
                border-radius: 5px
+               border-bottom: .5rem solid #f24141
                object-fit: cover
                           
 
@@ -102,15 +102,16 @@
           text-align: center
 
           &--line
-               margin: 2rem 0 1rem 0
+               margin: .4rem 0 1rem 0
                width: 100%
                height: 3px
                border-top: 1.5px solid #dee2e2
 
           &--textBig
-               padding: 0  0 1vw 0
+               padding: 0  0 .5vw 0
                font-size: 1.1rem
-               font-weight: 500
+               font-weight: 600
+               color: #0049ff
 
           &--textSmall
                padding: 0 1vw
@@ -119,6 +120,9 @@
 
      &__paragraph
           width: 50%
+          display: flex
+          flex-direction: column
+          justify-content: center
 
           &--size
                font-size: 1.2rem
@@ -131,6 +135,9 @@
                letter-spacing: 1.2px
                line-height: 1.2
                border-left: 7px solid #fc4646
+
+.par12
+    
                
 .par3
      display: flex

@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 export default function ({ text, image }) {
-    const [hover, setHover] = useState()
-
-    useEffect(() => {
-        setHover(noHover)
-    }, [])
-
-
-    const noHover = {
+    const [hover, setHover] = useState({
         color: "white",
         fontWeight: 600,
         transform: "translateY(-60px)",
         opacity: 0
-    }
+    })
 
     const onHover = {
         color: "white",

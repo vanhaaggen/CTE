@@ -8,7 +8,7 @@ const { highlightCell } = methods
 
 export default function ({ delayTime, bttnClass, tdClass, activity }) {
     const [isOn, setIsOn] = useState(false)
-    const [selector, setSelector] = useState()
+    const [selector, setSelector] = useState(null)
 
     useEffect(() => {
         highlightCell(selector, isOn)
