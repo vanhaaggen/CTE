@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 const text = {
     navBar: {
         acronym: 'CTE',
@@ -245,7 +247,7 @@ const text = {
         ],
         sectionWho: {
             par1: <p className='who-divisor__paragraph--size'>Som un gimnàs de Crosstraining situat al <b>carrer dels Arboços 4 a Vulpellac.</b></p>,
-            par2: <p className='who-divisor__paragraph--size'>T'ajudarem en les nostres <b>classes dirigides</b> a alliberar el teu màxim potencial mitjançant <b>entrenaments intervàlics d'alta intensitat</b> (HIIT) i funcionals adaptats al teu nivell esportiu. Sempre prestant molta atenció al correcte desenvolupament del moviment.</p>,
+            par2: <p className='who-divisor__paragraph--size'>T'ajudarem en les nostres <b>classes dirigides</b> a alliberar el teu màxim potencial mitjançant <b>entrenaments intervàlics d'alta intensitat</b> (<span className="hiit">HIIT</span>) i funcionals adaptats al teu nivell esportiu. Sempre prestant molta atenció al correcte desenvolupament del moviment.</p>,
 
             par3: "Sia acabant de començar o portant temps, amb nosaltres sempre t'ho passaràs en gran arribant al teu límit.",
 

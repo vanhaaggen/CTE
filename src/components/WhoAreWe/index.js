@@ -1,6 +1,8 @@
 import React from 'react'
+
 import SectionTitle from '../SectionTitle'
 import Card from './Card'
+
 import { Animated } from 'react-animated-css'
 import './style.sass'
 
@@ -40,6 +42,8 @@ export default function (props) {
                         </div>
                     </div>
                 </Animated>
+
+
 
                 <Animated className="who-wrapp__anim"
                     animationIn="bounceInRight"
