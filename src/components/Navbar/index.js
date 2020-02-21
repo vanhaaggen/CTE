@@ -6,13 +6,10 @@ import Media from 'react-media'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
-
-
 import './style.sass'
 import './styleMobile.sass'
 
 import { I18NConsumer } from '../i18ncontext'
-
 
 
 export default function Navbar(props) {
@@ -26,18 +23,33 @@ export default function Navbar(props) {
         }, 300);
     }
 
-    return <>
+    const LinkComponent = ({ text, lang, linkTo }) => {
+        return (
+            <Link className="menu"
+                activeClass="active"
+                to={linkTo}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+            >
+                {text[`${lang}`].navbar[`${linkTo}`]}
+            </Link>
+        )
 
+    }
+
+    return <>
 
         <I18NConsumer>
             {({ text, lang }) => (
                 <header className="navbar-wrapper">
-                    <Media query={{ minWidth: 700 }}>
+                    <Media query={{ minWidth: 776 }}>
                         {matches => matches ? (
                             <>
                                 <div className="Navbar">
                                     <div className="navbar-container">
-                                        <Link className="menu"
+                                        <Link
                                             activeClass="active"
                                             to="hero"
                                             spy={true}
@@ -53,48 +65,24 @@ export default function Navbar(props) {
                                         </Link>
 
                                         <div className="navbar-container__list">
-                                            <ul>
-                                                <Link className="menu"
-                                                    activeClass="active"
-                                                    to="who"
-                                                    spy={true}
-                                                    smooth={true}
-                                                    offset={-70}
-                                                    duration={500}
-                                                >{text[`${lang}`].navbar.who}</Link>
-                                                <Link className="menu"
-                                                    activeClass="active"
-                                                    to="what"
-                                                    spy={true}
-                                                    smooth={true}
-                                                    offset={-70}
-                                                    duration={500}
-                                                >{text[`${lang}`].navbar.what}</Link>
-                                                <Link className="menu"
-                                                    activeClass="active"
-                                                    to="schedule"
-                                                    spy={true}
-                                                    smooth={true}
-                                                    offset={-70}
-                                                    duration={500}
-                                                >{text[`${lang}`].navbar.schedule}</Link>
-                                                <Link className="menu"
-                                                    activeClass="active"
-                                                    to="price"
-                                                    spy={true}
-                                                    smooth={true}
-                                                    offset={-70}
-                                                    duration={500}
-                                                >{text[`${lang}`].navbar.price}</Link>
-                                                <Link className="menu"
-                                                    activeClass="active"
-                                                    to="contact"
-                                                    spy={true}
-                                                    smooth={true}
-                                                    offset={-70}
-                                                    duration={500}
-                                                >{text[`${lang}`].navbar.contact}</Link>
-                                            </ul>
+                                            <nav className="nav-list">
+                                                <div className="link-container">
+                                                    <LinkComponent text={text} lang={lang} linkTo={'who'} />
+                                                </div>
+                                                <div className="link-container">
+                                                    <LinkComponent text={text} lang={lang} linkTo={'what'} />
+                                                </div>
+                                                <div className="link-container">
+                                                    <LinkComponent text={text} lang={lang} linkTo={'schedule'} />
+                                                </div>
+                                                <div className="link-container">
+                                                    <LinkComponent text={text} lang={lang} linkTo={'price'} />
+                                                </div>
+                                                <div className="link-container">
+                                                    <LinkComponent text={text} lang={lang} linkTo={'contact'} />
+                                                </div>
+
+                                            </nav>
                                         </div>
                                     </div>
                                     <div>

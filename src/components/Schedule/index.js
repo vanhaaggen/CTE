@@ -8,8 +8,11 @@ const { createTable } = methods
 
 
 export default function (props) {
+
     const { text, lang } = props
-    const { sectionSchedule } = text[`${lang}`]
+    const { daysOfWeek } = text[`${lang}`].sectionSchedule
+    const { scheduleContent } = text
+
 
     return (
         <>
@@ -32,14 +35,11 @@ export default function (props) {
                                 <tbody>
                                     <tr>
                                         <th></th>
-                                        <th>Dilluns</th>
-                                        <th>Dimarts</th>
-                                        <th>Dimecres</th>
-                                        <th>Dijous</th>
-                                        <th>Divendres</th>
-                                        <th>Dissabte</th>
+                                        {daysOfWeek.map(day => {
+                                            return <th>{day}</th>
+                                        })}
                                     </tr>
-                                    {createTable(sectionSchedule, 9, 7)}
+                                    {createTable(scheduleContent, 9, 7)}
                                 </tbody>
                             </table>
                         </div>
