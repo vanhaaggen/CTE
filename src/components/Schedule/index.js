@@ -13,7 +13,6 @@ export default function (props) {
     const { daysOfWeek } = text[`${lang}`].sectionSchedule
     const { scheduleContent } = text
 
-
     return (
         <>
             <section className="schedule-container-content">

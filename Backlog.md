@@ -3,15 +3,17 @@
 
 
 ### Navbar
-- [ ] add hoover style to Navbar menu
+- [x] add hoover style to Navbar menu
 
 ### WhoAreWe
 - [x] center main text
 - [x] style text on card
 
 ## WhatWeDo
+- [ ] add translation in EN
 - [ ] add better description
-- [ ] take margin of main-container
+- [ ] take margin off main-container
+- [x] give p.what-para more width
 
 ## Price
 - [ ] style the offer block from the center card.

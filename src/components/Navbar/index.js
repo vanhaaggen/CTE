@@ -66,19 +66,19 @@ export default function Navbar(props) {
 
                                         <div className="navbar-container__list">
                                             <nav className="nav-list">
-                                                <div className="link-container">
+                                                <div className="link-container large">
                                                     <LinkComponent text={text} lang={lang} linkTo={'who'} />
                                                 </div>
-                                                <div className="link-container">
+                                                <div className="link-container large">
                                                     <LinkComponent text={text} lang={lang} linkTo={'what'} />
                                                 </div>
-                                                <div className="link-container">
+                                                <div className="link-container small">
                                                     <LinkComponent text={text} lang={lang} linkTo={'schedule'} />
                                                 </div>
-                                                <div className="link-container">
+                                                <div className="link-container small">
                                                     <LinkComponent text={text} lang={lang} linkTo={'price'} />
                                                 </div>
-                                                <div className="link-container">
+                                                <div className="link-container small">
                                                     <LinkComponent text={text} lang={lang} linkTo={'contact'} />
                                                 </div>
 

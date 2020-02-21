@@ -42,6 +42,9 @@ const text = {
                 text: "I will teach you to overcome your weaknesess"
             }
         },
+        sectionSchedule: {
+            daysOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        },
         sectionPrice: {
             child: {
                 content1: {
@@ -153,7 +156,11 @@ const text = {
             icons: ["Fuerza", "Agilidad", "Flexibilidad", "Velocidad", "Equilibrio", "Condición"],
             par1: <p className="what-para">En <b>Crosstraining Empordà</b> te ofrecemos entrenos funcionales o HIITs para  grandes y pequeños, como también clases de Jiu Jitsu.</p>,
             par2: <p className="what-para">Los <b>HIIT</b> son entrenamientos intervalicos de alta intensidad. Es una técnica de entreno rápida, intensa y que et permite quemar calorías como ninguna otra.</p>,
-            par3: <p className="what-para">Si tienes <b>curiosidad</b>, ven a probar una clase.</p>
+            par3: [<p className="what-para-third">Si tienes <b>curiosidad</b>,</p>, <p className="what-para-third">ven a probar una clase.</p>]
+
+        },
+        sectionSchedule: {
+            daysOfWeek: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
         },
         sectionPrice: {
             child: {
