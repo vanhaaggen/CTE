@@ -40,7 +40,7 @@ export default function (props) {
 
                         <div className="what-blocks">
                             {icons.map((item, index) => {
-                                return <IconBox text={text[`${lang}`].sectionWhat.icons[index]} image={item} />
+                                return <IconBox key={`what-b-${index}`} text={text[`${lang}`].sectionWhat.icons[index]} image={item} />
                             })}
                         </div>
                     </div>

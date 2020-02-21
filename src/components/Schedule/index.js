@@ -34,8 +34,8 @@ export default function (props) {
                                 <tbody>
                                     <tr>
                                         <th></th>
-                                        {daysOfWeek.map(day => {
-                                            return <th>{day}</th>
+                                        {daysOfWeek.map((day, i) => {
+                                            return <th key={`d-${i}`}>{day}</th>
                                         })}
                                     </tr>
                                     {createTable(scheduleContent, 9, 7)}

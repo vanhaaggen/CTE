@@ -1,17 +1,39 @@
 $turquoise: #52f9b1
 $dustwhite: #f5f5f5
-    
+
+.contact-container
+    margin: 0
+    padding: 0
+    width: 100%
+
 .contact-title
     text-align: right
 
 .contact-content
-    margin-left: 4rem
-    margin-top: 2rem
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin-top: 3rem
+
+    &--left-size
+        display: flex
+        justify-content: center
+        width: 50%
+        
+    &--right-size
+        display: flex
+        justify-content: center
+        min-width: 50%
+       
 
 .title-wrap
     width: 35%
+    padding: .5rem 0 .5rem 0
     min-width: 400px
     border-left: 6px solid $dustwhite
+    background-color: #444040
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
 
 .title-h2
     padding-left: 1rem
@@ -24,21 +46,23 @@ $dustwhite: #f5f5f5
     font-size: 1.2rem
     color: $dustwhite
 
+.form-container
+    width: 70%
+
 .contact-form
     display: flex
     flex-direction: column
     margin-top: 3rem
-    width: 40%
-    min-width: 600px
+    width: 100%
 
 .input-field, .textarea
-    padding: .2rem .7rem
+    padding: .4rem .7rem 
     margin: .5rem
-    background-color: #494646
+    background-color: #fcfbf8
     border: none
-    border-radius: 2px
-    border-bottom: 3px solid $dustwhite
-    font-size: 1.5rem
+    border: 1px solid #0049ff
+    border-radius: 5px
+    font-size: 1rem
     color: $dustwhite
 
 .bttn-wrap
@@ -51,7 +75,7 @@ $dustwhite: #f5f5f5
     height: 30px
     margin: .5rem .5rem 0 0
     border: none
-    border-radius: 2px
+    border-radius: 5px
     background-color: $turquoise
     color: #0632a3
     font-size: 1rem
@@ -85,7 +109,6 @@ $dustwhite: #f5f5f5
         font-size: 1.2rem
         padding: .5rem .5rem 0 .5rem
         color: $dustwhite
-
 
 
 //Loading-----Bars
@@ -143,4 +166,33 @@ $dustwhite: #f5f5f5
     transform: translateZ(0) scale(1)
     backface-visibility: hidden
     transform-origin: 0 0
-//-------------------------------
+
+
+//---------Error Message-------------
+
+.error-container
+    width: 55%
+    padding: 1rem
+    border: 2px solid #f24141
+    border-radius: 10px
+    font-size: 1.5rem
+    line-height: .8
+    color: #444040
+    background-color: #fcfbf8
+
+.errorBackBttn
+    color: #0049ff
+    cursor: pointer
+
+.errorBackBttn:hover
+    font-weight: 600 
+
+
+//---download-link
+
+.download-container
+    margin-top: .5rem
+    padding: 0 .5rem .5rem .5rem
+    background-color: #fcfbf8
+    border-radius: 10px
+    

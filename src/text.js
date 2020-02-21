@@ -156,7 +156,7 @@ const text = {
             icons: ["Fuerza", "Agilidad", "Flexibilidad", "Velocidad", "Equilibrio", "Condición"],
             par1: <p className="what-para">En <b>Crosstraining Empordà</b> te ofrecemos entrenos funcionales o HIITs para  grandes y pequeños, como también clases de Jiu Jitsu.</p>,
             par2: <p className="what-para">Los <b>HIIT</b> son entrenamientos intervalicos de alta intensidad. Es una técnica de entreno rápida, intensa y que et permite quemar calorías como ninguna otra.</p>,
-            par3: [<p className="what-para-third">Si tienes <b>curiosidad</b>,</p>, <p className="what-para-third">ven a probar una clase.</p>]
+            par3: [<p key={`what-para-3-1`} className="what-para-third">Si tienes <b>curiosidad</b>,</p>, <p key={`what-para-3-2`} className="what-para-third">ven a probar una clase.</p>]
 
         },
         sectionSchedule: {
@@ -272,7 +272,7 @@ const text = {
             icons: ["Força", "Agilitat", "Flexibilitat", "Velocitat", "Equilibri", "Condició"],
             par1: <p className="what-para">A <b>Crosstraining Empordà</b> t'oferim entrenaments funcionals o HIITS, per a grans i petits, com tambe classes de Jiu Jitsu.</p>,
             par2: <p className="what-para">Els <b>HIIT</b> son entrenaments intervalics d'alta intensitat. És una tecnica d'entrenament ràpida, intensa i que et permet cremar calories com ninguna altre.</p>,
-            par3: [<p className="what-para-third">Si tens <b>curiositat</b>,</p>, <p className="what-para-third"> vine a provar una classe.</p>]
+            par3: [<p key={`what-para-3-1`} className="what-para-third">Si tens <b>curiositat</b>,</p>, <p key={`what-para-3-2`} className="what-para-third"> vine a provar una classe.</p>]
         },
         sectionSchedule: {
             daysOfWeek: ["Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte"]

@@ -11,22 +11,22 @@ const { Hero, WhoAreWe, Instalation, WhatWeDo, Schedule, Price, Insta, Contact }
 
 export default function Home(props) {
     return (
-        <>
-            <I18NConsumer>
-                {({ text, lang }) => (
-                    <main className="Home">
-                        <Hero />
-                        <SectionLayout section={'who'} content={<WhoAreWe text={text} lang={lang} />} />
-                        <SectionLayout section={'what'} content={<WhatWeDo text={text} lang={lang} />} />
-                        <SectionLayout section={'schedule'} content={<Schedule text={text} lang={lang} />} />
-                        <SectionLayout section={'price'} content={<Price text={text} lang={lang} />} />
-                        <Instalation text={text} lang={lang} />
-                        <Insta text={text} lang={lang} />
-                        <SectionLayout section={'contact'} content={<Contact text={text} lang={lang} />} />
-                    </main>
 
-                )}
-            </I18NConsumer>
-        </>
+        <I18NConsumer>
+            {({ text, lang }) => (
+                <main className="Home">
+                    <Hero />
+                    <SectionLayout section={'who'} content={<WhoAreWe text={text} lang={lang} />} />
+                    <SectionLayout section={'what'} content={<WhatWeDo text={text} lang={lang} />} />
+                    <SectionLayout section={'schedule'} content={<Schedule text={text} lang={lang} />} />
+                    <SectionLayout section={'price'} content={<Price text={text} lang={lang} />} />
+                    <Instalation text={text} lang={lang} />
+                    <Insta text={text} lang={lang} />
+                    <SectionLayout section={'contact'} content={<Contact text={text} lang={lang} />} />
+                </main>
+
+            )}
+        </I18NConsumer>
+
     )
 }
