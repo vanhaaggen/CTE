@@ -34,8 +34,9 @@ export default function (props) {
     }
 
 
-    const handleOnClick = () => {
+    const handleBackToForm = () => {
         setError(false)
+        setSent(false)
     }
 
 
@@ -96,14 +97,19 @@ export default function (props) {
                         </>}
 
                         {sent && <>
-                            {text[`${lang}`].sectionContact.sent}
+                            <div className="sended-mssg-container">
+                                {text[`${lang}`].sectionContact.sent}
+                                <div className="sentBackBttn-container">
+                                    <p className="sentBackBttn" onClick={handleBackToForm}>👈Torna</p>
+                                </div>
+                            </div>
                         </>}
 
                         {error && <>
                             <div className="error-container">
                                 <p>Ups! 😅</p>
                                 <p>Sembla que algo <b>no</b> ha anat bé...</p>
-                                <p className="errorBackBttn" onClick={handleOnClick}>torna-ho a probar 🤞</p>
+                                <p className="errorBackBttn" onClick={handleBackToForm}>torna-ho a probar 🤞</p>
                             </div>
                         </>}
                     </div>

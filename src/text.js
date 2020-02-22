@@ -103,7 +103,7 @@ const text = {
             }
         },
         sectionContact: {
-            title1: "Can we help?",
+            title1: "Any doubt?",
             title2: "Leave us a message",
             name: "Name",
             email: "E-mail",
@@ -220,7 +220,7 @@ const text = {
             }
         },
         sectionContact: {
-            title1: "Te podemos ayudar ?",
+            title1: "Alguna duda?",
             title2: "Dejanos un mensaje",
             name: "Nombre",
             email: "E-mail",
@@ -335,7 +335,7 @@ const text = {
             }
         },
         sectionContact: {
-            title1: "Et podem ajudar?",
+            title1: "Algun dubte?",
             title2: "deixa'ns un missatge",
             name: "Nom",
             email: "E-mail",
