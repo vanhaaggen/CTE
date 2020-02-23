@@ -36,7 +36,20 @@ export default function Navbar(props) {
                 {text[`${lang}`].navbar[`${linkTo}`]}
             </Link>
         )
+    }
 
+    const LinkComponentMobile = ({ text, lang, linkTo }) => {
+        return (
+            <Link className="menu-mobile"
+                activeClass="active"
+                to={linkTo}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={() => setMenuOpen(!menuOpen)}
+            >{text[`${lang}`].navbar[`${linkTo}`]}</Link>
+        )
     }
 
     return <>
@@ -157,55 +170,12 @@ export default function Navbar(props) {
                                         </div>
                                         {menuOpen && <>
                                             <div className="navbar-container-mobile">
-                                                <ul className="navbar-container-mobile__list">
-                                                    <Link className="menu-mobile"
-                                                        activeClass="active"
-                                                        to="who"
-                                                        spy={true}
-                                                        smooth={true}
-                                                        offset={-70}
-                                                        duration={500}
-                                                        onClick={() => setMenuOpen(!menuOpen)}
-                                                    >{text[`${lang}`].navbar.who}</Link>
-                                                    <Link className="menu-mobile"
-                                                        activeClass="active"
-                                                        to="what"
-                                                        spy={true}
-                                                        smooth={true}
-                                                        offset={-70}
-                                                        duration={500}
-                                                        onClick={() => setMenuOpen(!menuOpen)}
-                                                    >{text[`${lang}`].navbar.what}</Link>
-
-                                                    <Link className="menu-mobile"
-                                                        activeClass="active"
-                                                        to="schedule"
-                                                        spy={true}
-                                                        smooth={true}
-                                                        offset={-70}
-                                                        duration={500}
-                                                        onClick={() => setMenuOpen(!menuOpen)}
-                                                    >{text[`${lang}`].navbar.schedule}</Link>
-
-                                                    <Link className="menu-mobile"
-                                                        activeClass="active"
-                                                        to="price"
-                                                        spy={true}
-                                                        smooth={true}
-                                                        offset={-70}
-                                                        duration={500}
-                                                        onClick={() => setMenuOpen(!menuOpen)}
-                                                    >{text[`${lang}`].navbar.price}</Link>
-
-                                                    <Link className="menu-mobile"
-                                                        activeClass="active"
-                                                        to="contact"
-                                                        spy={true}
-                                                        smooth={true}
-                                                        offset={-70}
-                                                        duration={500}
-                                                        onClick={() => setMenuOpen(!menuOpen)}
-                                                    >{text[`${lang}`].navbar.contact}</Link>
+                                                <nav className="navbar-container-mobile__list">
+                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'who'} />
+                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'what'} />
+                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'schedule'} />
+                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'price'} />
+                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} />
                                                     <div className="menu-mobile" onClick={() => {
                                                         setAnimation(!animation)
                                                         delayLangMenu(langMenu)
@@ -213,7 +183,7 @@ export default function Navbar(props) {
                                                     }>
                                                         <span>lang</span>
                                                     </div>
-                                                </ul>
+                                                </nav>
                                             </div>
                                         </>}
 
@@ -244,7 +214,6 @@ export default function Navbar(props) {
                                             </>}
                                         </div>
                                     </div>
-
                                 </>
                             )
                         }
@@ -252,7 +221,6 @@ export default function Navbar(props) {
                 </header>
             )}
         </I18NConsumer>
-
     </>
 }
 

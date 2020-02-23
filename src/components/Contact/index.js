@@ -115,9 +115,18 @@ export default function (props) {
                     </div>
                     <div className="contact-content--right-size">
                         <div className="download-container">
-                            <p className="download-container--text1">Si ja t'hem convençut</p>
-                            <p className="download-container--text2">descarreguet el nostre formulari d'inscripció</p>
-                            <a className="download-anch" href={form} download>Download Form</a>
+                            <div className="download-container__text-wrap">
+                                <p className="download-container__text-wrap--text1">Si ja t'hem convençut !</p>
+                                <p className="download-container__text-wrap--text2">descarrega't el nostre formulari d'inscripció</p>
+                                <p className="em-fi-dwn">
+                                    <span className="emoji-finger-down">👇</span>
+                                    <span className="emoji-finger-down">👇</span>
+                                    <span className="emoji-finger-down">👇</span>
+                                    <span className="emoji-finger-down">👇</span>
+                                    <span className="emoji-finger-down">👇</span>
+                                </p>
+                            </div>
+                            <a className="download-bttn" href={form} download>Download Form</a>
                         </div>
                     </div>
 
