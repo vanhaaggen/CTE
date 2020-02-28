@@ -7,14 +7,14 @@ import './style.sass'
 import form from '../../resource/form.pdf'
 
 export default function (props) {
-    const [widthState, setWidthState] = useState({ fontSize: "2rem" })
+    const [widthState, setWidthState] = useState({ fontSize: "2vw" })
     const [sent, setSent] = useState(false)
     const [loader, setLoader] = useState(false)
     const [error, setError] = useState(false)
     const { text, lang } = props
 
     useEffect(() => {
-        setWidthState({ fontSize: "6rem" })
+        setWidthState({ fontSize: "6vw" })
     }, [])
 
 
@@ -33,27 +33,16 @@ export default function (props) {
         }
     }
 
-
     const handleBackToForm = () => {
         setError(false)
         setSent(false)
     }
 
 
-
-
     return (
         <>
             <div className="contact-container">
-                <div style={{
-                    fontSize: widthState.fontSize,
-                    color: "#4577f6",
-                    fontWeight: "800",
-                    transition: "1s linear",
-                    paddingRight: "4rem"
-                }}>
-                    <p className=" contact-title section-title-wrapper">{text[`${lang}`].navbar.contact.toUpperCase()}</p>
-                </div>
+
                 <section className="contact-content">
                     <div className="contact-content--left-size">
                         {!sent && !loader && !error && <>

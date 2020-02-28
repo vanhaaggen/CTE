@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionTitle from '../SectionTitle'
+
 
 import './style.sass'
 
@@ -12,8 +12,6 @@ export default function (props) {
     return (
         <>
             <section className="price-container">
-
-                <SectionTitle props={props} section={"price"} padding={"0 0 4rem 0"} />
 
                 <div className="price-content-container">
                     <div className="price-table-container">

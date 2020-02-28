@@ -27,7 +27,6 @@ export default function (props) {
                 handleRight={() => handleRight()} />
 
             <section className="pic-container">
-                <p className="install-title">Les Instal·lacions</p>
 
                 <div className="img-wrapper">
 
