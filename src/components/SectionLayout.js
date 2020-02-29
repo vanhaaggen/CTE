@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Animated } from 'react-animated-css'
 import isInViewPort from '../utils/isInViewport'
+import SectionTitle from './SectionTitle'
 import './SectionStyle.sass'
 
 
 export default function SectionLayout(props) {
     const [isInView, setIsInView] = useState(false)
-    const { section, content } = props
+    const { section, content, text, lang } = props
 
 
     useEffect(() => {
@@ -28,8 +29,11 @@ export default function SectionLayout(props) {
 
     return (
         <>
-            <section className={`${section}-background`}>
-                <div className={`container-${section}`} id={section}>
+            <section className={`${section}-background`} >
+
+                <SectionTitle props={props} section={section} />
+
+                <div className={`container-${section}`}>
                     {isInView && <>
                         <Animated
                             animationIn="fadeIn"

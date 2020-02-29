@@ -9,7 +9,7 @@
      background-color: #4577f6
 
 table
-    width: 100%
+    width: 95%
     border-collapse: separate
     border-spacing: .2rem
     background-color: white
@@ -39,6 +39,7 @@ td
     display: flex
     justify-content: space-between
     width: 90%
+
   
 .table-container
     width: 100%
@@ -56,3 +57,36 @@ td
     max-width: 140px
 
 
+.schedule-menu-mbl
+    width: 100%
+    display: flex
+    flex-direction: column
+    margin-bottom: 1rem
+
+    &__subclass
+        display: flex
+        justify-content: space-around
+        font-size: 1rem
+
+
+
+.control-table-container-mbl
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 90%
+
+
+@media (max-width: 1000px)
+        
+    .control-table-container
+        display: flex
+        flex-direction: column
+        width: 90%
+
+    .schedule-menu
+        display: flex
+        width: 100%
+        flex-direction: row
+       
+        

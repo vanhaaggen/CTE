@@ -1,6 +1,4 @@
 import React from 'react'
-
-import SectionTitle from '../SectionTitle'
 import Card from './Card'
 
 import { Animated } from 'react-animated-css'
@@ -17,8 +15,6 @@ export default function (props) {
     return (
 
         <section className="who-container-content">
-
-            <SectionTitle props={props} section={"who"} padding={"0 0 4rem 0"} />
 
             <div className="who-wrapp">
                 <Animated className="who-wrapp__anim"

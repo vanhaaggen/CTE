@@ -1,5 +1,4 @@
 import React from 'react'
-import SectionTitle from '../SectionTitle'
 import IconBox from './IconBox'
 import images from "../../images"
 
@@ -13,8 +12,6 @@ export default function (props) {
 
     return (<>
         <section className="what-container">
-
-            <SectionTitle props={props} section={"what"} padding={"0 0 4rem 0"} />
 
             <div className="what-content">
 

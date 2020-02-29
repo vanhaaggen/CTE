@@ -16,7 +16,7 @@ const highlightCell = (selector, boolean) => {
         let pushNum = toArr.push("-td")
         let del = toArr.splice(0, 2)
         let result = toArr.join('')
-
+        debugger
         return result
     }
 

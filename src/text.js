@@ -43,7 +43,8 @@ const text = {
             }
         },
         sectionSchedule: {
-            daysOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+            daysOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            daysOfWeekMobile: ["Mo", "Tu", "We", "Th", "Fr", "Sa"]
         },
         sectionPrice: {
             child: {
@@ -160,7 +161,8 @@ const text = {
 
         },
         sectionSchedule: {
-            daysOfWeek: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+            daysOfWeek: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+            daysOfWeekMobile: ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
         },
         sectionPrice: {
             child: {
@@ -275,7 +277,8 @@ const text = {
             par3: [<p key={`what-para-3-1`} className="what-para-third">Si tens <b>curiositat</b>,</p>, <p key={`what-para-3-2`} className="what-para-third"> vine a provar una classe.</p>]
         },
         sectionSchedule: {
-            daysOfWeek: ["Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte"]
+            daysOfWeek: ["Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte"],
+            daysOfWeekMobile: ["Dl", "Dt", "Dm", "Dj", "Dv", "Ds"]
         },
         sectionPrice: {
             child: {
@@ -349,6 +352,7 @@ const text = {
             follow: "Segueix-nos:"
         },
     },
+
     scheduleContent: {
         row1: {
             cell0: "9:30 - 10:30",
@@ -429,6 +433,90 @@ const text = {
             cell59: <p className="ct">CROSSTRAINING</p>,
             cell60: <p className="ct">CROSSTRAINING</p>,
             cell61: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="jj">Jiu-Jitsu</p></div>,
+            cell62: "",
+        }
+
+    },
+    scheduleContentMobile: {
+        row1: {
+            cell0: "9:30 - 10:30",
+            cell1: <p className="ct-mbl">CT</p>,
+            cell2: <p className="ct-mbl">CT</p>,
+            cell3: <p className="ct-mbl">CT</p>,
+            cell4: <p className="ct-mbl">CT</p>,
+            cell5: <p className="ct-mbl">CT</p>,
+            cell6: <p className="ct-mbl">CT</p>,
+        },
+        row2: {
+            cell7: "10:30 - 11:30",
+            cell9: <p className="ct-mbl">CT</p>,
+            cell8: <p className="ct-mbl">CT</p>,
+            cell10: <p className="ct-mbl">CT</p>,
+            cell11: <p className="ct-mbl">CT</p>,
+            cell12: <p className="ct-mbl">CT</p>,
+            cell13: <p className="ct-mbl">CT</p>,
+        },
+        row3: {
+            cell14: "11:30 - 15:15",
+            cell15: <p className="ob-mbl">OB</p>,
+            cell16: <p className="ob-mbl">OB</p>,
+            cell17: <p className="ob-mbl">OB</p>,
+            cell18: <p className="ob-mbl">OB</p>,
+            cell19: <p className="ob-mbl">OB</p>,
+            cell20: "",
+        },
+        row4: {
+            cell21: "15:15 - 16:15",
+            cell22: <p className="ct-mbl">CT</p>,
+            cell23: <p className="ct-mbl">CT</p>,
+            cell24: <p className="ct-mbl">CT</p>,
+            cell25: <p className="ct-mbl">CT</p>,
+            cell26: <p className="ct-mbl">CT</p>,
+            cell27: "",
+        },
+        row5: {
+            cell28: "16:30 - 17:30",
+            cell29: <p className="ct-mbl">CT</p>,
+            cell30: <p className="ct-mbl">CT</p>,
+            cell31: <p className="ct-mbl">CT</p>,
+            cell32: <p className="ct-mbl">CT</p>,
+            cell33: <p className="ct-mbl">CT</p>,
+            cell34: "",
+        },
+        row6: {
+            cell35: "17:30 - 18:30",
+            cell36: <p className="ct-mbl">CT</p>,
+            cell37: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="jjk-mbl">JJK</p></div>,
+            cell38: <p className="ct-mbl">CT</p>,
+            cell39: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="jjk-mbl">JJK</p></div>,
+            cell40: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ctk-mbl">CTK</p></div>,
+            cell41: "",
+        },
+        row7: {
+            cell42: "18:30 - 19:30",
+            cell43: <p className="ct-mbl">CT</p>,
+            cell44: <p className="ct-mbl">CT</p>,
+            cell45: <p className="ct-mbl">CT</p>,
+            cell46: <p className="ct-mbl">CT</p>,
+            cell47: <p className="ct-mbl">CT</p>,
+            cell48: "",
+        },
+        row8: {
+            cell49: "19:30 - 20:30",
+            cell50: <p className="ct-mbl">CT</p>,
+            cell51: <p className="ct-mbl">CT</p>,
+            cell52: <p className="ct-mbl">CT</p>,
+            cell53: <p className="ct-mbl">CT</p>,
+            cell54: <p className="ct-mbl">CT</p>,
+            cell55: "",
+        },
+        row9: {
+            cell56: "20:30 - 21:30",
+            cell57: <p className="ct-mbl">CT</p>,
+            cell58: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="jj-mbl">JJ</p></div>,
+            cell59: <p className="ct-mbl">CT</p>,
+            cell60: <p className="ct-mbl">CT</p>,
+            cell61: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="jj-mbl">JJ</p></div>,
             cell62: "",
         },
 
