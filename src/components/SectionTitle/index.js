@@ -9,7 +9,7 @@ export default function ({ props, section }) {
             <div style={{
                 color: "white",
                 fontWeight: "800",
-                padding: "0 0 2rem 0",
+
                 fontSize: "4rem"
 
             }} >

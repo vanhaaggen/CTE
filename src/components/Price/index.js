@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 import './style.sass'
 
 export default function (props) {
@@ -50,8 +49,8 @@ export default function (props) {
                                         <p className="list-secondTitle-offer-price">{basic.content4.price}</p>
                                     </li>
                                     <li>
-                                        <p>{basic.content5.text}</p>
-                                        <p>{basic.content5.price}</p>
+                                        <p className="list-secondTitle-offer--line1 divisor-line">{basic.content5.text}</p>
+                                        <p className="list-secondTitle-offer--line1">{basic.content5.price}</p>
                                     </li>
                                 </ul>
                             </div>
@@ -85,7 +84,7 @@ export default function (props) {
 
                     <div className="price-info-container">
                         <p className="price-info-container__matricula">{info.text} <span>{info.price}</span></p>
-                        <p className="price-info-container__iva">{info.vat}</p>
+                        <p className="price-info-container__iva"><i>{info.vat}</i></p>
                     </div>
 
 
