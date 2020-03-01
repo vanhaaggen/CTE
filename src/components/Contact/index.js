@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import logic from '../../logic'
 
 
@@ -7,15 +7,12 @@ import './style.sass'
 import form from '../../resource/form.pdf'
 
 export default function (props) {
-    const [widthState, setWidthState] = useState({ fontSize: "2vw" })
+
     const [sent, setSent] = useState(false)
     const [loader, setLoader] = useState(false)
     const [error, setError] = useState(false)
     const { text, lang } = props
 
-    useEffect(() => {
-        setWidthState({ fontSize: "6vw" })
-    }, [])
 
 
     const handleSendEmail = async (name, email, userMessage) => {
@@ -89,16 +86,16 @@ export default function (props) {
                             <div className="sended-mssg-container">
                                 {text[`${lang}`].sectionContact.sent}
                                 <div className="sentBackBttn-container">
-                                    <p className="sentBackBttn" onClick={handleBackToForm}>👈Torna</p>
+                                    <p className="sentBackBttn" onClick={handleBackToForm}><span aria-label="emoji" role="img">👈</span>Torna</p>
                                 </div>
                             </div>
                         </>}
 
                         {error && <>
                             <div className="error-container">
-                                <p>Ups! 😅</p>
+                                <p>Ups! <span aria-label="emoji" role="img">😅</span></p>
                                 <p>Sembla que algo <b>no</b> ha anat bé...</p>
-                                <p className="errorBackBttn" onClick={handleBackToForm}>torna-ho a probar 🤞</p>
+                                <p className="errorBackBttn" onClick={handleBackToForm}>torna-ho a probar <span aria-label="emoji" role="img">🤞</span></p>
                             </div>
                         </>}
                     </div>
@@ -108,11 +105,11 @@ export default function (props) {
                                 <p className="download-container__text-wrap--text1">Si ja t'hem convençut !</p>
                                 <p className="download-container__text-wrap--text2">descarrega't el nostre formulari d'inscripció</p>
                                 <p className="em-fi-dwn">
-                                    <span className="emoji-finger-down">👇</span>
-                                    <span className="emoji-finger-down">👇</span>
-                                    <span className="emoji-finger-down">👇</span>
-                                    <span className="emoji-finger-down">👇</span>
-                                    <span className="emoji-finger-down">👇</span>
+                                    <span aria-label="emojis" className="emoji-finger-down" role="img">👇</span>
+                                    <span aria-label="emojis" className="emoji-finger-down" role="img">👇</span>
+                                    <span aria-label="emojis" className="emoji-finger-down" role="img">👇</span>
+                                    <span aria-label="emojis" className="emoji-finger-down" role="img">👇</span>
+                                    <span aria-label="emojis" className="emoji-finger-down" role="img">👇</span>
                                 </p>
                             </div>
                             <a className="download-bttn" href={form} download>Download Form</a>

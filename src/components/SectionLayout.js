@@ -7,7 +7,7 @@ import './SectionStyle.sass'
 
 export default function SectionLayout(props) {
     const [isInView, setIsInView] = useState(false)
-    const { section, content, text, lang } = props
+    const { section, content } = props
 
 
     useEffect(() => {

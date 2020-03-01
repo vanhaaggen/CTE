@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import { Animated } from 'react-animated-css'
 import Media from 'react-media'
+import OutsideAlerter from './OutsideAlerter'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -16,6 +17,7 @@ export default function Navbar(props) {
     const [langMenu, setLangMenu] = useState(false)
     const [animation, setAnimation] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
+    const childRef = useRef(null)
 
     function delayLangMenu(param) {
         setTimeout(() => {
@@ -50,6 +52,15 @@ export default function Navbar(props) {
                 onClick={() => setMenuOpen(!menuOpen)}
             >{text[`${lang}`].navbar[`${linkTo}`]}</Link>
         )
+    }
+
+    const handleOutsideAlert = (childState) => {
+        if (childState === true) {
+            setMenuOpen(!menuOpen)
+        } else {
+            return
+        }
+
     }
 
     return <>
@@ -161,7 +172,6 @@ export default function Navbar(props) {
                                             </Link>
                                             <div onClick={(e) => {
                                                 e.preventDefault()
-                                                console.log('this works')
                                                 setMenuOpen(!menuOpen)
                                             }
                                             }>
@@ -169,22 +179,26 @@ export default function Navbar(props) {
                                             </div>
                                         </div>
                                         {menuOpen && <>
-                                            <div className="navbar-container-mobile">
-                                                <nav className="navbar-container-mobile__list">
-                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'who'} />
-                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'what'} />
-                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'schedule'} />
-                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'price'} />
-                                                    <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} />
-                                                    <div className="menu-mobile" onClick={() => {
-                                                        setAnimation(!animation)
-                                                        delayLangMenu(langMenu)
-                                                    }
-                                                    }>
-                                                        <span>lang</span>
-                                                    </div>
-                                                </nav>
-                                            </div>
+                                            <OutsideAlerter forwardedRef={childRef} handleOutsideAlert={handleOutsideAlert}>
+                                                <div className="navbar-container-mobile">
+                                                    <nav className="navbar-container-mobile__list">
+
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'who'} />
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'what'} />
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'schedule'} />
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'price'} />
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} />
+                                                        <div className="menu-mobile" onClick={() => {
+                                                            setAnimation(!animation)
+                                                            delayLangMenu(langMenu)
+                                                        }
+                                                        }>
+                                                            <span>lang</span>
+                                                        </div>
+
+                                                    </nav>
+                                                </div>
+                                            </OutsideAlerter>
                                         </>}
 
                                         <div className="lang-wrapper-mobile">
