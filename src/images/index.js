@@ -11,7 +11,7 @@ import img4 from './ins-4.png'
 import img5 from './ins-5.png'
 import icons from './icons'
 
-const { cardio, strenght, flexibility, agility, meditationMan, meditationWoman, speed } = icons
+const { cardio, strenght, flexibility, agility, meditationWoman, speed } = icons
 
 const images = {
 

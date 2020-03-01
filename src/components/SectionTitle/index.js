@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 export default function ({ props, section }) {
 
@@ -9,7 +9,6 @@ export default function ({ props, section }) {
             <div style={{
                 color: "white",
                 fontWeight: "800",
-
                 fontSize: "4rem"
 
             }} >

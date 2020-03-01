@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Media from 'react-media'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'

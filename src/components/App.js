@@ -4,8 +4,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import components from './index'
 
-import SectionWipes2 from '../components/SectionWipes2'
-
 
 import text from '../text'
 import { I18NProvider } from './i18ncontext'
@@ -21,6 +19,17 @@ function App() {
         localStorage.setItem('lang', lang)
     }
 
+    /**
+     * check for iOs browser touch events. 
+     * If present, cursor is set to pointer so it recognizes click events.
+     */
+    useEffect(() => {
+        if ('ontouchstart' in document.documentElement) {
+            document.body.style.cursor = 'pointer';
+        }
+    }, [])
+
+
     return <>
         <BrowserRouter>
             <I18NProvider value={{ text: text, lang: language }}>
@@ -29,10 +38,6 @@ function App() {
                     <Route exact path='/' component={Home} />
                 </Switch>
                 <Footer />
-
-                {/* <SectionWipes2 /> */}
-
-
             </I18NProvider>
         </BrowserRouter>
     </>
