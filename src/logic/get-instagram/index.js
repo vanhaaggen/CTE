@@ -3,8 +3,6 @@ const { REACT_APP_INSTAGRAM } = process.env
 
 export default function () {
 
-
-
     return (async () => {
         const response = await fetch(`${REACT_APP_INSTAGRAM}`, {
             method: 'GET'
