@@ -7,6 +7,7 @@ import components from './index'
 
 import text from '../text'
 import { I18NProvider } from './i18ncontext'
+import { faWindows } from '@fortawesome/free-brands-svg-icons'
 
 const { Navbar, Footer } = components
 
@@ -29,6 +30,22 @@ function App() {
         }
     }, [])
 
+    /**
+    * starts animations after page has loaded.
+    */
+    useEffect(() => {
+        function showPage() {
+            document.body.classList.remove('js-loading');
+        }
+
+        document.body.classList.add('js-loading');
+
+        window.addEventListener("load", showPage);
+
+        return () => {
+            window.removeEventListener("load", showPage)
+        }
+    })
 
     return <>
         <BrowserRouter>

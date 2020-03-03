@@ -29,7 +29,7 @@ const Header = () => {
                     )}
                 </I18NConsumer>
                 <div className="animation-wrapper">
-                    <div>
+                    <div className="animwrappwrapp">
                         <Animated
                             animationIn="bounceIn"
                             animationInDelay={1200}

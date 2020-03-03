@@ -14,16 +14,10 @@ import { I18NConsumer } from '../i18ncontext'
 
 
 export default function Navbar(props) {
-    const [langMenu, setLangMenu] = useState(false)
-    const [animation, setAnimation] = useState(false)
-    const [menuOpen, setMenuOpen] = useState(false)
+    const [isAnimation, setIsAnimation] = useState(false)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const childRef = useRef(null)
 
-    function delayLangMenu(param) {
-        setTimeout(() => {
-            setLangMenu(!param)
-        }, 300);
-    }
 
     const LinkComponent = ({ text, lang, linkTo }) => {
         return (
@@ -49,14 +43,14 @@ export default function Navbar(props) {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                onClick={() => setMenuOpen(!menuOpen)}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >{text[`${lang}`].navbar[`${linkTo}`]}</Link>
         )
     }
 
     const handleOutsideAlert = (childState) => {
         if (childState === true) {
-            setMenuOpen(!menuOpen)
+            setIsMobileMenuOpen(!isMobileMenuOpen)
         } else {
             return
         }
@@ -111,8 +105,8 @@ export default function Navbar(props) {
                                     </div>
                                     <div>
                                         <div className="button-lang" onClick={() => {
-                                            setAnimation(!animation)
-                                            delayLangMenu(langMenu)
+                                            setIsAnimation(!isAnimation)
+
                                         }
                                         }>
                                             <span>lang</span>
@@ -122,41 +116,41 @@ export default function Navbar(props) {
                                 </div>
 
                                 <div className="lang-wrapper">
-                                    {langMenu === true && <>
-                                        <Animated
-                                            animationIn="slideInRight"
-                                            animationOut="slideOutRight"
-                                            animationInDuration={300}
-                                            animationOutDuration={300}
-                                            isVisible={animation}>
-                                            <div className='langMenu'>
-                                                <p className='langMenu__lang' onClick={() => {
-                                                    props.handleLang('CAT')
-                                                    setAnimation(!animation)
-                                                    delayLangMenu(langMenu)
-                                                }
-                                                }>CAT</p>
-                                                <p className='langMenu__lang' onClick={() => {
-                                                    props.handleLang('ES')
-                                                    setAnimation(!animation)
-                                                    delayLangMenu(langMenu)
-                                                }
-                                                }>ES</p>
-                                                <p className='langMenu__lang' onClick={() => {
-                                                    props.handleLang('EN')
-                                                    setAnimation(!animation)
-                                                    delayLangMenu(langMenu)
-                                                }
-                                                }>EN</p>
-                                            </div>
 
-                                        </Animated>
-                                    </>}
+                                    <Animated
+                                        animationIn="slideInRight"
+                                        animationOut="slideOutRight"
+                                        animationInDuration={300}
+                                        animationOutDuration={300}
+                                        isVisible={isAnimation}>
+                                        <div className='langMenu'>
+                                            <p className='langMenu__lang' onClick={() => {
+                                                props.handleLang('CAT')
+                                                setIsAnimation(!isAnimation)
+
+                                            }
+                                            }>CAT</p>
+                                            <p className='langMenu__lang' onClick={() => {
+                                                props.handleLang('ES')
+                                                setIsAnimation(!isAnimation)
+
+                                            }
+                                            }>ES</p>
+                                            <p className='langMenu__lang' onClick={() => {
+                                                props.handleLang('EN')
+                                                setIsAnimation(!isAnimation)
+
+                                            }
+                                            }>EN</p>
+                                        </div>
+
+                                    </Animated>
+
                                 </div>
                             </>
                         ) : (
                                 <>
-                                    <div className={`Navbar-mobile-${menuOpen}`}>
+                                    <div className={`Navbar-mobile-${isMobileMenuOpen}`}>
                                         <div className="navbar-container-mobile">
                                             <Link className="menu"
                                                 activeClass="active"
@@ -172,13 +166,13 @@ export default function Navbar(props) {
                                             </Link>
                                             <div onClick={(e) => {
                                                 e.preventDefault()
-                                                setMenuOpen(!menuOpen)
+                                                setIsMobileMenuOpen(!isMobileMenuOpen)
                                             }
                                             }>
-                                                <FontAwesomeIcon className="menu-icon" icon={menuOpen ? faTimes : faBars} />
+                                                <FontAwesomeIcon className="menu-icon" icon={isMobileMenuOpen ? faTimes : faBars} />
                                             </div>
                                         </div>
-                                        {menuOpen && <>
+                                        {isMobileMenuOpen && <>
                                             <OutsideAlerter forwardedRef={childRef} handleOutsideAlert={handleOutsideAlert}>
                                                 <div className="navbar-container-mobile">
                                                     <nav className="navbar-container-mobile__list">
@@ -189,8 +183,8 @@ export default function Navbar(props) {
                                                         <LinkComponentMobile text={text} lang={lang} linkTo={'price'} />
                                                         <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} />
                                                         <div className="menu-mobile" onClick={() => {
-                                                            setAnimation(!animation)
-                                                            delayLangMenu(langMenu)
+                                                            setIsAnimation(!isAnimation)
+
                                                         }
                                                         }>
                                                             <span>lang</span>
@@ -202,30 +196,30 @@ export default function Navbar(props) {
                                         </>}
 
                                         <div className="lang-wrapper-mobile">
-                                            {langMenu === true && <>
-                                                <Animated
-                                                    animationIn="slideInRight"
-                                                    animationOut="slideOutRight"
-                                                    animationInDuration={300}
-                                                    animationOutDuration={300}
-                                                    isVisible={animation}>
-                                                    <div className='langMenu-mobile'>
-                                                        <p className='langMenu__lang-mobile' onClick={() => {
-                                                            props.handleLang('CAT')
-                                                            setAnimation(!animation)
-                                                            delayLangMenu(langMenu)
-                                                        }
-                                                        }>CAT</p>
-                                                        <p className='langMenu__lang-mobile' onClick={() => {
-                                                            props.handleLang('ES')
-                                                            setAnimation(!animation)
-                                                            delayLangMenu(langMenu)
-                                                        }
-                                                        }>ES</p>
-                                                    </div>
 
-                                                </Animated>
-                                            </>}
+                                            <Animated
+                                                animationIn="slideInRight"
+                                                animationOut="slideOutRight"
+                                                animationInDuration={300}
+                                                animationOutDuration={300}
+                                                isVisible={isAnimation}>
+                                                <div className='langMenu-mobile'>
+                                                    <p className='langMenu__lang-mobile' onClick={() => {
+                                                        props.handleLang('CAT')
+                                                        setIsAnimation(!isAnimation)
+
+                                                    }
+                                                    }>CAT</p>
+                                                    <p className='langMenu__lang-mobile' onClick={() => {
+                                                        props.handleLang('ES')
+                                                        setIsAnimation(!isAnimation)
+
+                                                    }
+                                                    }>ES</p>
+                                                </div>
+
+                                            </Animated>
+
                                         </div>
                                     </div>
                                 </>
