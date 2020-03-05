@@ -10,7 +10,7 @@ export default function (name, email, userMessage) {
         })
 
         if (response.status !== 200) {
-            const { error } = await response.json()
+            const { error } = await response.text()
 
             throw Error(error)
         } else {
