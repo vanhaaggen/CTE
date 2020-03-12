@@ -8,7 +8,7 @@ import './Stripe.sass'
 
 function Stripe() {
     const [isInView, setIsinView] = useState(false)
-
+    console.log('Holis')
     useEffect(() => {
         function watchPageScroll() {
             window.addEventListener('scroll', function (event) {
