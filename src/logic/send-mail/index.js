@@ -9,7 +9,8 @@ export default function (name, email, userMessage) {
             body: JSON.stringify({ name, email, userMessage })
         })
 
-        if (response.status !== 200) {
+
+        if (response.status >= 400) {
             const { error } = await response.text()
 
             throw Error(error)
