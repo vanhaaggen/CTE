@@ -28,21 +28,21 @@ export default function (props) {
 
                 </article>
 
-                <div className="what-stripe-container">
+                <article className="what-stripe-container">
                     <div className="what-shape-container">
 
                         <div className="what-text-wrapper">
                             <p className="what-text-wrapper--text1">Els beneficis d'entrenar amb nosaltres?</p>
                             <p className="what-text-wrapper--text2"><i>guanyaras en...</i></p>
                         </div>
-
                         <div className="what-blocks">
                             {icons.map((item, index) => {
                                 return <IconBox key={`what-b-${index}`} text={text[`${lang}`].sectionWhat.icons[index]} image={item} />
                             })}
                         </div>
+
                     </div>
-                </div>
+                </article>
 
                 <article className="what-third-pgrph-wrapper">
                     <div className="what-third-pgrph-line-Left"></div>
