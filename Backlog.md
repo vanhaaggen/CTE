@@ -12,15 +12,15 @@
 ## WhatWeDo
 - [ ] add translation in EN
 - [ ] add better description
-- [ ] take margin off main-container
+- [x] take margin off main-container
 - [x] give p.what-para more width
 
 ## Price
-- [ ] style the offer block from the center card.
+- [x] style the offer block from the center card.
 
 ## Instalations
-- [ ] style container
-- [ ] style title
+- [x] style container
+- [x] style title
 
 ## Instagram
 - [ ] style title (add big #)
@@ -29,7 +29,6 @@
 - [ ] add hover on big card that informs when click you will be redirected to instagram
 
 ## Contact
-- [ ] Add image
 - [ ] Add captcha
 - [ ] Add  P.P. disclaimer
 
