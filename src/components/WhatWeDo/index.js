@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import IconBox from './IconBox'
 import images from "../../images"
 
@@ -49,6 +50,22 @@ export default function (props) {
                         {text[`${lang}`].sectionWhat.par3}
                     </div>
                     <div className="what-third-pgrph-line-Right"></div>
+                </article>
+                <article className="what-fourth-pgrph-wrapper">
+
+                    {text[`${lang}`].sectionWhat.par4}
+                    <span>o</span>
+                    <Link className="contactLink"
+                        activeClass="active"
+                        to='contact'
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                    >
+                        {text[`${lang}`].sectionWhat.contactLink}
+                    </Link>
+
                 </article>
 
             </div>
