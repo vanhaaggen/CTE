@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logic from '../../logic'
 
 
@@ -7,34 +7,50 @@ import './style.sass'
 import form from '../../resource/form.pdf'
 
 export default function (props) {
-
+    const { text, lang } = props
     const [sent, setSent] = useState(false)
+    const [honey, setHoney] = useState()
     const [loader, setLoader] = useState(false)
     const [error, setError] = useState(false)
-    const { text, lang } = props
+    const [errorMessage, setErrorMessage] = useState()
+
+    useEffect(() => {
+        if (honey) {
+            document.querySelector('.contact-button').disabled = true
+        } else {
+            document.querySelector('.contact-button').disabled = false
+        }
+    }, [honey])
 
 
-
-    const handleSendEmail = async (name, email, userMessage) => {
+    const handleSendEmail = async (eathoneybitch, name, email, userMessage) => {
         try {
-            const response = await logic.sendMail(name, email, userMessage)
-            if (response === 'OK') {
-                setLoader(false)
-                setSent(true)
-            }
+            setLoader(true)
+            await logic.sendMail(eathoneybitch, name, email, userMessage)
+            setLoader(false)
+            setSent(true)
+
         } catch ({ message }) {
             setLoader(false)
-            setSent(false)
-            setError(true)
-            console.log(message)
+            if (message === "Failed to fetch" || message === "honeypot is being looted") {
+                setError(true)
+
+            } else {
+                const messageArr = message.split('\n')
+                setErrorMessage(messageArr)
+            }
         }
     }
 
     const handleBackToForm = () => {
         setError(false)
         setSent(false)
+        setErrorMessage(null)
     }
 
+    const handleChange = event => {
+        setHoney(event.target.value)
+    }
 
     return (
         <>
@@ -49,16 +65,18 @@ export default function (props) {
                                     <p className="title-p">{text[`${lang}`].sectionContact.title2}</p>
                                 </div>
 
-                                <form className="contact-form" name="contact" onSubmit={event => {
+                                <form className="contact-form" onSubmit={event => {
                                     event.preventDefault()
 
-                                    const { target: { name: { value: name }, email: { value: email }, userMessage: { value: userMessage } } } = event
+                                    const { target: { eathoneybitch: { value: eathoneybitch }, name: { value: name }, email: { value: email }, userMessage: { value: userMessage } } } = event
 
-                                    handleSendEmail(name, email, userMessage)
-                                    setLoader(true)
+                                    handleSendEmail(eathoneybitch, name, email, userMessage)
+
 
                                 }}>
-                                    <input type="hidden" name="form-name" value="contact" />
+                                    <label htmlFor="eathoneybitch"></label>
+                                    <input type="text" name="eathoneybitch" onChange={handleChange} hidden />
+
                                     <label htmlFor="name" className="label-placeholder"></label>
                                     <input type="text" name="name" id="name" className="input-field" placeholder={text[`${lang}`].sectionContact.name} />
                                     <label htmlFor="email" className="label-placeholder"></label>
@@ -66,6 +84,9 @@ export default function (props) {
                                     <label htmlFor="userMessage" className="label-placeholder"></label>
                                     <textarea name="userMessage" id="userMessage" rows="5" className="textarea" placeholder={text[`${lang}`].sectionContact.message}></textarea>
                                     <div className="bttn-wrap">
+                                        <div>{errorMessage && errorMessage.map(error => (
+                                            <p className="error-message">{error}</p>
+                                        ))}</div>
                                         <button className="contact-button">{text[`${lang}`].sectionContact.send}</button>
                                     </div>
                                 </form>
@@ -119,7 +140,7 @@ export default function (props) {
 
                 </section>
 
-            </div>
+            </div >
         </>
     )
 }
