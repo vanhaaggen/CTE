@@ -49,7 +49,7 @@ export default function (props) {
                                     <p className="title-p">{text[`${lang}`].sectionContact.title2}</p>
                                 </div>
 
-                                <form className="contact-form" onSubmit={event => {
+                                <form className="contact-form" name="contact" onSubmit={event => {
                                     event.preventDefault()
 
                                     const { target: { name: { value: name }, email: { value: email }, userMessage: { value: userMessage } } } = event
@@ -58,6 +58,7 @@ export default function (props) {
                                     setLoader(true)
 
                                 }}>
+                                    <input type="hidden" name="form-name" value="contact" />
                                     <label htmlFor="name" className="label-placeholder"></label>
                                     <input type="text" name="name" id="name" className="input-field" placeholder={text[`${lang}`].sectionContact.name} />
                                     <label htmlFor="email" className="label-placeholder"></label>

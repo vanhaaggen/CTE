@@ -29,8 +29,9 @@
 - [ ] add hover on big card that informs when click you will be redirected to instagram
 
 ## Contact
-- [ ] Add captcha
+- [ ] Add honeypot
 - [ ] Add  P.P. disclaimer
+
 
 ## Footer
 - [ ] Add legal advice
