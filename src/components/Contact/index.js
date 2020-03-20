@@ -108,7 +108,7 @@ export default function (props) {
                             <div className="sended-mssg-container">
                                 {text[`${lang}`].sectionContact.sent}
                                 <div className="sentBackBttn-container">
-                                    <p className="sentBackBttn" onClick={handleBackToForm}><span aria-label="emoji" role="img">👈</span>Torna</p>
+                                    <p className="sentBackBttn" onClick={handleBackToForm}><span aria-label="emoji" role="img">👈</span>{text[`${lang}`].sectionContact.goback}</p>
                                 </div>
                             </div>
                         </>}
@@ -116,16 +116,16 @@ export default function (props) {
                         {error && <>
                             <div className="error-container">
                                 <p>Ups! <span aria-label="emoji" role="img">😅</span></p>
-                                <p>Sembla que algo <b>no</b> ha anat bé...</p>
-                                <p className="errorBackBttn" onClick={handleBackToForm}>torna-ho a probar <span aria-label="emoji" role="img">🤞</span></p>
+                                {text[`${lang}`].sectionContact.error}
+                                <p className="errorBackBttn" onClick={handleBackToForm}>{text[`${lang}`].sectionContact.tryagain}<span aria-label="emoji" role="img">🤞</span></p>
                             </div>
                         </>}
                     </div>
                     <div className="contact-content--right-size">
                         <div className="download-container">
                             <div className="download-container__text-wrap">
-                                <p className="download-container__text-wrap--text1">Si ja t'hem convençut !</p>
-                                <p className="download-container__text-wrap--text2">descarrega't el nostre formulari d'inscripció</p>
+                                <p className="download-container__text-wrap--text1">{text[`${lang}`].sectionContact.downloadtitle}</p>
+                                <p className="download-container__text-wrap--text2">{text[`${lang}`].sectionContact.downloadtitle1}</p>
                                 <p className="em-fi-dwn">
                                     <span aria-label="emojis" className="emoji-finger-down" role="img">👇</span>
                                     <span aria-label="emojis" className="emoji-finger-down" role="img">👇</span>

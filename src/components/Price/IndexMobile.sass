@@ -1,0 +1,60 @@
+%price-shadow
+    -webkit-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.1)
+    -moz-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.1)
+    box-shadow: 6px 6px 5px -5px rgba(0,0,0,0.1)
+
+
+$cte-blue: #0049ff
+$cte-red: #fc4646
+
+
+.list-background-m
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    background-image: linear-gradient(45deg, #ffffff 3.13%, #f5f5f5 3.13%, #f5f5f5 50%, #ffffff 50%, #ffffff 53.13%, #f5f5f5 53.13%, #f5f5f5 100%)
+    background-size: 22.63px 22.63px
+    border-radius: 10px
+    
+
+.list-m
+    margin-top: 0
+    margin-bottom: 0
+    text-align: center
+    height: 70%
+    width: 70%
+    background-color: white
+
+.list-secondTitle-offer-m
+    @extend %price-shadow
+    margin-top: .5rem
+    color: white
+    background-color: #0049ff
+    border-radius: 10px
+
+    &--line1-m
+        margin: .5rem 0 0 0 
+    
+.divisor-line-m
+    border-top: 1px dashed white
+    padding-top: .3rem
+
+.list-secondTitle-offer-text-m
+    margin: .8rem 0 0 0
+    font-size: 1.3rem
+    font-weight: 600
+
+.list-secondTitle-offer-price-m
+    margin: 0
+    font-size: 1.8rem
+    font-weight: 600
+        
+
+.divisor
+    width: 50%
+    height: 2px
+    background-color: #fc4646
+
+
+

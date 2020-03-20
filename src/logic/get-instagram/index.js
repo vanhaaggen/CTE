@@ -20,7 +20,7 @@ export default function () {
         const filteredData = []
 
         for (let i = 0; i < 5; i++) {
-            let myImage = pathToData[i].node.display_url
+            let myImage = pathToData[i].node.thumbnail_resources[3].src
             let myCaption = pathToData[i].node.edge_media_to_caption.edges[0].node.text
             filteredData.push({ image: myImage, caption: myCaption })
         }

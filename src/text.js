@@ -42,46 +42,63 @@ const text = {
                 text: "I will teach you to overcome your weaknesess"
             }
         },
+        sectionWhat: {
+            par1: <p className="what-para">At <b>Crosstraining Empordà</b> we offer functional training or HIITs for adults and children, as well as Jiu Jitsu classes.</p>,
+            par2: <p className="what-para"><b>HIITs</b> are high intensity interval training sessions. It is a fast, intense training technique that allows you to burn calories like no other</p>,
+            benefits: <p className="what-text-wrapper--text1">Benefits for training with us?</p>,
+            benefits1: <p className="what-text-wrapper--text2"><i>You will gain...</i></p>,
+            icons: ["Strength", "Agility", "Flexibility", "Speed", "Balance", "Condition"],
+            par3: [<p key={`what-para-3-1`} className="what-para-third">If you're <b>curious</b>,</p>, <p key={`what-para-3-2`} className="what-para-third">come and try a class</p>],
+            par4: <p className="what-para-fourth">Call us ☎ <span className="what-para-fourth--phone-num">659 53 37 21</span></p>,
+            o: <span>or</span>,
+            contactLink: "Send us an email ✉"
+
+        },
         sectionSchedule: {
             daysOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             daysOfWeekMobile: ["Mo", "Tu", "We", "Th", "Fr", "Sa"]
         },
         sectionPrice: {
+            fee: {
+                child: "Kids fee",
+                basic: "Basic fee",
+                ticket: "Tickets"
+            },
             child: {
                 content1: {
-                    text: "1 sessió al mes ",
+                    text: "1 session per month ",
                     price: "20€",
                 },
                 content2: {
-                    text: "2 sessions al mes",
+                    text: "2 session per month",
                     price: "40€"
                 }
             },
             basic: {
                 content1: {
-                    text: "9 sessions al mes",
+                    text: "9 session per month",
                     price: "40€",
                 },
                 content2: {
-                    text: "9 sessions al mes (matins)",
+                    text: "9 session per month AM",
                     price: "30€",
                 },
                 content3: {
-                    text: "13 sessions al mes",
+                    text: "13 session per month",
                     price: "45€",
                 },
                 content4: {
-                    text: "Il·limitat",
+                    text: "Unlimited",
                     price: "58€",
                 },
                 content5: {
-                    text: "Il.limitat (matins)",
+                    text: "Unlimited AM",
                     price: "40€",
                 },
             },
             bond: {
                 content1: {
-                    text: "1 sessió",
+                    text: "1 session",
                     price: "8€",
                 },
                 content2: {
@@ -94,13 +111,13 @@ const text = {
                 },
             },
             offer: {
-                text: "Estudiants, jubilats, Agents ordre public, familiars de socis",
+                text: "Students, retirees, law enforcement officers, family members",
                 discount: "-10%"
             },
             info: {
-                text: "Matricula",
+                text: "Enrolment",
                 price: "40€",
-                vat: "IVA inclós en totes les quotes",
+                vat: "VAT included in all fees",
             }
         },
         sectionContact: {
@@ -112,7 +129,16 @@ const text = {
             send: "Send",
             sending: "We are sending your message",
             sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Thanks for contacting us ❤</p>
-                <p className="contact-p contact-sent-wrap--second">We will contact you shortly.</p></div>
+                <p className="contact-p contact-sent-wrap--second">We will contact you shortly.</p></div>,
+            error: <p>Seems that something has gone <b>wrong</b>...</p>,
+            tryagain: "try again",
+            goback: "go back",
+            downloadtitle: "If we've already convinced you!",
+            downloadtitle1: "download our registration form"
+        },
+        sectionInsta: {
+            pretitle: "follow us ",
+            title: <a className="insta-title" href="https://www.instagram.com/crosstrainingemporda/">#crosstrainingemporda</a>
         },
         footer: {
             follow: "follow us:"
@@ -125,7 +151,7 @@ const text = {
             who: "Quien somos?",
             what: "Que hacemos?",
             schedule: 'Horario',
-            price: "Quotas",
+            price: "Cuotas",
             contact: 'Contacto'
         },
         header: <p className="quote">SE TU<br />MEJOR<br />VERSIÓN</p>,
@@ -154,11 +180,14 @@ const text = {
             }
         },
         sectionWhat: {
-            icons: ["Fuerza", "Agilidad", "Flexibilidad", "Velocidad", "Equilibrio", "Condición"],
             par1: <p className="what-para">En <b>Crosstraining Empordà</b> te ofrecemos entrenos funcionales o HIITs para  grandes y pequeños, como también clases de Jiu Jitsu.</p>,
             par2: <p className="what-para">Los <b>HIIT</b> son entrenamientos intervalicos de alta intensidad. Es una técnica de entreno rápida, intensa y que et permite quemar calorías como ninguna otra.</p>,
+            benefits: <p className="what-text-wrapper--text1">Los beneficios de entrenear con nosotros?</p>,
+            benefits1: <p className="what-text-wrapper--text2"><i>ganarás en...</i></p>,
+            icons: ["Fuerza", "Agilidad", "Flexibilidad", "Velocidad", "Equilibrio", "Condición"],
             par3: [<p key={`what-para-3-1`} className="what-para-third">Si tienes <b>curiosidad</b>,</p>, <p key={`what-para-3-2`} className="what-para-third">ven a probar una clase.</p>],
             par4: <p className="what-para-fourth">Llamanos ☎ <span className="what-para-fourth--phone-num">659 53 37 21</span></p>,
+            o: <span>o</span>,
             contactLink: "Envianos un mail ✉"
 
         },
@@ -167,6 +196,11 @@ const text = {
             daysOfWeekMobile: ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
         },
         sectionPrice: {
+            fee: {
+                child: "Cuota Infantil",
+                basic: "Cuotas básicas",
+                ticket: "Bonos"
+            },
             child: {
                 content1: {
                     text: "1 sesión al mes ",
@@ -223,6 +257,10 @@ const text = {
                 vat: "IVA incluido en todas las cuotas",
             }
         },
+        sectionInsta: {
+            pretitle: "síguenos ",
+            title: <a className="insta-title" href="https://www.instagram.com/crosstrainingemporda/">#crosstrainingemporda</a>
+        },
         sectionContact: {
             title1: "Alguna duda?",
             title2: "Dejanos un mensaje",
@@ -232,10 +270,15 @@ const text = {
             send: "Enviar",
             sending: "Estamos enviando tu mensaje",
             sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Gracies por contactar con nosotros ❤</p>
-                <p className="contact-p contact-sent-wrap--second">En breve nos pondremos en contacto contigo.</p></div>
+                <p className="contact-p contact-sent-wrap--second">En breve nos pondremos en contacto contigo.</p></div>,
+            error: <p>Parece que algo <b>no</b> ha salido bien...</p>,
+            tryagain: "volver a probar",
+            goback: "atrás",
+            downloadtitle: "Si ya te hemos convencido!",
+            downloadtitle1: "descárgate el formulario de inscripción"
         },
         footer: {
-            follow: "Siguenos:"
+            follow: "Síguenos:"
         },
 
     },
@@ -258,7 +301,7 @@ const text = {
         ],
         sectionWho: {
             par1: <p className='who-divisor__paragraph--size'>Som un gimnàs de Crosstraining situat al <b>carrer dels Arboços 4 a Vulpellac.</b></p>,
-            par2: <p className='who-divisor__paragraph--size'>T'ajudarem en les nostres <b>classes dirigides</b> a alliberar el teu màxim potencial mitjançant <b>entrenaments intervàlics d'alta intensitat</b> (<span className="hiit">HIIT</span>) i funcionals adaptats al teu nivell esportiu. Sempre prestant molta atenció al correcte desenvolupament del moviment.</p>,
+            par2: <p className='who-divisor__paragraph--size'>T'ajudarem en les nostres <b>classes dirigides</b> a alliberar el teu màxim potencial mitjançant <b>entrenaments intervàl·lics d'alta intensitat</b> (<span className="hiit">HIIT</span>) i funcionals adaptats al teu nivell esportiu. Sempre prestant molta atenció al correcte desenvolupament del moviment.</p>,
 
             par3: "Sia acabant de començar o portant temps, amb nosaltres sempre t'ho passaràs en gran arribant al teu límit.",
 
@@ -273,11 +316,14 @@ const text = {
             }
         },
         sectionWhat: {
-            icons: ["Força", "Agilitat", "Flexibilitat", "Velocitat", "Equilibri", "Condició"],
             par1: <p className="what-para">A <b>Crosstraining Empordà</b> t'oferim entrenaments funcionals o HIITS, per a grans i petits, com tambe classes de Jiu Jitsu.</p>,
-            par2: <p className="what-para">Els <b>HIIT</b> son entrenaments intervalics d'alta intensitat. És una tecnica d'entrenament ràpida, intensa i que et permet cremar calories com ninguna altre.</p>,
+            par2: <p className="what-para">Els <b>HIIT</b> son entrenaments intervàl·lics d'alta intensitat. És una tecnica d'entrenament ràpida, intensa i que et permet cremar calories com ninguna altre.</p>,
+            benefits: <p className="what-text-wrapper--text1">Els beneficis d'entrenar amb nosaltres?</p>,
+            benefits1: <p className="what-text-wrapper--text2"><i>guanyaràs en...</i></p>,
+            icons: ["Força", "Agilitat", "Flexibilitat", "Velocitat", "Equilibri", "Condició"],
             par3: [<p key={`what-para-3-1`} className="what-para-third">Si tens <b>curiositat</b>,</p>, <p key={`what-para-3-2`} className="what-para-third"> vine a provar una classe.</p>],
             par4: <p className="what-para-fourth">Truca'ns ☎ <span className="what-para-fourth--phone-num">659 53 37 21</span></p>,
+            o: <span>o</span>,
             contactLink: "Envia'ns un mail ✉"
         },
         sectionSchedule: {
@@ -285,6 +331,11 @@ const text = {
             daysOfWeekMobile: ["Dl", "Dt", "Dm", "Dj", "Dv", "Ds"]
         },
         sectionPrice: {
+            fee: {
+                child: "Quota Infantil",
+                basic: "Quotes bàsicas",
+                ticket: "Bonos"
+            },
             child: {
                 content1: {
                     text: "1 sessió al mes ",
@@ -341,6 +392,10 @@ const text = {
                 vat: "IVA inclós en totes les quotes",
             }
         },
+        sectionInsta: {
+            pretitle: "segueix-nos ",
+            title: <a className="insta-title" href="https://www.instagram.com/crosstrainingemporda/">#crosstrainingemporda</a>
+        },
         sectionContact: {
             title1: "Algun dubte?",
             title2: "deixa'ns un missatge",
@@ -350,7 +405,12 @@ const text = {
             send: "Enviar",
             sending: "Estem enviant el teu missatge",
             sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Gràcies per contactar amb nosaltres ❤</p>
-                <p className="contact-p contact-sent-wrap--second">En breu ens posarem en contacte amb tu.</p></div>
+                <p className="contact-p contact-sent-wrap--second">En breu ens posarem en contacte amb tu.</p></div>,
+            error: <p>Sembla que algo <b>no</b> ha anat bé...</p>,
+            tryagain: "tornar a provar",
+            goback: "enrere",
+            downloadtitle: "Si ja t'hem convençut !",
+            downloadtitle1: "descarrega't el nostre formulari d'inscripció"
         },
         footer: {
             follow: "Segueix-nos:"

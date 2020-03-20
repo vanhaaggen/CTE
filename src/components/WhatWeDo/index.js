@@ -32,8 +32,8 @@ export default function (props) {
                     <div className="what-shape-container">
 
                         <div className="what-text-wrapper">
-                            <p className="what-text-wrapper--text1">Els beneficis d'entrenar amb nosaltres?</p>
-                            <p className="what-text-wrapper--text2"><i>guanyaras en...</i></p>
+                            {text[`${lang}`].sectionWhat.benefits}
+                            {text[`${lang}`].sectionWhat.benefits1}
                         </div>
                         <div className="what-blocks">
                             {icons.map((item, index) => {
@@ -54,7 +54,7 @@ export default function (props) {
                 <article className="what-fourth-pgrph-wrapper">
 
                     {text[`${lang}`].sectionWhat.par4}
-                    <span>o</span>
+                    {text[`${lang}`].sectionWhat.o}
                     <Link className="contactLink"
                         activeClass="active"
                         to='contact'

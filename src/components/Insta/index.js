@@ -4,7 +4,8 @@ import addClassToText from '../../utils/addClassToText'
 
 import './style.sass'
 
-export default function (prop) {
+export default function (props) {
+    const { lang, text } = props
     const [data, setData] = useState([])
     const [firstImage, setFirstImage] = useState()
 
@@ -33,11 +34,14 @@ export default function (prop) {
     return (
         <>
             <section className="insta-container">
-                <p className="insta-title">El nostre Insta</p>
-                <div className="insta-caption-image-container">
-                    <div className="insta-first">
-                        {firstImage ? <div className="insta-first-wrap">
-                            <img src={firstImage.image} alt=" " />
+                <div className='title-wrapp'>
+                    <p className="insta-pretitle">{text[`${lang}`].sectionInsta.pretitle}<span role="img">👇</span></p>
+                    <p className="insta-title">{text[`${lang}`].sectionInsta.title}</p>
+                </div>
+                <div className="insta-caption-container">
+                    <div className="big-caption-container">
+                        {firstImage ? <div className="big-caption-container__img-cont">
+                            <img className="big-caption-container__img-cont--img" src={firstImage.image} alt=" " />
                             <div>
                                 {addClassToText(firstImage.caption)}
                             </div>
@@ -48,11 +52,11 @@ export default function (prop) {
                         }
                     </div>
 
-                    <div className="insta-images-container">
+                    <div className="small-caption-container">
                         {data && data.map((item, index) => (
                             <>
-                                <div className="insta-thumb-container" key={`insta-${index}`} onClick={() => handleOnClick(item, index)}>
-                                    <img className="insta-thumb-container__image" src={item.image} alt=" " />
+                                <div className="small-caption-container__img-cont" key={`insta-${index}`} onClick={() => handleOnClick(item, index)}>
+                                    <img className="small-caption-container__img-cont--img" src={item.image} alt=" " />
                                 </div>
                             </>
                         ))}

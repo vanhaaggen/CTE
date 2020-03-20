@@ -10,8 +10,8 @@
 - [x] style text on card
 
 ## WhatWeDo
-- [ ] add translation in EN
-- [ ] add better description
+- [x] add translation in EN
+- [x] add better description
 - [x] take margin off main-container
 - [x] give p.what-para more width
 
@@ -29,7 +29,7 @@
 - [ ] add hover on big card that informs when click you will be redirected to instagram
 
 ## Contact
-- [ ] Add honeypot
+- [x] Add honeypot
 - [ ] Add  P.P. disclaimer
 
 
