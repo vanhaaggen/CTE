@@ -22,7 +22,8 @@ export default function () {
         for (let i = 0; i < 5; i++) {
             let myImage = pathToData[i].node.thumbnail_resources[3].src
             let myCaption = pathToData[i].node.edge_media_to_caption.edges[0].node.text
-            filteredData.push({ image: myImage, caption: myCaption })
+            let likes = pathToData[i].node.edge_liked_by.count
+            filteredData.push({ image: myImage, caption: myCaption, likes: likes })
         }
 
         return filteredData

@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react'
 import logic from '../../logic'
 import addClassToText from '../../utils/addClassToText'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
+
 import './style.sass'
 
 export default function (props) {
     const { lang, text } = props
     const [data, setData] = useState([])
     const [firstImage, setFirstImage] = useState()
-
 
     useEffect(() => {
         (async () => {
@@ -25,7 +27,7 @@ export default function (props) {
     }, [])
 
 
-    const handleOnClick = (item, index) => {
+    const handleOnClick = (item) => {
         let prev = firstImage
         setFirstImage(item)
         setData(data.map(x => x === item ? x = prev : x))
@@ -42,6 +44,12 @@ export default function (props) {
                     <div className="big-caption-container">
                         {firstImage ? <div className="big-caption-container__img-cont">
                             <img className="big-caption-container__img-cont--img" src={firstImage.image} alt=" " />
+                            <div className="insta-likes-block">
+                                <div className="insta-likes-block__element">
+                                    <p className="insta-likes-block__element--number">{firstImage.likes}</p>
+                                    <FontAwesomeIcon className="insta-likes-block__element--insta-heart" icon={faHeart} />
+                                </div>
+                            </div>
                             <div>
                                 {addClassToText(firstImage.caption)}
                             </div>
@@ -55,7 +63,7 @@ export default function (props) {
                     <div className="small-caption-container">
                         {data && data.map((item, index) => (
                             <>
-                                <div className="small-caption-container__img-cont" key={`insta-${index}`} onClick={() => handleOnClick(item, index)}>
+                                <div className="small-caption-container__img-cont" key={`insta-${index}`} onClick={() => handleOnClick(item)}>
                                     <img className="small-caption-container__img-cont--img" src={item.image} alt=" " />
                                 </div>
                             </>
