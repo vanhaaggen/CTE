@@ -9,7 +9,7 @@ export default function (props) {
      * Alert if clicked outside element
      */
     function handleClickOutside(event) {
-        if (props.forwardedRef.current && !props.forwardedRef.current.contains(event.targe)) {
+        if (props.forwardedRef.current && !props.forwardedRef.current.contains(event.target)) {
             props.handleOutsideAlert(true)
         }
     }

@@ -36,9 +36,16 @@ export default function (props) {
                             {text[`${lang}`].sectionWhat.benefits1}
                         </div>
                         <div className="what-blocks">
-                            {icons.map((item, index) => {
-                                return <IconBox key={`what-b-${index}`} text={text[`${lang}`].sectionWhat.icons[index]} image={item} />
-                            })}
+                            {icons.map((item, index) => (
+                                <div key={`what-b-${index}`} className='icon-block-container'>
+                                    <div className="ib-img-container">
+                                        <img className="ib-img-container--image" src={item} alt=" " />
+                                    </div>
+                                    <p className="onHover">
+                                        {text[`${lang}`].sectionWhat.icons[index]}
+                                    </p>
+                                </div>
+                            ))}
                         </div>
 
                     </div>

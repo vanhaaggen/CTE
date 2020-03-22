@@ -3,19 +3,25 @@
     -moz-box-shadow: 9px 9px 5px -6px rgba(0,0,0,0.1)
     box-shadow: 6px 6px 5px -5px rgba(0,0,0,0.1)
 
+%flex-column-center
+    display: flex
+    flex-direction: column
+    align-items: center
+
+
+.price-info-container, .title, .price-offer-container, .list
+    text-align: center
+
+
 .price-title   
     width: 100%
     text-align: right
     background-color: #4577f6
-    
-
 
 .price-content-container
+    @extend %flex-column-center
     width: 100%
     height: 100%
-    display: flex
-    flex-direction: column
-    align-items: center
     margin-top: 2rem
 
 .price-table-container
@@ -25,9 +31,7 @@
     justify-content: center
 
     &__content
-        display: flex
-        flex-direction: column
-        align-items: center
+        @extend %flex-column-center
         width: 33%
         height: 350px
         background-image: linear-gradient(45deg, #ffffff 3.13%, #f5f5f5 3.13%, #f5f5f5 50%, #ffffff 50%, #ffffff 53.13%, #f5f5f5 53.13%, #f5f5f5 100%)
@@ -52,9 +56,7 @@
     margin-top: 1rem
 
 .list-background
-    display: flex
-    flex-direction: column
-    align-items: center
+    @extend %flex-column-center
     width: 100%
     background-color: white
 
@@ -62,7 +64,6 @@
 .list
     margin-top: 0
     margin-bottom: 0
-    text-align: center
     height: 70%
     width: 70%
 
@@ -104,11 +105,8 @@
     background-color: #f5f5f5
     border-radius: 10px
 
-.price-info-container
-    text-align: center
 
 .title
-    text-align: center
     width: 100%
     padding: 0
     margin: 0 0 1rem 0

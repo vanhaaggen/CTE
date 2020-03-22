@@ -23,9 +23,9 @@
 - [x] style title
 
 ## Instagram
-- [ ] style title (add big #)
-- [ ] change box background-color
-- [ ] add instagram icons to big card
+- [x] style title (add big #)
+- [x] change box background-color
+- [x] add instagram icons to big card
 - [ ] add hover on big card that informs when click you will be redirected to instagram
 
 ## Contact

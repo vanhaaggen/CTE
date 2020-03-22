@@ -1,12 +1,17 @@
 $cte-blue: #0049ff
 $cte-red: #fc4646
 
+=box-shadow($property)
+    -webkit-box-shadow: $property
+    -moz-box-shadow: $property
+    box-shadow: $property
+
 .insta-container
     display: flex
     margin-bottom: 4rem
     flex-direction: column
     align-items: center
-    background-color: #f5f5f5
+    
 
 .title-wrapp
     margin-bottom: 2rem
@@ -35,6 +40,7 @@ $cte-red: #fc4646
     max-width: 480px
     min-width: 330px
     background-color: white
+    +box-shadow(2px 3px 4px 0px rgba(0,0,0,0.1))
     &__img-cont
         margin: .5vw 
         &--img
@@ -71,6 +77,7 @@ $cte-red: #fc4646
         margin: .5vw
         &--img
             width: 100%
+            +box-shadow(2px 3px 4px 0px rgba(0,0,0,0.12))
 
 
 @media (max-width: 700px)

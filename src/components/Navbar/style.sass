@@ -1,4 +1,5 @@
-$cte-red: #ff0101
+$cte-blue: #0049ff
+$cte-red: #fc4646
 
 %flex-spacebtw-center
     display: flex
@@ -40,7 +41,7 @@ $cte-red: #ff0101
         
 .nav-list
     display: flex
-    justify-content: flex-end
+    justify-content: space-around
     width: 100%
 
 .link-container
@@ -49,12 +50,17 @@ $cte-red: #ff0101
     align-items: center
     height: 2.5rem
     margin: 0 .5rem
+    font-weight: 600
+    color: #6a6a6a
+    
+.large
     width: 15%
-
+.small
+    width: 8%
 
 .link-container:hover
     color: #0049ff 
-    font-weight: 600
+   
     cursor: pointer
 
 .acronym
@@ -79,30 +85,19 @@ $cte-red: #ff0101
         font-size: .8rem
 
     
-.lang-wrapper
-    position: fixed
-    width: 100%
-    height: 40px
-    transform: translateY(4rem) 
-    z-index: 99998   
-
 .langMenu
     display: flex
-    justify-content: flex-end
-    padding: 0 1rem
-    font-size: 1.2rem
+    font-size: .9rem
     font-weight: 700
-    background-color: #e5e0e0
     cursor: pointer
-    
-
     &__lang
         margin: 0
-        padding: 0 0.5rem
-        color: #444040
-
+        padding-right: .5rem
+        color: #b3b3b3
     &__lang:hover
-        color: #52f9b1
+        color: $cte-blue
+    &__lang:focus
+        color: $cte-blue
 
 .button-lang
     margin-right: 2rem
@@ -110,15 +105,8 @@ $cte-red: #ff0101
     color: #444040
     font-size: 0.8rem
     font-weight: 600
-    cursor: pointer
 
 
-.button-lang:hover
-    color: #00ca6a
-
-@media (max-width: 950px)
-    .lang-wrapper
-        transform: translateY(3.9rem)
   
 
 
