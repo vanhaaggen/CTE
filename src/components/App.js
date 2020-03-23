@@ -3,15 +3,17 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Home from '../pages/Home'
 import components from './index'
+import legalPages from '../pages'
 
 
 import text from '../text'
 import { I18NProvider } from './i18ncontext'
-import { faWindows } from '@fortawesome/free-brands-svg-icons'
+
 
 const { Navbar, Footer } = components
+const { Legal, Privacy } = legalPages
 
-function App() {
+export default function App(props) {
     const [language, setLanguage] = useState(localStorage.getItem('lang') || 'CAT')
 
 
@@ -53,6 +55,8 @@ function App() {
                 <Navbar handleLang={handleLang} />
                 <Switch>
                     <Route exact path='/' component={Home} />
+                    <Route exact path="/legal" component={Legal} />
+                    <Route exact path="/privacy" component={Privacy} />
                 </Switch>
                 <Footer />
             </I18NProvider>
@@ -60,7 +64,7 @@ function App() {
     </>
 }
 
-export default App
+
 
 //para pasar props en React Router utilizamos el prop de render en vez del de component.
 //este accepta una inline function sin montar y desmontar el componente constantemente.

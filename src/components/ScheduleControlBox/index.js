@@ -20,10 +20,7 @@ export default function ({ delayTime, bttnClass, tdClass, activity }) {
     }
 
     return (<>
-        <Animated className="schedule-cont"
-            animationIn="bounceInUp"
-            animationInDelay={delayTime}
-            isVisible={true}>
+        <div className="schedule-cont">
 
             <div className={`schedule-menu__container ${bttnClass}`}
                 style={activeStyle}
@@ -36,6 +33,6 @@ export default function ({ delayTime, bttnClass, tdClass, activity }) {
                 <p>{activity}</p>
             </div>
 
-        </Animated>
+        </div>
     </>)
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import Media from 'react-media'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
-
 import './style.sass'
 
 import whiteLogo from '../../images/logo-white.png'
@@ -19,6 +19,7 @@ export default function Footer() {
             <p className={!param ? `footer-legal-p` : `footer-legal-p${param}`}>Crosstraining Empordà - {year}</p>
         </>
     }
+
 
     return <>
 
@@ -58,6 +59,10 @@ export default function Footer() {
                                     </div>
                                     <div className="footer-legal">
                                         {legal()}
+                                        <div className="legals">
+                                            <Link to="/legal"><p className="legal" >{text[`${lang}`].navbar.legal}</p></Link>
+                                            <Link to="/privacy"><p className="privacy" >{text[`${lang}`].navbar.privacy}</p></Link>
+                                        </div>
                                     </div>
                                 </>
                             ) : (
@@ -88,7 +93,12 @@ export default function Footer() {
 
                                         <div className="footer-legal">
                                             {legal("-mbl")}
+                                            <div className="legals">
+                                                <Link to="/legal"><p className="legal" >Avís Legal</p></Link>
+                                                <Link to="/privacy"><p className="privacy" >Politica de Privacitat</p></Link>
+                                            </div>
                                         </div>
+
                                     </>
                                 )}
                         </Media>

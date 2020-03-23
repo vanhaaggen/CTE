@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
-import { Link, animateScroll as scroll } from 'react-scroll'
-import { Animated } from 'react-animated-css'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
+import { Link, useLocation } from 'react-router-dom'
 import Media from 'react-media'
 import OutsideAlerter from './OutsideAlerter'
 
@@ -17,11 +17,11 @@ export default function Navbar(props) {
     const [isAnimation, setIsAnimation] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const childRef = useRef(null)
-
+    const location = useLocation()
 
     const LinkComponent = ({ text, lang, linkTo }) => {
         return (
-            <Link className="menu"
+            <ScrollLink className="menu"
                 activeClass="active"
                 to={linkTo}
                 spy={true}
@@ -30,13 +30,13 @@ export default function Navbar(props) {
                 duration={500}
             >
                 {text[`${lang}`].navbar[`${linkTo}`]}
-            </Link>
+            </ScrollLink>
         )
     }
 
     const LinkComponentMobile = ({ text, lang, linkTo }) => {
         return (
-            <Link className="menu-mobile"
+            <ScrollLink className="menu-mobile"
                 activeClass="active"
                 to={linkTo}
                 spy={true}
@@ -44,7 +44,7 @@ export default function Navbar(props) {
                 offset={-70}
                 duration={500}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >{text[`${lang}`].navbar[`${linkTo}`]}</Link>
+            >{text[`${lang}`].navbar[`${linkTo}`]}</ScrollLink>
         )
     }
 
@@ -67,7 +67,7 @@ export default function Navbar(props) {
                             <>
                                 <div className="Navbar">
                                     <div className="navbar-container">
-                                        <Link
+                                        <ScrollLink
                                             activeClass="active"
                                             to="hero"
                                             spy={true}
@@ -80,28 +80,35 @@ export default function Navbar(props) {
                                                 <span className="brand1">{text.navBar.brand1}</span>
                                                 <span className="brand2">{text.navBar.brand2}</span>
                                             </div>
-                                        </Link>
-
+                                        </ScrollLink>
                                         <div className="navbar-container__list">
                                             <nav className="nav-list">
-                                                <div className="link-container large">
-                                                    <LinkComponent text={text} lang={lang} linkTo={'who'} />
-                                                </div>
-                                                <div className="link-container large">
-                                                    <LinkComponent text={text} lang={lang} linkTo={'what'} />
-                                                </div>
-                                                <div className="link-container small">
-                                                    <LinkComponent text={text} lang={lang} linkTo={'schedule'} />
-                                                </div>
-                                                <div className="link-container small">
-                                                    <LinkComponent text={text} lang={lang} linkTo={'price'} />
-                                                </div>
-                                                <div className="link-container small">
-                                                    <LinkComponent text={text} lang={lang} linkTo={'contact'} />
-                                                </div>
 
+                                                {location.pathname === "/" ? <>
+                                                    <div className="link-container large">
+                                                        <LinkComponent text={text} lang={lang} linkTo={'who'} />
+                                                    </div>
+
+                                                    <div className="link-container large">
+                                                        <LinkComponent text={text} lang={lang} linkTo={'what'} />
+                                                    </div>
+                                                    <div className="link-container small">
+                                                        <LinkComponent text={text} lang={lang} linkTo={'schedule'} />
+                                                    </div>
+                                                    <div className="link-container small">
+                                                        <LinkComponent text={text} lang={lang} linkTo={'price'} />
+                                                    </div>
+                                                    <div className="link-container small">
+                                                        <LinkComponent text={text} lang={lang} linkTo={'contact'} />
+                                                    </div>
+                                                </> : <>
+                                                        <Link to="/">{text[`${lang}`].navbar.home}</Link>
+                                                        <Link to="/legal">{text[`${lang}`].navbar.legal}</Link>
+                                                        <Link to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
+                                                    </>}
                                             </nav>
                                         </div>
+
                                     </div>
                                     <div>
                                         <div className="button-lang" >
@@ -111,7 +118,6 @@ export default function Navbar(props) {
                                                     <p className='langMenu__lang' onClick={() => {
                                                         props.handleLang('CAT')
                                                         setIsAnimation(!isAnimation)
-
                                                     }
                                                     }>CAT</p>
                                                     <p className='langMenu__lang' onClick={() => {
@@ -138,7 +144,7 @@ export default function Navbar(props) {
                                 <>
                                     <div className={`Navbar-mobile`}>
                                         <div className="navbar-container-mobile">
-                                            <Link className="menu"
+                                            <ScrollLink className="menu"
                                                 activeClass="active"
                                                 to="header"
                                                 spy={true}
@@ -149,7 +155,7 @@ export default function Navbar(props) {
                                                 <div className="navbar-container-mobile___brand-name-mobile">
                                                     <p className="acronym-mobile">{text.navBar.acronym}</p>
                                                 </div>
-                                            </Link>
+                                            </ScrollLink>
                                             <div onClick={(e) => {
                                                 e.preventDefault()
                                                 setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -162,12 +168,19 @@ export default function Navbar(props) {
                                             <OutsideAlerter forwardedRef={childRef} handleOutsideAlert={handleOutsideAlert}>
                                                 <div className="navbar-menu-container-mobile">
                                                     <nav className="navbar-menu-container-mobile__list">
-
-                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'who'} />
-                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'what'} />
-                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'schedule'} />
-                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'price'} />
-                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} />
+                                                        {location.pathname === "/" ? <>
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'who'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'what'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'schedule'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'price'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} />
+                                                        </> :
+                                                            <>
+                                                                <Link className="menu-mobile" to="/">{text[`${lang}`].navbar.home}</Link>
+                                                                <Link className="menu-mobile" to="/legal">{text[`${lang}`].navbar.legal}</Link>
+                                                                <Link className="menu-mobile" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
+                                                            </>
+                                                        }
                                                         <div className="menu-mobile" >
                                                             <div className="lang-container-m">
                                                                 <p className='lang-m'>lang</p>
@@ -192,9 +205,6 @@ export default function Navbar(props) {
                                                                 }>EN</p>
                                                             </div>
                                                         </div>
-
-
-
                                                     </nav>
                                                 </div>
                                             </OutsideAlerter>

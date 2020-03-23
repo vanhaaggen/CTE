@@ -15,7 +15,10 @@ const text = {
             what: "What we do",
             schedule: "Schedule",
             price: "Rates",
-            contact: "Contact"
+            contact: "Contact",
+            home: "Home",
+            legal: "Terms & Conditions",
+            privacy: "Privacy Policy"
         },
         header: <p className="quote">BE YOUR<br />BETTER<br />VERSION</p>,
         quote: "He Conquers Who Conquers Himself ",
@@ -152,7 +155,10 @@ const text = {
             what: "Que hacemos?",
             schedule: 'Horario',
             price: "Cuotas",
-            contact: 'Contacto'
+            contact: 'Contacto',
+            home: "Volver",
+            legal: "Aviso Legal",
+            privacy: "Política de Privacidad"
         },
         header: <p className="quote">SE TU<br />MEJOR<br />VERSIÓN</p>,
         quote: "Conquista el que se vence a si mismo",
@@ -289,7 +295,10 @@ const text = {
             what: "Que fem?",
             schedule: 'Horari',
             price: "Quotes",
-            contact: "Contacte"
+            contact: "Contacte",
+            home: "Inici",
+            legal: "Avís Legal",
+            privacy: "Politica de Privacitat"
         },
         header: <p className="quote">SIGUES<br />LA TEVA<br />MILLOR<br />VERSIÓ</p>,
         quote: "Conquereix el que es venç a si mateix",
