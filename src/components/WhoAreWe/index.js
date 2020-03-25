@@ -3,16 +3,13 @@ import Card from './Card'
 
 import './style.sass'
 
-import coach1 from '../../images/coach1.png'
-import coach2 from '../../images/coach2.png'
+import coach1 from '../../images/larr.png'
+import coach2 from '../../images/ger.png'
 
 
 export default function (props) {
     const { text, lang } = props
-
-
     return (
-
         <section className="who-container-content">
 
             <div className="who-wrapp">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import logic from '../../logic'
 
 
@@ -83,6 +84,11 @@ export default function (props) {
                                     <input type="email" name="email" id="email" className="input-field" placeholder={text[`${lang}`].sectionContact.email} />
                                     <label htmlFor="userMessage" className="label-placeholder"></label>
                                     <textarea name="userMessage" id="userMessage" rows="5" className="textarea" placeholder={text[`${lang}`].sectionContact.message}></textarea>
+
+                                    <div className="disclaimer-block">
+                                        <p>{text[`${lang}`].sectionContact.legal} <Link className="disclaimer-block--mod" to="/privacy">{text[`${lang}`].navbar.privacy}</Link></p>
+                                    </div>
+
                                     <div className="bttn-wrap">
                                         <div>{errorMessage && errorMessage.map(error => (
                                             <p className="error-message">{error}</p>

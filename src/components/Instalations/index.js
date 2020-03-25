@@ -35,7 +35,6 @@ export default function (props) {
                         autoPlayDirection="rtl"
                         fadeOutAnimation={true}
                         mouseTrackingEnabled={true}
-
                     />
                 </div>
 

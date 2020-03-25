@@ -60,8 +60,9 @@ export default function Footer() {
                                     <div className="footer-legal">
                                         {legal()}
                                         <div className="legals">
-                                            <Link to="/legal"><p className="legal" >{text[`${lang}`].navbar.legal}</p></Link>
-                                            <Link to="/privacy"><p className="privacy" >{text[`${lang}`].navbar.privacy}</p></Link>
+                                            <Link className="legal-link" to="/legal">{text[`${lang}`].navbar.legal}</Link>
+                                            <span>|</span>
+                                            <Link className="legal-link" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
                                         </div>
                                     </div>
                                 </>
@@ -94,8 +95,9 @@ export default function Footer() {
                                         <div className="footer-legal">
                                             {legal("-mbl")}
                                             <div className="legals">
-                                                <Link to="/legal"><p className="legal" >Avís Legal</p></Link>
-                                                <Link to="/privacy"><p className="privacy" >Politica de Privacitat</p></Link>
+                                                <Link className="legal-link" to="/legal">{text[`${lang}`].navbar.legal}</Link>
+                                                <span>|</span>
+                                                <Link className="legal-link" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
                                             </div>
                                         </div>
 

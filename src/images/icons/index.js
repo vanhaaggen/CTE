@@ -6,6 +6,8 @@ import meditationMan from "./yoga.svg"
 import meditationWoman from "./yoga (1).svg"
 import speed from "./funcionamiento.svg"
 import instagram from './instagram.svg'
+import gamer from './gamer.svg'
+import underconst from './underconst.svg'
 
 const icons = {
     cardio,
@@ -15,7 +17,9 @@ const icons = {
     meditationMan,
     meditationWoman,
     speed,
-    instagram
+    instagram,
+    gamer,
+    underconst
 }
 
 export default icons

@@ -102,9 +102,9 @@ export default function Navbar(props) {
                                                         <LinkComponent text={text} lang={lang} linkTo={'contact'} />
                                                     </div>
                                                 </> : <>
-                                                        <Link to="/">{text[`${lang}`].navbar.home}</Link>
-                                                        <Link to="/legal">{text[`${lang}`].navbar.legal}</Link>
-                                                        <Link to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
+                                                        <Link className="link-container" to="/">{text[`${lang}`].navbar.home}</Link>
+                                                        <Link className="link-container" to="/legal">{text[`${lang}`].navbar.legal}</Link>
+                                                        <Link className="link-container" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
                                                     </>}
                                             </nav>
                                         </div>

@@ -1,5 +1,8 @@
 import React from 'react'
-
+import ES_LEGAL from './legals/ES_legal'
+import CAT_LEGAL from './legals/CAT_legal'
+import ES_PRIVACY from './legals/ES_privacy'
+import CAT_PRIVACY from './legals/CAT_privacy'
 
 
 const text = {
@@ -280,12 +283,15 @@ const text = {
             error: <p>Parece que algo <b>no</b> ha salido bien...</p>,
             tryagain: "volver a probar",
             goback: "atrás",
+            legal: "Al hacer click sobre el botón “Enviar” estás confirmando que has leído y aceptado nuestra ",
             downloadtitle: "Si ya te hemos convencido!",
             downloadtitle1: "descárgate el formulario de inscripción"
         },
         footer: {
             follow: "Síguenos:"
         },
+        legal: ES_LEGAL,
+        privacy: ES_PRIVACY
 
     },
 
@@ -316,12 +322,12 @@ const text = {
 
             coach1: {
                 name: "- Coach Cristhian -",
-                text: "Jo t'ensenyare a moure pesos alts sense risc"
+                text: "Jo t'ensenyaré a moure pesos alts sense risc"
             },
 
             coach2: {
                 name: "- Coach Gerard -",
-                text: "Jo t'ensenyare a superar les teves debilitats."
+                text: "Jo t'ensenyaré a superar les teves debilitats."
             }
         },
         sectionWhat: {
@@ -418,12 +424,16 @@ const text = {
             error: <p>Sembla que algo <b>no</b> ha anat bé...</p>,
             tryagain: "tornar a provar",
             goback: "enrere",
+            legal: "Al fer clic sobre el botó “Enviar” estàs confirmant que has llegit i acceptat la nostra ",
             downloadtitle: "Si ja t'hem convençut !",
             downloadtitle1: "descarrega't el nostre formulari d'inscripció"
         },
         footer: {
             follow: "Segueix-nos:"
         },
+        legal: CAT_LEGAL,
+        privacy: CAT_PRIVACY
+
     },
 
     scheduleContent: {

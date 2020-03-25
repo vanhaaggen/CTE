@@ -30,11 +30,11 @@
 
 ## Contact
 - [x] Add honeypot
-- [ ] Add  P.P. disclaimer
+- [x] Add  P.P. disclaimer
 
 
 ## Footer
-- [ ] Add legal advice
-- [ ] Add cookies advice
-- [ ] Add privacy policy (P.P)
+- [x] Add legal advice
+- [x] Add cookies advice
+- [x] Add privacy policy (P.P)
 
