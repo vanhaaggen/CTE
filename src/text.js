@@ -132,13 +132,14 @@ const text = {
             name: "Name",
             email: "E-mail",
             message: "Your message here...",
-            send: "Send",
+            send: "Submit",
             sending: "We are sending your message",
             sent: <div className="contact-sent-wrap"><p className="contact-p contact-sent-wrap--first">Thanks for contacting us ❤</p>
                 <p className="contact-p contact-sent-wrap--second">We will contact you shortly.</p></div>,
             error: <p>Seems that something has gone <b>wrong</b>...</p>,
             tryagain: "try again",
             goback: "go back",
+            legal: "By clicking on the “Submit” button you are confirming that you have read and accepted our ",
             downloadtitle: "If we've already convinced you!",
             downloadtitle1: "download our registration form"
         },
