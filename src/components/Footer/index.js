@@ -92,8 +92,8 @@ export default function Footer() {
                                             </div>
                                         </div>
 
-                                        <div className="footer-legal">
-                                            <div className="legals">
+                                        <div className="footer-legal-m">
+                                            <div className="legals-m">
                                                 <Link className="legal-link" to="/legal">{text[`${lang}`].navbar.legal}</Link>
                                                 <span>|</span>
                                                 <Link className="legal-link" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
