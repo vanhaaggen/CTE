@@ -16,7 +16,6 @@ export default function (props) {
         (async () => {
             try {
                 const response = await logic.instaFetch()
-                console.log(response)
                 setData(response)
                 setFirstImage(response.shift())
 
@@ -37,7 +36,7 @@ export default function (props) {
         <>
             <section className="insta-container">
                 <div className='title-wrapp'>
-                    <p className="insta-pretitle">{text[`${lang}`].sectionInsta.pretitle}<span role="img">👇</span></p>
+                    <p className="insta-pretitle">{text[`${lang}`].sectionInsta.pretitle}<span role="img" aria-label="point-down">👇</span></p>
                     <p className="insta-title">{text[`${lang}`].sectionInsta.title}</p>
                 </div>
                 <div className="insta-caption-container">

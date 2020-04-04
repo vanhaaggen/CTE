@@ -19,7 +19,7 @@ const privacy = {
 
     normativa: {
         p1: <p>La nostra Política de Privacitat s'ha dissenyat d'acord amb el <b> Reglament General de Protecció de Dades de la UE 2016/679 de Parlament Europeu </b> i de el Consell, de 27 d'abril de 2016, relatiu a la protecció de les persones físiques pel que fa a el tractament de dades personals ia la lliure circulació d'aquestes dades i pel qual es deroga la Directiva 95/46 / CE (Reglament general de protecció de dades), i la Llei Orgànica 3/2018 de el 5 de desembre, de protecció de dades de caràcter personal i Garantia dels Drets Digitals.</p>,
-        p3: <p>A l'facilitar-nos les seves dades, vostè declara haver llegit i conèixer la present Política de Privadesa, prestant el seu consentiment inequívoc i exprés a el tractament de les seves dades personals d'acord a les finalitats i termes aquí expressats.</p>,
+        p2: <p>A l'facilitar-nos les seves dades, vostè declara haver llegit i conèixer la present Política de Privadesa, prestant el seu consentiment inequívoc i exprés a el tractament de les seves dades personals d'acord a les finalitats i termes aquí expressats.</p>,
         p3: <p>L'Empresa podrà modificar la present Política de Privacitat per adaptar-la a les novetats legislatives, jurisprudencials o d'interpretació de l'Agència Espanyola de Protecció de Dades. Aquestes condicions de privacitat podran ser complementades per l'Avís Legal, Política de Cookies i les condicions generals que, si escau, es recullin per a determinats productes o serveis, si aquest accés suposa alguna especialitat en matèria de protecció de dades de caràcter personal. </p>
     },
 

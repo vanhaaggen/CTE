@@ -19,7 +19,7 @@ const privacy = {
 
     normativa: {
         p1: <p>Nuestra Política de Privacidad se ha diseñado de acuerdo con el <b>Reglamento General de Protección de Datos de la UE 2016/679 del Parlamento Europeo</b> y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protección de datos), y la Ley Orgánica 3/2018 del 5 de diciembre, de Protección de Datos de Carácter Personal y Garantía de los Derechos Digitales.</p>,
-        p3: <p>Al facilitarnos sus datos, Usted declara haber leído y conocer la presente Política de Privacidad, prestando su consentimiento inequívoco y expreso al tratamiento de sus datos personales de acuerdo a las finalidades y términos aquí expresados.</p>,
+        p2: <p>Al facilitarnos sus datos, Usted declara haber leído y conocer la presente Política de Privacidad, prestando su consentimiento inequívoco y expreso al tratamiento de sus datos personales de acuerdo a las finalidades y términos aquí expresados.</p>,
         p3: <p>La Empresa podrá modificar la presente Política de Privacidad para adaptarla a las novedades legislativas, jurisprudenciales o de interpretación de la Agencia Española de Protección de Datos. Estas condiciones de privacidad podrán ser complementadas por el Aviso Legal, Política de Cookies y las Condiciones Generales que, en su caso, se recojan para determinados productos o servicios, si dicho acceso supone alguna especialidad en materia de protección de datos de carácter personal. </p>
     },
 

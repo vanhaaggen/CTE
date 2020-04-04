@@ -45,7 +45,7 @@ export default function Footer() {
                                         </div>
 
                                         <div className="logo-wrapper">
-                                            <img src={whiteLogo} alt="logo" />
+                                            <img src={whiteLogo} alt="crosstraining emporda logo" />
                                         </div>
 
                                         <div className="footer-social">
@@ -72,12 +72,12 @@ export default function Footer() {
                                         <div className="footer-wrapper-mbl">
                                             <div>
                                                 <div className="logo-wrapper-mbl">
-                                                    <img src={whiteLogo} alt="logo" />
+                                                    <img src={whiteLogo} alt="crosstraining emporda logo" />
                                                 </div>
                                                 <div className="footer-address-mbl">
                                                     <p>Carrer dels Arboços, 4</p>
                                                     <p>1711, Vulpellac</p>
-                                                    <p>+34 659 53 37 21</p>
+                                                    <p><span className="prefix">+34</span> 659 533 721</p>
                                                 </div>
                                             </div>
 
@@ -93,12 +93,12 @@ export default function Footer() {
                                         </div>
 
                                         <div className="footer-legal">
-                                            {legal("-mbl")}
                                             <div className="legals">
                                                 <Link className="legal-link" to="/legal">{text[`${lang}`].navbar.legal}</Link>
                                                 <span>|</span>
                                                 <Link className="legal-link" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
                                             </div>
+                                            {legal("-mbl")}
                                         </div>
 
                                     </>

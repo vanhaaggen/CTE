@@ -1,4 +1,4 @@
-import React, { Route } from 'react'
+import React from 'react'
 import SectionLayout from '../components/SectionLayout'
 import components from '../components'
 import { I18NConsumer } from '../components/i18ncontext'

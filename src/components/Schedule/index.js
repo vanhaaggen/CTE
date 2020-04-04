@@ -21,11 +21,11 @@ export default function (props) {
                         <div className="sh-cont-wrapp">
                             <div className="control-table-container">
                                 <div className="schedule-menu" >
-                                    <ScheduleControlBox delayTime={1000} bttnClass={"ct-bttn"} tdClass={"ct"} activity={"Crosstraining"} />
-                                    <ScheduleControlBox delayTime={1100} bttnClass={"ob-bttn"} tdClass={"ob"} activity={"Open Box"} />
-                                    <ScheduleControlBox delayTime={1200} bttnClass={"jj-bttn"} tdClass={"jj"} activity={"Jiu-Jitsu"} />
-                                    <ScheduleControlBox delayTime={1300} bttnClass={"jjk-bttn"} tdClass={"jjk"} activity={"Jiu-Jitsu Kids"} />
-                                    <ScheduleControlBox delayTime={1400} bttnClass={"ctk-bttn"} tdClass={"ctk"} activity={"Crosstraining Kids"} />
+                                    <ScheduleControlBox bttnClass={"ct-bttn"} tdClass={"ct"} activity={"Crosstraining"} />
+                                    <ScheduleControlBox bttnClass={"ob-bttn"} tdClass={"ob"} activity={"Open Box"} />
+                                    <ScheduleControlBox bttnClass={"jj-bttn"} tdClass={"jj"} activity={"Jiu-Jitsu"} />
+                                    <ScheduleControlBox bttnClass={"jjk-bttn"} tdClass={"jjk"} activity={"Jiu-Jitsu Kids"} />
+                                    <ScheduleControlBox bttnClass={"ctk-bttn"} tdClass={"ctk"} activity={"Crosstraining Kids"} />
                                 </div>
 
                                 <div className="table-container">
@@ -48,13 +48,13 @@ export default function (props) {
                                 <div className="control-table-container-mbl">
                                     <div className="schedule-menu-mbl" >
                                         <div className="schedule-menu-mbl__subclass">
-                                            <ScheduleControlBox delayTime={1000} bttnClass={"ct-bttn"} tdClass={"ct-mbl"} activity={"Crosstraining"} />
-                                            <ScheduleControlBox delayTime={1400} bttnClass={"ctk-bttn"} tdClass={"ctk-mbl"} activity={"Crosstraining Kids"} />
+                                            <ScheduleControlBox bttnClass={"ct-bttn"} tdClass={"ct-mbl"} activity={"Crosstraining"} />
+                                            <ScheduleControlBox bttnClass={"ctk-bttn"} tdClass={"ctk-mbl"} activity={"Crosstraining Kids"} />
                                         </div>
                                         <div className="schedule-menu-mbl__subclass">
-                                            <ScheduleControlBox delayTime={1200} bttnClass={"jj-bttn"} tdClass={"jj-mbl"} activity={"Jiu-Jitsu"} />
-                                            <ScheduleControlBox delayTime={1300} bttnClass={"jjk-bttn"} tdClass={"jjk-mbl"} activity={"Jiu-Jitsu Kids"} />
-                                            <ScheduleControlBox delayTime={1100} bttnClass={"ob-bttn"} tdClass={"ob-mbl"} activity={"Open Box"} />
+                                            <ScheduleControlBox bttnClass={"jj-bttn"} tdClass={"jj-mbl"} activity={"Jiu-Jitsu"} />
+                                            <ScheduleControlBox bttnClass={"jjk-bttn"} tdClass={"jjk-mbl"} activity={"Jiu-Jitsu Kids"} />
+                                            <ScheduleControlBox bttnClass={"ob-bttn"} tdClass={"ob-mbl"} activity={"Open Box"} />
                                         </div>
                                     </div>
                                     <div className="table-container">

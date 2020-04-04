@@ -1,11 +1,13 @@
 import React, { useState, useRef } from 'react'
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
 import { Link, useLocation } from 'react-router-dom'
 import Media from 'react-media'
 import OutsideAlerter from './OutsideAlerter'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+
+import logo from '../../images/logo-nav.png'
 
 import './style.sass'
 import './styleMobile.sass'
@@ -76,7 +78,7 @@ export default function Navbar(props) {
                                             duration={500}
                                         >
                                             <div className="navbar-container___brand-name">
-                                                <p className="acronym">{text.navBar.acronym}</p>
+                                                <img className="acronym" src={logo} alt="crosstraining emporda logo" />
                                                 <span className="brand1">{text.navBar.brand1}</span>
                                                 <span className="brand2">{text.navBar.brand2}</span>
                                             </div>
@@ -146,7 +148,7 @@ export default function Navbar(props) {
                                         <div className="navbar-container-mobile">
                                             <ScrollLink className="menu"
                                                 activeClass="active"
-                                                to="header"
+                                                to="hero"
                                                 spy={true}
                                                 smooth={true}
                                                 offset={-70}

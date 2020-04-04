@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link, animateScroll as scroll } from 'react-scroll'
-import IconBox from './IconBox'
+import { Link } from 'react-scroll'
 import images from "../../images"
 
 import './style.sass'
