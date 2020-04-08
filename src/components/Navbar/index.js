@@ -69,20 +69,22 @@ export default function Navbar(props) {
                             <>
                                 <div className="Navbar">
                                     <div className="navbar-container">
-                                        <ScrollLink
-                                            activeClass="active"
-                                            to="hero"
-                                            spy={true}
-                                            smooth={true}
-                                            offset={-70}
-                                            duration={500}
-                                        >
-                                            <div className="navbar-container___brand-name">
-                                                <img className="acronym" src={logo} style={{ width: "50px", height: "50px" }} alt="crosstraining emporda logo" />
-                                                <span className="brand1">{text.navBar.brand1}</span>
-                                                <span className="brand2">{text.navBar.brand2}</span>
-                                            </div>
-                                        </ScrollLink>
+                                        <div className="navbar-container___brand-name">
+                                            <ScrollLink className="logo-link-container"
+                                                activeClass="active"
+                                                to="hero"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}
+                                            >
+                                                <img className="acronym" src={logo} alt="crosstraining emporda logo" />
+                                                <div>
+                                                    <span className="brand1">{text.navBar.brand1}</span>
+                                                    <span className="brand2">{text.navBar.brand2}</span>
+                                                </div>
+                                            </ScrollLink>
+                                        </div>
                                         <div className="navbar-container__list">
                                             <nav className="nav-list">
 
