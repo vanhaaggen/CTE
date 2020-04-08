@@ -78,7 +78,7 @@ export default function Navbar(props) {
                                             duration={500}
                                         >
                                             <div className="navbar-container___brand-name">
-                                                <img className="acronym" src={logo} style={{ width: "50px" }} alt="crosstraining emporda logo" />
+                                                <img className="acronym" src={logo} style={{ width: "50px", height: "50px" }} alt="crosstraining emporda logo" />
                                                 <span className="brand1">{text.navBar.brand1}</span>
                                                 <span className="brand2">{text.navBar.brand2}</span>
                                             </div>
