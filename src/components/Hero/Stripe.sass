@@ -1,7 +1,7 @@
-=bckImage($property)
+=bckImage($property, $format)
     width: 100%
     height: 100%
-    background-image: url("../../images/" + $property + ".jpg")
+    background-image: url("../../images/" + $property + $format)
     background-size: cover
     border-radius: 5px
     -webkit-box-shadow: 7px 7px 7px -5px rgba(0,0,0,0.5)
@@ -58,17 +58,29 @@
     
     
 
-.cont0
-    +bckImage("stripeImg1")
+.no-webp .cont0
+    +bckImage("stripeImg1", ".jpg")
 
-.cont1
-    +bckImage("stripeImg4")
+.no-webp .cont1
+    +bckImage("stripeImg4", ".jpg")
 
-.cont2
-    +bckImage("stripeImg3")
+.no-webp .cont2
+    +bckImage("stripeImg3", ".jpg")
 
-.cont3
-    +bckImage("stripeImg2")
+.no-webp .cont3
+    +bckImage("stripeImg2", ".jpg")
+
+.webp .cont0
+    +bckImage("stripeImg1", ".webp")
+
+.webp .cont1
+    +bckImage("stripeImg4", ".webp")
+
+.webp .cont2
+    +bckImage("stripeImg3", ".webp")
+
+.webp .cont3
+    +bckImage("stripeImg2", ".webp")
 
 
 

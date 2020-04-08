@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+
 import Home from '../pages/Home'
 import components from './index'
 import legalPages from '../pages'
