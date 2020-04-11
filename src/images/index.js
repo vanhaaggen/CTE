@@ -11,6 +11,11 @@ import circleWebP from './circle.webp'
 import laurelWebP from './laurel.webp'
 import kettlebellWebP from './kettlebell.webp'
 
+import gerard from './ger.png';
+import cristhian from './larr.png'
+import gerardWebP from './ger.webp'
+import cristhianWebP from './larr.webp'
+
 
 import img1 from './ins-1.png'
 import img2 from './ins-2.png'
@@ -42,12 +47,22 @@ const images = {
         kettlebellWebP
     ],
 
+    coaches: [
+        gerard,
+        cristhian,
+        gerardWebP,
+        cristhianWebP
+    ],
+
     instalation: [
         img1,
         img2,
         img3,
         img4,
-        img5,
+        img5
+    ],
+
+    instalationWebP: [
         img1WebP,
         img2WebP,
         img3WebP,

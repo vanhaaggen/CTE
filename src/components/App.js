@@ -16,7 +16,7 @@ const { Legal, Privacy } = legalPages
 
 export default function App(props) {
     const [language, setLanguage] = useState(localStorage.getItem('lang') || 'CAT')
-
+    const [isWebP, setIsWebP] = useState(true)
 
     const handleLang = (lang) => {
         setLanguage(lang)
@@ -50,9 +50,23 @@ export default function App(props) {
         }
     })
 
+    /* global Modernizr */
+
+    useEffect(() => {
+
+        if (Modernizr.webp) {
+            setIsWebP(true)
+            console.info('%cWebP is supported ✅', 'color: green')
+        } else {
+            console.info('%cWebP is not supported in your Browser ❌', 'font-weight: bold')
+        }
+
+    }, [])
+
+
     return <>
         <BrowserRouter>
-            <I18NProvider value={{ text: text, lang: language }}>
+            <I18NProvider value={{ text: text, lang: language, webp: isWebP }}>
                 <Navbar handleLang={handleLang} />
                 <Switch>
                     <Route exact path='/' component={Home} />

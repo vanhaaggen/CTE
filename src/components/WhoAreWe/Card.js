@@ -1,14 +1,20 @@
 import React from 'react'
+import ToogleImgFormat from '../ToogleImgFormat'
 
-
-export default function ({ image, text1, text2 }) {
+export default function ({ webPImg, fallBackImg, text1, text2 }) {
 
     return (
         <div className="who-divisor__coach-container">
 
             <div className="who-divisor__coach">
 
-                <img className="who-divisor__coach--image" src={image} alt="coach" />
+                <ToogleImgFormat
+                    webPImg={webPImg}
+                    fallBackImg={fallBackImg}
+                    format={"png"}
+                    className={"who-divisor__coach--image"}
+                    altMssg={"coach"}
+                />
 
                 <div className="who-divisor__coach-description-container">
                     <div className="who-divisor__coach-description-container--line"></div>

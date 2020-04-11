@@ -8,9 +8,8 @@ import './style.sass'
 
 
 import images from '../../images'
+
 const { logo: [back, barbell, circle, laurel, kettlebell, backWebP, barbellWebP, circleWebP, laurelWebP, kettlebellWebP] } = images
-
-
 
 const Header = () => {
     return <>

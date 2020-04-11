@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import images from '../../images'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
+import ToogleImgFormat from '../ToogleImgFormat'
 
 import './style.sass'
 
-const { instalation } = images
+const { instalation, instalationWebP } = images
 
-export default function (props) {
+export default function ({ webp }) {
+    const [instalationArr, setInstalationArr] = useState(instalationWebP)
+
+    useEffect(() => {
+        const webPImgsArr = webp ? instalationWebP : instalation
+        setInstalationArr(webPImgsArr)
+    }, [])
+
 
     const responsive = {
         0: { items: 1 },
@@ -18,18 +26,19 @@ export default function (props) {
     const Images = ({ image }) => {
         return (
             <div className="images-container">
-                <img className="carousel-images" src={image} alt=" " />
+                <img src={image} className="carousel-images" alt="shows different gym props and items" />
             </div>
         )
     }
+
+
     return (
         <>
-
             <section className="pic-container">
 
                 <div className="carousel-container">
                     <AliceCarousel className="carousel"
-                        items={instalation.map(item => (<Images image={item} />))}
+                        items={instalationArr.map(item => (<Images image={item} />))}
                         responsive={responsive}
                         autoPlayInterval={2000}
                         autoPlayDirection="rtl"

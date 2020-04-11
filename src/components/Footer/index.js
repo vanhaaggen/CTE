@@ -3,9 +3,12 @@ import Media from 'react-media'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import ToogleImgFormat from '../ToogleImgFormat'
+
 import './style.sass'
 
 import whiteLogo from '../../images/logo-white.png'
+import whiteLogoWebP from '../../images/logo-white.webp'
 import { I18NConsumer } from '../i18ncontext'
 
 
@@ -45,7 +48,12 @@ export default function Footer() {
                                         </div>
 
                                         <div className="logo-wrapper">
-                                            <img src={whiteLogo} alt="crosstraining emporda logo" />
+                                            <ToogleImgFormat
+                                                webPImg={whiteLogoWebP}
+                                                fallBackImg={whiteLogo}
+                                                format={"png"}
+                                                altMssg={"crosstraining emporda logo"}
+                                            />
                                         </div>
 
                                         <div className="footer-social">

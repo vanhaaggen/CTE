@@ -3,8 +3,10 @@ import Card from './Card'
 
 import './style.sass'
 
-import coach1 from '../../images/larr.png'
-import coach2 from '../../images/ger.png'
+import images from '../../images'
+
+
+const { coaches: [gerard, cristhian, gerardWebp, cristhianWebP] } = images
 
 
 export default function (props) {
@@ -23,7 +25,12 @@ export default function (props) {
                                 {text[`${lang}`].sectionWho.par2}
                             </article>
 
-                            <Card image={coach1} text1={text[`${lang}`].sectionWho.coach1.name} text2={text[`${lang}`].sectionWho.coach1.text} />
+                            <Card
+                                webPImg={cristhianWebP}
+                                fallBackImg={cristhian}
+                                text1={text[`${lang}`].sectionWho.coach1.name}
+                                text2={text[`${lang}`].sectionWho.coach1.text}
+                            />
 
                         </div>
 
@@ -34,7 +41,12 @@ export default function (props) {
                     <div className="divisor-wave2">
                         <div className="who-divisor">
 
-                            <Card image={coach2} text1={text[`${lang}`].sectionWho.coach2.name} text2={text[`${lang}`].sectionWho.coach2.text} />
+                            <Card
+                                webPImg={gerardWebp}
+                                fallBackImg={gerard}
+                                text1={text[`${lang}`].sectionWho.coach2.name}
+                                text2={text[`${lang}`].sectionWho.coach2.text}
+                            />
 
                             <article className="who-divisor__paragraph par3">
                                 <q className='who-divisor__paragraph--size-par3'>{text[`${lang}`].sectionWho.par3}</q>
