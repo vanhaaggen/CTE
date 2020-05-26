@@ -17,16 +17,16 @@ import gerardWebP from './ger.webp'
 import cristhianWebP from './larr.webp'
 
 
-import img1 from './ins-1.png'
-import img2 from './ins-2.png'
-import img3 from './ins-3.png'
-import img4 from './ins-4.png'
-import img5 from './ins-5.png'
-import img1WebP from './ins-1.webp'
-import img2WebP from './ins-2.webp'
-import img3WebP from './ins-3.webp'
-import img4WebP from './ins-4.webp'
-import img5WebP from './ins-5.webp'
+import img1 from './ins-1.jpg'
+import img2 from './ins-2.jpg'
+import img3 from './ins-3.jpg'
+import img4 from './ins-4.jpg'
+import img5 from './ins-5.jpg'
+import img1w from './ins-1.webp'
+import img2w from './ins-2.webp'
+import img3w from './ins-3.webp'
+import img4w from './ins-4.webp'
+import img5w from './ins-5.webp'
 
 import icons from './icons'
 
@@ -54,21 +54,22 @@ const images = {
         cristhianWebP
     ],
 
-    instalation: [
-        img1,
-        img2,
-        img3,
-        img4,
-        img5
-    ],
-
-    instalationWebP: [
-        img1WebP,
-        img2WebP,
-        img3WebP,
-        img4WebP,
-        img5WebP
-    ],
+    instalation: {
+        webp: [
+            img1w,
+            img2w,
+            img4w,
+            img5w,
+            img3w,
+        ],
+        noWebp: [
+            img1,
+            img2,
+            img4,
+            img5,
+            img3,
+        ],
+    },
 
     icons: [
         strenght,

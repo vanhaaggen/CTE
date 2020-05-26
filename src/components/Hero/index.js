@@ -1,7 +1,7 @@
 import React from 'react'
-
 import { Animated } from 'react-animated-css'
 import { I18NConsumer } from '../i18ncontext'
+import News from '../News'
 import Stripe from './Stripe'
 import ToogleImgFormat from '../ToogleImgFormat'
 import './style.sass'
@@ -104,6 +104,7 @@ const Header = () => {
         </section>
 
         <Stripe />
+        <News />
 
     </>
 }

@@ -21,10 +21,15 @@ const text = {
             contact: "Contact",
             home: "Home",
             legal: "Terms & Conditions",
-            privacy: "Privacy Policy"
+            privacy: "Privacy Policy",
+            news: "News"
         },
         header: <p className="quote">BE YOUR<br />BETTER<br />VERSION</p>,
         quote: "He Conquers Who Conquers Himself ",
+        sectionNews: {
+            text: '',
+            url: 'https://youtu.be/CzMxdxKCikY'
+        },
         stripeText: [
             <p className="stripeText">We call the gym <span className="stripeText___box1">BOX</span></p>,
             <p className="stripeText">We call the trainings <span className="stripeText___box2">WODs</span></p>,
@@ -32,7 +37,7 @@ const text = {
             <p className="stripeText">We call the suffering a <span className="stripeText___box4">Joyful</span> experience</p>,
         ],
         sectionWho: {
-            par1: <p className='who-divisor__paragraph--size'>We are a Crosstraining gym located on <b>Calle dels Arboços 4 in Vulpellac.</b></p>,
+            par1: <p className='who-divisor__paragraph--size'>We are a Crosstraining gym located <span className="fix">on</span> <b>Calle dels Arboços 4 in Vulpellac.</b></p>,
 
             par2: <p className='who-divisor__paragraph--size'>We will help you with our classes to <b>unlock</b> your full potential through <b>high intensity interval</b> (HIIT) and functional training adapted to your sports level. Always paying close attention to the correct implementation of the movements.</p>,
 
@@ -162,10 +167,15 @@ const text = {
             contact: 'Contacto',
             home: "Volver",
             legal: "Aviso Legal",
-            privacy: "Política de Privacidad"
+            privacy: "Política de Privacidad",
+            news: "Novedades"
         },
         header: <p className="quote">SE TU<br />MEJOR<br />VERSIÓN</p>,
         quote: "Conquista el que se vence a si mismo",
+        sectionNews: {
+            text: '',
+            url: 'https://youtu.be/CzMxdxKCikY'
+        },
         stripeText: [
             <p className="stripeText">Al gimnasio lo llamamos <span className="stripeText____box1">BOX</span></p>,
             <p className="stripeText">A los entrenamientos los llamamos <span className="stripeText____box2">WODs</span></p>,
@@ -174,7 +184,7 @@ const text = {
 
         ],
         sectionWho: {
-            par1: <p className='who-divisor__paragraph--size'>Somos un gimnasio de Crosstraining situado en la <b>calle dels Arboços 4 de Vulpellac.</b></p>,
+            par1: <p className='who-divisor__paragraph--size'>Somos un gimnasio de <span className="fix">Crosstraining</span> situado en la <b>calle dels Arboços 4 de Vulpellac.</b></p>,
             par2: <p className='who-divisor__paragraph--size'>Te ayudaremos con nuestras <b>clases dirigidas</b> a liberar tu máximo potencial mediante <b>entrenos intervalicos de alta intensidad</b> (HIIT) y funcionales adaptados a tu nivel deportivo. Siempre prestando mucha atención a la correcta implementación de los movimientos.</p>,
 
             par3: "Sea acabando de empezar o llevando ya un tiempo, con nosotros siempre te lo pasaras a lo grande llegando a tu limite.",
@@ -305,10 +315,16 @@ const text = {
             contact: "Contacte",
             home: "Inici",
             legal: "Avís Legal",
-            privacy: "Politica de Privacitat"
+            privacy: "Politica de Privacitat",
+            news: "Novetats"
         },
         header: <p className="quote">SIGUES<br />LA TEVA<br />MILLOR<br />VERSIÓ</p>,
         quote: "Conquereix el que es venç a si mateix",
+        sectionNews: {
+            text: '',
+            url: 'https://youtu.be/CzMxdxKCikY'
+
+        },
         stripeText: [
             <p className="stripeText">Al gimnàs en diem <span className="stripeText___box1">BOX</span></p>,
             <p className="stripeText">Als entrenaments els anomenem <span className="stripeText___box2">WOD</span></p>,
@@ -316,7 +332,7 @@ const text = {
             <p className="stripeText">Als entrenadors els anomenem <span className="stripeText___box4">Coaches</span></p>,
         ],
         sectionWho: {
-            par1: <p className='who-divisor__paragraph--size'>Som un gimnàs de Crosstraining situat al <b>carrer dels Arboços 4 a Vulpellac.</b></p>,
+            par1: <p className='who-divisor__paragraph--size'>Som un gimnàs de Crosstraining <span className='fix'>situat</span> al <b>carrer dels Arboços 4 a Vulpellac.</b></p>,
             par2: <p className='who-divisor__paragraph--size'>T'ajudarem en les nostres <b>classes dirigides</b> a alliberar el teu màxim potencial mitjançant <b>entrenaments intervàl·lics d'alta intensitat</b> (<span className="hiit">HIIT</span>) i funcionals adaptats al teu nivell esportiu. Sempre prestant molta atenció al correcte desenvolupament del moviment.</p>,
 
             par3: "Sia acabant de començar o portant temps, amb nosaltres sempre t'ho passaràs en gran arribant al teu límit.",

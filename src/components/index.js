@@ -1,5 +1,6 @@
 
 import Navbar from './Navbar/index.js'
+import News from './News/index.js'
 import Hero from './Hero/index.js'
 import WhoAreWe from './WhoAreWe/index.js'
 import Instalation from './Instalations/index.js'
@@ -12,6 +13,7 @@ import Footer from './Footer/index.js'
 
 const components = {
     Navbar,
+    News,
     Hero,
     WhoAreWe,
     Instalation,

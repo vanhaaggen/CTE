@@ -21,9 +21,9 @@ export default function Navbar(props) {
     const childRef = useRef(null)
     const location = useLocation()
 
-    const LinkComponent = ({ text, lang, linkTo }) => {
+    const LinkComponent = ({ text, lang, linkTo, classN }) => {
         return (
-            <ScrollLink className="menu"
+            <ScrollLink className={classN}
                 activeClass="active"
                 to={linkTo}
                 spy={true}
@@ -36,9 +36,9 @@ export default function Navbar(props) {
         )
     }
 
-    const LinkComponentMobile = ({ text, lang, linkTo }) => {
+    const LinkComponentMobile = ({ text, lang, linkTo, classN }) => {
         return (
-            <ScrollLink className="menu-mobile"
+            <ScrollLink className={classN}
                 activeClass="active"
                 to={linkTo}
                 spy={true}
@@ -79,7 +79,7 @@ export default function Navbar(props) {
                                                 duration={500}
                                             >
                                                 <img className="acronym" src={logo} alt="crosstraining emporda logo" />
-                                                <div>
+                                                <div className="brand-container">
                                                     <span className="brand1">{text.navBar.brand1}</span>
                                                     <span className="brand2">{text.navBar.brand2}</span>
                                                 </div>
@@ -90,20 +90,23 @@ export default function Navbar(props) {
 
                                                 {location.pathname === "/" ? <>
                                                     <div className="link-container large">
-                                                        <LinkComponent text={text} lang={lang} linkTo={'who'} />
+                                                        <LinkComponent text={text} lang={lang} linkTo={'news'} classN={'nav-news'} />
+                                                    </div>
+                                                    <div className="link-container large">
+                                                        <LinkComponent text={text} lang={lang} linkTo={'who'} classN={'menu'} />
                                                     </div>
 
                                                     <div className="link-container large">
-                                                        <LinkComponent text={text} lang={lang} linkTo={'what'} />
+                                                        <LinkComponent text={text} lang={lang} linkTo={'what'} classN={'menu'} />
                                                     </div>
                                                     <div className="link-container small">
-                                                        <LinkComponent text={text} lang={lang} linkTo={'schedule'} />
+                                                        <LinkComponent text={text} lang={lang} linkTo={'schedule'} classN={'menu'} />
                                                     </div>
                                                     <div className="link-container small">
-                                                        <LinkComponent text={text} lang={lang} linkTo={'price'} />
+                                                        <LinkComponent text={text} lang={lang} linkTo={'price'} classN={'menu'} />
                                                     </div>
                                                     <div className="link-container small">
-                                                        <LinkComponent text={text} lang={lang} linkTo={'contact'} />
+                                                        <LinkComponent text={text} lang={lang} linkTo={'contact'} classN={'menu'} />
                                                     </div>
                                                 </> : <>
                                                         <Link className="link-container" to="/">{text[`${lang}`].navbar.home}</Link>
@@ -173,11 +176,12 @@ export default function Navbar(props) {
                                                 <div className="navbar-menu-container-mobile">
                                                     <nav className="navbar-menu-container-mobile__list">
                                                         {location.pathname === "/" ? <>
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'who'} />
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'what'} />
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'schedule'} />
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'price'} />
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'who'} classN={'menu-mobile'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'what'} classN={'menu-mobile'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'schedule'} classN={'menu-mobile'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'price'} classN={'menu-mobile'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} classN={'menu-mobile'} />
+                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'news'} classN={'nav-news-m'} />
                                                         </> :
                                                             <>
                                                                 <Link className="menu-mobile" to="/">{text[`${lang}`].navbar.home}</Link>

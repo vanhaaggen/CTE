@@ -6,27 +6,55 @@ import ToogleImgFormat from '../ToogleImgFormat'
 
 import './style.sass'
 
-const { instalation, instalationWebP } = images
 
-export default function ({ webp }) {
-    const [instalationArr, setInstalationArr] = useState(instalationWebP)
+
+export default function () {
+    const [isLessThan, setIsLessThan] = useState(false)
+    const { instalation: { webp, noWebp } } = images
 
     useEffect(() => {
-        const webPImgsArr = webp ? instalationWebP : instalation
-        setInstalationArr(webPImgsArr)
+        function handleIsLessThan(event) {
+            if (event.target.innerWidth < 540) {
+                return setIsLessThan(true)
+            } else {
+                return setIsLessThan(false)
+            }
+        }
+        window.addEventListener('resize', handleIsLessThan)
+
+        return () => {
+            window.removeEventListener('resize', handleIsLessThan)
+        }
     }, [])
 
 
+
+
     const responsive = {
-        0: { items: 1 },
-        1024: { items: 2 },
-        1800: { items: 3 }
+        600: { items: 1 },
+        980: { items: 2 },
+        1400: { items: 3 },
     }
 
-    const Images = ({ image }) => {
+    const stagePadding = function () {
+        if (!isLessThan) {
+            return {
+                paddingLeft: 50,
+                paddingRight: 50
+            }
+        } else {
+            return
+        }
+    };
+
+    const Images = ({ image, idx }) => {
         return (
             <div className="images-container">
-                <img src={image} className="carousel-images" alt="shows different gym props and items" />
+                <picture>
+                    <source srcSet={image} type="image/webp" />
+                    <source srcSet={noWebp[idx]} type="image/jpeg" />
+                    <img className="carousel-images" src={noWebp[idx]} alt="Gym equipment" />
+                </picture>
             </div>
         )
     }
@@ -38,12 +66,11 @@ export default function ({ webp }) {
 
                 <div className="carousel-container">
                     <AliceCarousel className="carousel"
-                        items={instalationArr.map(item => (<Images image={item} />))}
+                        items={webp.map((item, index) => (<Images image={item} idx={index} />))}
                         responsive={responsive}
-                        autoPlayInterval={2000}
-                        autoPlayDirection="rtl"
                         fadeOutAnimation={true}
                         mouseTrackingEnabled={true}
+                        stagePadding={stagePadding()}
                     />
                 </div>
 
