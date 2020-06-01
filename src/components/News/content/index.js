@@ -13,10 +13,10 @@ const news = [
     {
         title: 'NOVA NORMALITAT',
         date: '01-06-2020',
-        headline: 'Entrenar si, pero amb precaució',
+        headline: 'Entrenar sí, però amb precaució',
         article: {
             body: [<p className="news-container--text">Avui, 1 de Juny i entrant en fase 2, podem dir que ja podrem tornar a gaudir dels nostres entrenaments a Crosstraining Empordà. </p>,
-            <p className="news-container--text">Us expliquem com serà aquesta nova normalitat i quines mesures hem pres perquè tots vosaltres podeu tornar a gaudir dels vostres entrenaments, segurs, higiènics i complint les distàncies de seguretat.</p>],
+            <p className="news-container--text">Us expliquem com serà aquesta nova normalitat i quines mesures hem pres perquè tots vosaltres pogueu tornar a gaudir dels vostres entrenaments, segurs, higiènics i complint les distàncies de seguretat.</p>],
             link: {
                 name: '#crosstrainingemporda',
                 url: 'https://www.instagram.com/p/CA2XA-JKOiw/'
