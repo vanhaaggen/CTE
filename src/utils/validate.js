@@ -7,10 +7,12 @@ const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"
  * 
  * @returns {Error}
  */
-export default function (honey, name, email) {
+export default function (honey, name, email, message) {
     let errors = ''
 
     if (honey) throw new Error(`honeypot is being looted`)
+
+    if (message.length < 30) throw new Error('unable to be sent')
 
     if (!name.trim()) errors += 'name is empty or blank'
 
