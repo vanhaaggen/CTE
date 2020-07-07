@@ -12,7 +12,7 @@
 >You will also see any lint errors in the console.
 
 
-## [visit website](https://corsstrainingemporda.com)🏋️‍♂️🏋️‍♀️
+## [visit website](https://crosstrainingemporda.com)🏋️‍♂️🏋️‍♀️
 
 
 
