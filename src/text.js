@@ -67,7 +67,8 @@ const text = {
         },
         sectionSchedule: {
             daysOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            daysOfWeekMobile: ["Mo", "Tu", "We", "Th", "Fr", "Sa"]
+            daysOfWeekMobile: ["Mo", "Tu", "We", "Th", "Fr", "Sa"],
+            covidMssg: '*Activities canceled under COVID restrictions'
         },
         sectionPrice: {
             fee: {
@@ -214,6 +215,8 @@ const text = {
         sectionSchedule: {
             daysOfWeek: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
             daysOfWeekMobile: ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+            covidMssg: '*Actividades canceladas según restricciones COVID'
+
         },
         sectionPrice: {
             fee: {
@@ -360,7 +363,8 @@ const text = {
         },
         sectionSchedule: {
             daysOfWeek: ["Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte"],
-            daysOfWeekMobile: ["Dl", "Dt", "Dm", "Dj", "Dv", "Ds"]
+            daysOfWeekMobile: ["Dl", "Dt", "Dm", "Dj", "Dv", "Ds"],
+            covidMssg: '*Activitats cancel·lades segons restriccions COVID'
         },
         sectionPrice: {
             fee: {
@@ -452,25 +456,29 @@ const text = {
         privacy: CAT_PRIVACY
 
     },
-
+    /*classNames:
+    - jjk = Jiu-Jitsu Kids
+    - jj = Jiu-Jitsu
+    - ctk = CrossTraining Kids
+    */
     scheduleContent: {
         row1: {
             cell0: "9:30 - 10:30",
-            cell1: <p className="ct">CROSSTRAINING</p>,
-            cell2: <p className="ct">CROSSTRAINING</p>,
-            cell3: <p className="ct">CROSSTRAINING</p>,
-            cell4: <p className="ct">CROSSTRAINING</p>,
-            cell5: <p className="ct">CROSSTRAINING</p>,
-            cell6: <p className="ct">CROSSTRAINING</p>,
+            cell1: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell2: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell3: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell4: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell5: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell6: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
         },
         row2: {
             cell7: "10:30 - 11:30",
-            cell9: <p className="ct">CROSSTRAINING</p>,
-            cell8: <p className="ct">CROSSTRAINING</p>,
-            cell10: <p className="ct">CROSSTRAINING</p>,
-            cell11: <p className="ct">CROSSTRAINING</p>,
-            cell12: <p className="ct">CROSSTRAINING</p>,
-            cell13: <p className="ct">CROSSTRAINING</p>,
+            cell9: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell8: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell10: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell11: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell12: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell13: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
         },
         row3: {
             cell14: "11:30 - 15:15",
@@ -483,78 +491,83 @@ const text = {
         },
         row4: {
             cell21: "15:15 - 16:15",
-            cell22: <p className="ct">CROSSTRAINING</p>,
-            cell23: <p className="ct">CROSSTRAINING</p>,
-            cell24: <p className="ct">CROSSTRAINING</p>,
-            cell25: <p className="ct">CROSSTRAINING</p>,
-            cell26: <p className="ct">CROSSTRAINING</p>,
+            cell22: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell23: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell24: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell25: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell26: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
             cell27: "",
         },
         row5: {
             cell28: "16:30 - 17:30",
-            cell29: <p className="ct">CROSSTRAINING</p>,
-            cell30: <p className="ct">CROSSTRAINING</p>,
-            cell31: <p className="ct">CROSSTRAINING</p>,
-            cell32: <p className="ct">CROSSTRAINING</p>,
-            cell33: <p className="ct">CROSSTRAINING</p>,
+            cell29: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell30: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell31: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell32: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell33: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
             cell34: "",
         },
         row6: {
             cell35: "17:30 - 18:30",
-            cell36: <p className="ct">CROSSTRAINING</p>,
-            cell37: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="jjk">Jiu-Jitsu Kids</p></div>,
-            cell38: <p className="ct">CROSSTRAINING</p>,
-            cell39: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="jjk">Jiu-Jitsu Kids</p></div>,
-            cell40: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ctk">Crosstraining Kids</p></div>,
+            cell36: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell37: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell38: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell39: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell40: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
             cell41: "",
         },
         row7: {
             cell42: "18:30 - 19:30",
-            cell43: <p className="ct">CROSSTRAINING</p>,
-            cell44: <p className="ct">CROSSTRAINING</p>,
-            cell45: <p className="ct">CROSSTRAINING</p>,
-            cell46: <p className="ct">CROSSTRAINING</p>,
-            cell47: <p className="ct">CROSSTRAINING</p>,
+            cell43: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell44: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell45: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell46: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell47: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
             cell48: "",
         },
         row8: {
             cell49: "19:30 - 20:30",
-            cell50: <p className="ct">CROSSTRAINING</p>,
-            cell51: <p className="ct">CROSSTRAINING</p>,
-            cell52: <p className="ct">CROSSTRAINING</p>,
-            cell53: <p className="ct">CROSSTRAINING</p>,
-            cell54: <p className="ct">CROSSTRAINING</p>,
+            cell50: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell51: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell52: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell53: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
+            cell54: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="ob">OPEN BOX</p></div>,
             cell55: "",
         },
         row9: {
             cell56: "20:30 - 21:30",
-            cell57: <p className="ct">CROSSTRAINING</p>,
-            cell58: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="jj">Jiu-Jitsu</p></div>,
-            cell59: <p className="ct">CROSSTRAINING</p>,
-            cell60: <p className="ct">CROSSTRAINING</p>,
-            cell61: <div className="cellSplitted"><p className="ct">CROSSTRAINING</p> <p className="jj">Jiu-Jitsu</p></div>,
+            cell57: "",
+            cell58: "",
+            cell59: "",
+            cell60: "",
+            cell61: "",
             cell62: "",
         }
 
     },
+    /*classNames:
+    - jjk-mbl = Jiu-Jitsu Kids
+    - jj-mbl = Jiu-Jitsu
+    - ctk-mbl = CrossTraining Kids
+    */
     scheduleContentMobile: {
         row1: {
             cell0: "9:30 - 10:30",
-            cell1: <p className="ct-mbl">CT</p>,
-            cell2: <p className="ct-mbl">CT</p>,
-            cell3: <p className="ct-mbl">CT</p>,
-            cell4: <p className="ct-mbl">CT</p>,
-            cell5: <p className="ct-mbl">CT</p>,
-            cell6: <p className="ct-mbl">CT</p>,
+            cell1: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell2: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell3: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell4: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell5: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell6: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
         },
         row2: {
             cell7: "10:30 - 11:30",
-            cell9: <p className="ct-mbl">CT</p>,
-            cell8: <p className="ct-mbl">CT</p>,
-            cell10: <p className="ct-mbl">CT</p>,
-            cell11: <p className="ct-mbl">CT</p>,
-            cell12: <p className="ct-mbl">CT</p>,
-            cell13: <p className="ct-mbl">CT</p>,
+            cell9: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell8: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell10: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell11: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell12: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell13: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
         },
         row3: {
             cell14: "11:30 - 15:15",
@@ -567,58 +580,58 @@ const text = {
         },
         row4: {
             cell21: "15:15 - 16:15",
-            cell22: <p className="ct-mbl">CT</p>,
-            cell23: <p className="ct-mbl">CT</p>,
-            cell24: <p className="ct-mbl">CT</p>,
-            cell25: <p className="ct-mbl">CT</p>,
-            cell26: <p className="ct-mbl">CT</p>,
+            cell23: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell24: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell25: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell22: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell26: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
             cell27: "",
         },
         row5: {
             cell28: "16:30 - 17:30",
-            cell29: <p className="ct-mbl">CT</p>,
-            cell30: <p className="ct-mbl">CT</p>,
-            cell31: <p className="ct-mbl">CT</p>,
-            cell32: <p className="ct-mbl">CT</p>,
-            cell33: <p className="ct-mbl">CT</p>,
+            cell30: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell31: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell32: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell29: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell33: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
             cell34: "",
         },
         row6: {
             cell35: "17:30 - 18:30",
-            cell36: <p className="ct-mbl">CT</p>,
-            cell37: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="jjk-mbl">JJK</p></div>,
-            cell38: <p className="ct-mbl">CT</p>,
-            cell39: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="jjk-mbl">JJK</p></div>,
-            cell40: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ctk-mbl">CTK</p></div>,
+            cell36: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell37: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell38: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell39: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell40: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
             cell41: "",
         },
         row7: {
             cell42: "18:30 - 19:30",
-            cell43: <p className="ct-mbl">CT</p>,
-            cell44: <p className="ct-mbl">CT</p>,
-            cell45: <p className="ct-mbl">CT</p>,
-            cell46: <p className="ct-mbl">CT</p>,
-            cell47: <p className="ct-mbl">CT</p>,
+            cell43: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell44: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell45: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell46: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell47: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
             cell48: "",
         },
         row8: {
             cell49: "19:30 - 20:30",
-            cell50: <p className="ct-mbl">CT</p>,
-            cell51: <p className="ct-mbl">CT</p>,
-            cell52: <p className="ct-mbl">CT</p>,
-            cell53: <p className="ct-mbl">CT</p>,
-            cell54: <p className="ct-mbl">CT</p>,
+            cell50: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell51: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell52: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell53: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
+            cell54: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="ob-mbl">OB</p></div>,
             cell55: "",
         },
         row9: {
             cell56: "20:30 - 21:30",
-            cell57: <p className="ct-mbl">CT</p>,
-            cell58: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="jj-mbl">JJ</p></div>,
-            cell59: <p className="ct-mbl">CT</p>,
-            cell60: <p className="ct-mbl">CT</p>,
-            cell61: <div className="cellSplitted"><p className="ct-mbl">CT</p> <p className="jj-mbl">JJ</p></div>,
+            cell57: "",
+            cell58: "",
+            cell59: "",
+            cell60: "",
+            cell61: "",
             cell62: "",
-        },
+        }
 
     },
 
