@@ -89,6 +89,9 @@ export default function Navbar(props) {
                                             <nav className="nav-list">
 
                                                 {location.pathname === "/" ? <>
+                                                    <div className="link-container small">
+                                                        <Link className="opens" to="/opens21">Opens21</Link>
+                                                    </div>
                                                     <div className="link-container large">
                                                         <LinkComponent text={text} lang={lang} linkTo={'news'} classN={'nav-news'} />
                                                     </div>
@@ -185,6 +188,7 @@ export default function Navbar(props) {
                                                         </> :
                                                             <>
                                                                 <Link className="menu-mobile" to="/">{text[`${lang}`].navbar.home}</Link>
+                                                                <Link className="menu-mobile" to="/opens21">Opens21</Link>
                                                                 <Link className="menu-mobile" to="/legal">{text[`${lang}`].navbar.legal}</Link>
                                                                 <Link className="menu-mobile" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
                                                             </>

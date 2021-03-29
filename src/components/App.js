@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import components from './index'
 import legalPages from '../pages'
+import PicturePage from '../pages/Pictures'
 
 
 import text from '../text'
@@ -72,6 +73,7 @@ export default function App(props) {
                     <Route exact path='/' component={Home} />
                     <Route exact path="/legal" component={Legal} />
                     <Route exact path="/privacy" component={Privacy} />
+                    <Route exact path="/opens21" component={PicturePage} />
                 </Switch>
                 <Footer />
             </I18NProvider>

@@ -16,6 +16,7 @@ export default function (props) {
         (async () => {
             try {
                 const response = await logic.instaFetch()
+                console.warn('HI', response)
                 setData(response)
                 setFirstImage(response.shift())
 
