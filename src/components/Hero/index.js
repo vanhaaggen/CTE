@@ -22,6 +22,9 @@ const Header = () => {
                             <span className="brand1">{text.navBar.brand1}</span>
                             <span className="brand2">{text.navBar.brand2}</span>
                         </h1>
+                        <div className="link-container small crossfit-open">
+                            <a target="_blank" rel="noopener noreferrer" href="https://photos.app.goo.gl/4Xxn6FQ2qYday5GM7">The Open 2021</a>
+                        </div>
 
                         <div className="hero-wrapper">
                             <div className="quote-wrapper">

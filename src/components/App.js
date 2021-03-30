@@ -6,7 +6,6 @@ import Home from '../pages/Home'
 import components from './index'
 import legalPages from '../pages'
 
-
 import text from '../text'
 import { I18NProvider } from './i18ncontext'
 
@@ -72,6 +71,11 @@ export default function App(props) {
                     <Route exact path='/' component={Home} />
                     <Route exact path="/legal" component={Legal} />
                     <Route exact path="/privacy" component={Privacy} />
+                    <Route exact path="/opens21" component={() => {
+                        window.location.href = "https://photos.app.goo.gl/4Xxn6FQ2qYday5GM7"
+                        return null;
+                    }
+                    } />
                 </Switch>
                 <Footer />
             </I18NProvider>

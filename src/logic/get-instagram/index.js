@@ -4,9 +4,12 @@ export default function () {
     return (async () => {
 
         const response = await fetch(`${process.env.REACT_APP_INSTAGRAM}`, {
-            method: 'GET'
+            method: 'GET',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            }
         })
-
+        console.warn(response)
         if (response.status !== 200) {
             const { error } = await response.json()
 

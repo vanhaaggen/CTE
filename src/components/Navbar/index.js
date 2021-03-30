@@ -89,6 +89,7 @@ export default function Navbar(props) {
                                             <nav className="nav-list">
 
                                                 {location.pathname === "/" ? <>
+
                                                     <div className="link-container large">
                                                         <LinkComponent text={text} lang={lang} linkTo={'news'} classN={'nav-news'} />
                                                     </div>
@@ -109,10 +110,10 @@ export default function Navbar(props) {
                                                         <LinkComponent text={text} lang={lang} linkTo={'contact'} classN={'menu'} />
                                                     </div>
                                                 </> : <>
-                                                        <Link className="link-container" to="/">{text[`${lang}`].navbar.home}</Link>
-                                                        <Link className="link-container" to="/legal">{text[`${lang}`].navbar.legal}</Link>
-                                                        <Link className="link-container" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
-                                                    </>}
+                                                    <Link className="link-container" to="/">{text[`${lang}`].navbar.home}</Link>
+                                                    <Link className="link-container" to="/legal">{text[`${lang}`].navbar.legal}</Link>
+                                                    <Link className="link-container" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
+                                                </>}
                                             </nav>
                                         </div>
 
@@ -148,78 +149,79 @@ export default function Navbar(props) {
                                 </div>
                             </>
                         ) : (
-                                <>
-                                    <div className={`Navbar-mobile`}>
-                                        <div className="navbar-container-mobile">
-                                            <ScrollLink className="menu"
-                                                activeClass="active"
-                                                to="hero"
-                                                spy={true}
-                                                smooth={true}
-                                                offset={-70}
-                                                duration={500}
-                                            >
-                                                <div className="navbar-container-mobile___brand-name-mobile">
-                                                    <p className="acronym-mobile">{text.navBar.acronym}</p>
-                                                </div>
-                                            </ScrollLink>
-                                            <div onClick={(e) => {
-                                                e.preventDefault()
-                                                setIsMobileMenuOpen(!isMobileMenuOpen)
-                                            }
-                                            }>
-                                                <FontAwesomeIcon className="menu-icon" icon={isMobileMenuOpen ? faTimes : faBars} />
+                            <>
+                                <div className={`Navbar-mobile`}>
+                                    <div className="navbar-container-mobile">
+                                        <ScrollLink className="menu"
+                                            activeClass="active"
+                                            to="hero"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            duration={500}
+                                        >
+                                            <div className="navbar-container-mobile___brand-name-mobile">
+                                                <p className="acronym-mobile">{text.navBar.acronym}</p>
                                             </div>
+                                        </ScrollLink>
+                                        <div onClick={(e) => {
+                                            e.preventDefault()
+                                            setIsMobileMenuOpen(!isMobileMenuOpen)
+                                        }
+                                        }>
+                                            <FontAwesomeIcon className="menu-icon" icon={isMobileMenuOpen ? faTimes : faBars} />
                                         </div>
-                                        {isMobileMenuOpen && <>
-                                            <OutsideAlerter forwardedRef={childRef} handleOutsideAlert={handleOutsideAlert}>
-                                                <div className="navbar-menu-container-mobile">
-                                                    <nav className="navbar-menu-container-mobile__list">
-                                                        {location.pathname === "/" ? <>
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'who'} classN={'menu-mobile'} />
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'what'} classN={'menu-mobile'} />
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'schedule'} classN={'menu-mobile'} />
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'price'} classN={'menu-mobile'} />
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} classN={'menu-mobile'} />
-                                                            <LinkComponentMobile text={text} lang={lang} linkTo={'news'} classN={'nav-news-m'} />
-                                                        </> :
-                                                            <>
-                                                                <Link className="menu-mobile" to="/">{text[`${lang}`].navbar.home}</Link>
-                                                                <Link className="menu-mobile" to="/legal">{text[`${lang}`].navbar.legal}</Link>
-                                                                <Link className="menu-mobile" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
-                                                            </>
-                                                        }
-                                                        <div className="menu-mobile" >
-                                                            <div className="lang-container-m">
-                                                                <p className='lang-m'>lang</p>
-                                                                <p className='lang-bttn-m' onClick={() => {
-                                                                    props.handleLang('CAT')
-                                                                    setIsMobileMenuOpen(!isMobileMenuOpen)
-
-                                                                }
-                                                                }>CAT</p>
-                                                                <p className='lang-bttn-m' onClick={() => {
-                                                                    props.handleLang('ES')
-                                                                    setIsMobileMenuOpen(!isMobileMenuOpen)
-
-
-                                                                }
-                                                                }>ES</p>
-                                                                <p className='lang-bttn-m' onClick={() => {
-                                                                    props.handleLang('EN')
-                                                                    setIsMobileMenuOpen(!isMobileMenuOpen)
-
-                                                                }
-                                                                }>EN</p>
-                                                            </div>
-                                                        </div>
-                                                    </nav>
-                                                </div>
-                                            </OutsideAlerter>
-                                        </>}
                                     </div>
-                                </>
-                            )
+                                    {isMobileMenuOpen && <>
+                                        <OutsideAlerter forwardedRef={childRef} handleOutsideAlert={handleOutsideAlert}>
+                                            <div className="navbar-menu-container-mobile">
+                                                <nav className="navbar-menu-container-mobile__list">
+                                                    {location.pathname === "/" ? <>
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'who'} classN={'menu-mobile'} />
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'what'} classN={'menu-mobile'} />
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'schedule'} classN={'menu-mobile'} />
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'price'} classN={'menu-mobile'} />
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'contact'} classN={'menu-mobile'} />
+                                                        <LinkComponentMobile text={text} lang={lang} linkTo={'news'} classN={'nav-news-m'} />
+                                                    </> :
+                                                        <>
+                                                            <Link className="menu-mobile" to="/">{text[`${lang}`].navbar.home}</Link>
+                                                            <Link className="menu-mobile" to="/opens21">Opens21</Link>
+                                                            <Link className="menu-mobile" to="/legal">{text[`${lang}`].navbar.legal}</Link>
+                                                            <Link className="menu-mobile" to="/privacy">{text[`${lang}`].navbar.privacy}</Link>
+                                                        </>
+                                                    }
+                                                    <div className="menu-mobile" >
+                                                        <div className="lang-container-m">
+                                                            <p className='lang-m'>lang</p>
+                                                            <p className='lang-bttn-m' onClick={() => {
+                                                                props.handleLang('CAT')
+                                                                setIsMobileMenuOpen(!isMobileMenuOpen)
+
+                                                            }
+                                                            }>CAT</p>
+                                                            <p className='lang-bttn-m' onClick={() => {
+                                                                props.handleLang('ES')
+                                                                setIsMobileMenuOpen(!isMobileMenuOpen)
+
+
+                                                            }
+                                                            }>ES</p>
+                                                            <p className='lang-bttn-m' onClick={() => {
+                                                                props.handleLang('EN')
+                                                                setIsMobileMenuOpen(!isMobileMenuOpen)
+
+                                                            }
+                                                            }>EN</p>
+                                                        </div>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </OutsideAlerter>
+                                    </>}
+                                </div>
+                            </>
+                        )
                         }
                     </Media>
                 </header>
