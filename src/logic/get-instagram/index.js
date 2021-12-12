@@ -6,7 +6,7 @@ export default function () {
         const response = await fetch(`${process.env.REACT_APP_INSTAGRAM}`, {
             method: 'GET',
             headers: {
-                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Origin': 'https://www.crosstrainingemporda.com',
             }
         })
         console.warn(response)
