@@ -54,7 +54,7 @@ const text = {
             }
         },
         sectionWhat: {
-            par1: <p className="what-para">At <b>Crosstraining Empordà</b> we offer functional training or HIITs for adults and children, as well as Jiu Jitsu classes.</p>,
+            par1: <p className="what-para">At <b>Crosstraining Empordà</b> we offer functional training or HIITs for adults and children.</p>,
             par2: <p className="what-para"><b>HIITs</b> are high intensity interval training sessions. It is a fast, intense training technique that allows you to burn calories like no other</p>,
             benefits: <p className="what-text-wrapper--text1">Benefits for training with us?</p>,
             benefits1: <p className="what-text-wrapper--text2"><i>You will gain...</i></p>,
@@ -201,7 +201,7 @@ const text = {
             }
         },
         sectionWhat: {
-            par1: <p className="what-para">En <b>Crosstraining Empordà</b> te ofrecemos entrenos funcionales o HIITs para  grandes y pequeños, como también clases de Jiu Jitsu.</p>,
+            par1: <p className="what-para">En <b>Crosstraining Empordà</b> te ofrecemos entrenos funcionales o HIITs para  grandes y pequeños.</p>,
             par2: <p className="what-para">Los <b>HIIT</b> son entrenamientos intervalicos de alta intensidad. Es una técnica de entreno rápida, intensa y que et permite quemar calorías como ninguna otra.</p>,
             benefits: <p className="what-text-wrapper--text1">Los beneficios de entrenear con nosotros?</p>,
             benefits1: <p className="what-text-wrapper--text2"><i>ganarás en...</i></p>,
@@ -351,7 +351,7 @@ const text = {
             }
         },
         sectionWhat: {
-            par1: <p className="what-para">A <b>Crosstraining Empordà</b> t'oferim entrenaments funcionals o HIITS, per a grans i petits, com tambe classes de Jiu Jitsu.</p>,
+            par1: <p className="what-para">A <b>Crosstraining Empordà</b> t'oferim entrenaments funcionals o HIITS, per a grans i petits.</p>,
             par2: <p className="what-para">Els <b>HIIT</b> son entrenaments intervàl·lics d'alta intensitat. És una tecnica d'entrenament ràpida, intensa i que et permet cremar calories com ninguna altre.</p>,
             benefits: <p className="what-text-wrapper--text1">Els beneficis d'entrenar amb nosaltres?</p>,
             benefits1: <p className="what-text-wrapper--text2"><i>guanyaràs en...</i></p>,

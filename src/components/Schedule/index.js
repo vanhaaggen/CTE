@@ -12,7 +12,7 @@ const SheduleWarningInfo = () => {
   return (
     <div className="warning">
       Actualment els horaris estàn pendents de ser actualitzat, per a més
-      informació, poseu-vos en
+      informació, poseu-vos en{' '}
       <ScrollLink
         className="warning__link"
         activeClass="active"
