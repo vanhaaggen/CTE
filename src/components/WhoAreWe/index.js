@@ -16,26 +16,11 @@ export default function (props) {
 
             <div className="who-wrapp">
 
-                <div className="divisor-background back-border-img-left">
-                    <div className="divisor-wave1">
-                        <div className="who-divisor">
-
-                            <article className="who-divisor__paragraph">
+                
+            <article className="who-divisor__paragraph">
                                 {text[`${lang}`].sectionWho.par1}
                                 {text[`${lang}`].sectionWho.par2}
                             </article>
-
-                            <Card
-                                webPImg={cristhianWebP}
-                                fallBackImg={cristhian}
-                                text1={text[`${lang}`].sectionWho.coach1.name}
-                                text2={text[`${lang}`].sectionWho.coach1.text}
-                            />
-
-                        </div>
-
-                    </div>
-                </div>
 
                 <div className="divisor-background back-border-img-right">
                     <div className="divisor-wave2">

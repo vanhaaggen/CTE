@@ -1,25 +1,55 @@
-import React from 'react'
-import Media from 'react-media'
-import methods from '../../utils/index.js'
-import ScheduleControlBox from '../ScheduleControlBox'
-import './style.sass'
+import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
+import Media from 'react-media';
+import methods from '../../utils/index.js';
+import ScheduleControlBox from '../ScheduleControlBox';
+import './style.sass';
 
-const { createTable } = methods
+const { createTable } = methods;
 
+const SheduleWarningInfo = () => {
+  return (
+    <div className="warning">
+      Actualment els horaris estàn pendents de ser actualitzat, per a més
+      informació, poseu-vos en
+      <ScrollLink
+        className="warning__link"
+        activeClass="active"
+        to="contact"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        contacte
+      </ScrollLink>{' '}
+      amb nosaltres, o visiteu el nostre{' '}
+      <a
+        className="warning__link"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.instagram.com/crosstrainingemporda/"
+      >
+        instagram
+      </a>
+    </div>
+  );
+};
 
 export default function (props) {
+  const { text, lang } = props;
+  const { daysOfWeek, daysOfWeekMobile } = text[`${lang}`].sectionSchedule;
+  const { scheduleContent, scheduleContentMobile } = text;
 
-    const { text, lang } = props
-    const { daysOfWeek, daysOfWeekMobile } = text[`${lang}`].sectionSchedule
-    const { scheduleContent, scheduleContentMobile } = text
-
-    return (
-        <>
-            <section className="schedule-container-content">
-                <Media query={{ minWidth: 776 }}>
-                    {matches => matches ? (
-                        <div className="sh-cont-wrapp">
-                            <div className="control-table-container">
+  return (
+    <>
+      <section className="schedule-container-content">
+        <Media query={{ minWidth: 776 }}>
+          {(matches) =>
+            matches ? (
+              <div className="sh-cont-wrapp">
+                {/* <div className="control-table-container">
                                 <div className="ctnr-schedule-menu">
                                     <div className="schedule-menu" >
                                         <ScheduleControlBox bttnClass={"ct-bttn"} tdClass={"ct"} activity={"Crosstraining"} />
@@ -47,11 +77,12 @@ export default function (props) {
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
-                        </div>
-                    ) : (
-                            <div className="sh-cont-wrapp">
-                                <div className="control-table-container-mbl">
+                            </div> */}
+                <SheduleWarningInfo />
+              </div>
+            ) : (
+              <div className="sh-cont-wrapp">
+                {/* <div className="control-table-container-mbl">
                                     <div className="schedule-menu-mbl" >
                                         <div className="schedule-menu-mbl__subclass">
                                             <ScheduleControlBox bttnClass={"ct-bttn"} tdClass={"ct-mbl"} activity={"Crosstraining"} />
@@ -81,12 +112,13 @@ export default function (props) {
                                     </div>
 
 
-                                </div>
-                            </div>
-                        )}
-                </Media>
-            </section>
-        </>
-    )
+                                </div> */}
+                <SheduleWarningInfo />
+              </div>
+            )
+          }
+        </Media>
+      </section>
+    </>
+  );
 }
-
