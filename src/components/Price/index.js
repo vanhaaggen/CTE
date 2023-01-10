@@ -30,6 +30,10 @@ export default function (props) {
                                                     <p>{child.content2.text}</p>
                                                     <p>{child.content2.price}</p>
                                                 </li>
+                                                <li>
+                                                    <p>{child.content3.text}</p>
+                                                    <p>{child.content3.price}</p>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -81,8 +85,8 @@ export default function (props) {
                                 </div>
                             </>
                         ) : (
-                                <IndexMobile text={text} lang={lang} />
-                            )}
+                            <IndexMobile text={text} lang={lang} />
+                        )}
                     </Media>
 
                     <div className="price-offer-container">

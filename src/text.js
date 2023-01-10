@@ -72,41 +72,45 @@ const text = {
         },
         sectionPrice: {
             fee: {
-                child: "Kids fee",
+                child: "Morning fee",
                 basic: "Basic fee",
-                ticket: "Tickets"
+                ticket: "Drop ins"
             },
             child: {
                 content1: {
-                    text: "1 session per month ",
-                    price: "20€",
+                    text: "9 session per month",
+                    price: "45€",
                 },
                 content2: {
-                    text: "2 session per month",
-                    price: "40€"
-                }
+                    text: "13 session per month AM",
+                    price: "50€",
+                },
+                content3: {
+                    text: "Unlimited AM",
+                    price: "57€",
+                },
+
             },
             basic: {
                 content1: {
                     text: "9 session per month",
-                    price: "40€",
+                    price: "48€",
                 },
+
                 content2: {
-                    text: "9 session per month AM",
-                    price: "30€",
-                },
-                content3: {
                     text: "13 session per month",
-                    price: "45€",
+                    price: "55€",
+                },
+
+                content3: {
+                    text: "17 session per month",
+                    price: "62€",
                 },
                 content4: {
                     text: "Unlimited",
-                    price: "58€",
+                    price: "69€",
                 },
-                content5: {
-                    text: "Unlimited AM",
-                    price: "40€",
-                },
+
             },
             bond: {
                 content1: {
@@ -123,12 +127,12 @@ const text = {
                 },
             },
             offer: {
-                text: "Students, retirees, law enforcement officers, family members",
-                discount: "-10%"
+                text: "Students, retirees, new members, family members",
+                discount: "-5%"
             },
             info: {
                 text: "Enrolment",
-                price: "40€",
+                price: "20€",
                 vat: "VAT included in all fees",
             }
         },
@@ -220,63 +224,67 @@ const text = {
         },
         sectionPrice: {
             fee: {
-                child: "Cuota Infantil",
+                child: "Cuotas de mañanas",
                 basic: "Cuotas básicas",
-                ticket: "Bonos"
+                ticket: "Drop ins"
             },
             child: {
                 content1: {
-                    text: "1 sesión al mes ",
-                    price: "20€",
+                    text: "9 sesiones al mes",
+                    price: "45€",
                 },
                 content2: {
-                    text: "2 sesiones al mes ",
-                    price: "40€"
-                }
+                    text: "13 sesiones al mes",
+                    price: "50€",
+                },
+                content3: {
+                    text: "Unlimited AM",
+                    price: "57€",
+                },
+
             },
             basic: {
                 content1: {
-                    text: "9 sesiones al mes ",
-                    price: "40€",
+                    text: "9 sesiones al mes",
+                    price: "48€",
                 },
+
                 content2: {
-                    text: "9 sesiones al mes (mañanas) ",
-                    price: "30€",
+                    text: "13 sesiones al mes",
+                    price: "55€",
                 },
+
                 content3: {
-                    text: "13 sesiones al mes ",
-                    price: "45€",
+                    text: "17 sesiones al mes",
+                    price: "62€",
                 },
                 content4: {
-                    text: "Ilimitado ",
-                    price: "58€",
+                    text: "Ilimitado",
+                    price: "69€",
                 },
-                content5: {
-                    text: "Ilimitado (mañanas) ",
-                    price: "40€",
-                },
+
             },
             bond: {
                 content1: {
-                    text: "1 sesión ",
+                    text: "1 sesión",
                     price: "8€",
                 },
                 content2: {
-                    text: "5 sesiones ",
+                    text: "5 sesiones",
                     price: "35€",
                 },
                 content3: {
-                    text: "10 sesiones ",
+                    text: "10 sesiones",
                     price: "60€",
                 },
             },
             offer: {
-                text: "Estudiantes, jubilados, Agentes orden publico, familiares de socios ",
-                discount: "-10%"
+                text: "Estudiantes, jubilados, nuevos socios, familiares de socios ",
+                discount: "-5%"
             },
             info: {
                 text: "Matricula ",
-                price: "40€",
+                price: "20€",
                 vat: "IVA incluido en todas las cuotas",
             }
         },
@@ -368,41 +376,49 @@ const text = {
         },
         sectionPrice: {
             fee: {
-                child: "Quota Infantil",
-                basic: "Quotes bàsicas",
-                ticket: "Bonos"
+                child: "Quotes de matins",
+                basic: "Quotes bàsiques",
+                ticket: "Drop ins"
             },
             child: {
                 content1: {
-                    text: "1 sessió al mes ",
-                    price: "20€",
+                    text: "9 sessions al mes",
+                    price: "45€",
                 },
                 content2: {
-                    text: "2 sessions al mes ",
-                    price: "40€"
-                }
+                    text: "13 sessions al mes",
+                    price: "50€",
+                },
+                content3: {
+                    text: "Il·limitat",
+                    price: "57€",
+                },
+
             },
             basic: {
                 content1: {
-                    text: "9 sessions al mes ",
-                    price: "40€",
+                    text: "9 sessions al mes",
+                    price: "48€",
                 },
+
                 content2: {
-                    text: "9 sessions al mes (matins) ",
-                    price: "30€",
+                    text: "13 sessions al mes",
+                    price: "55€",
                 },
+
                 content3: {
-                    text: "13 sessions al mes ",
-                    price: "45€",
+                    text: "17 sessions al mes",
+                    price: "62€",
                 },
                 content4: {
-                    text: "Il·limitat ",
-                    price: "58€",
+                    text: "Il·limitat",
+                    price: "69€",
                 },
                 content5: {
-                    text: "Il.limitat (matins) ",
-                    price: "40€",
+                    text: "Il·limitat Open Box",
+                    price: "60€",
                 },
+
             },
             bond: {
                 content1: {
@@ -419,12 +435,12 @@ const text = {
                 },
             },
             offer: {
-                text: "Estudiants, jubilats, Agents ordre public, familiars de socis ",
-                discount: "-10%"
+                text: "Estudiants, jubilats, nous socis, familiars de socis ",
+                discount: "-5%"
             },
             info: {
                 text: "Matricula ",
-                price: "40€",
+                price: "20€",
                 vat: "IVA inclós en totes les quotes",
             }
         },

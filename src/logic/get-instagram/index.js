@@ -1,12 +1,12 @@
 export default function () {
   return (async () => {
-    const response = await fetch(`${process.env.REACT_APP_INSTAGRAM}`, {
+    const response = await fetch(`https://www.instagram.com/crosstrainingemporda/?__a=1`, {
       method: 'GET',
       headers: {
         'Access-Control-Allow-Origin': '*',
       },
     });
-    console.warn(response);
+
     if (response.status !== 200) {
       const { error } = await response.json();
 
